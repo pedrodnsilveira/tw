@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 let urlAtual = window.location.href;
 
 if (!urlAtual.includes("screen=overview_villages")) {
