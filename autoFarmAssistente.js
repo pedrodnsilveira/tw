@@ -3,65 +3,77 @@ if (!window.location.href.includes("screen=overview_villages")) {
     throw new Error("Parando execução do script"); // Para execução
 }
 
-// Seleciona todos os spans com a classe 'quickedit-content'
-const spans = document.querySelectorAll('.quickedit-content');
+(function () {
+    const url = window.location.href;
 
-const villageIds = [];
+    // Utilidade para salvar progresso no armazenamento local
+    function salvarProgresso(lista, indice) {
+        localStorage.setItem("listaAldeiasFarm", JSON.stringify(lista));
+        localStorage.setItem("indiceAtualFarm", indice.toString());
+    }
 
-// Preenche o array villageIds com os IDs de aldeias
-spans.forEach(span => {
-    const link = span.querySelector('a');
-    if (link) {
-        const href = link.getAttribute('href');
-        const params = new URLSearchParams(href.split('?')[1]);
-        const villageId = params.get('village');
-        if (villageId) {
-            villageIds.push(villageId);
+    // Primeira fase: capturar os IDs das aldeias na tela de overview
+    if (url.includes("screen=overview_villages")) {
+        const spans = document.querySelectorAll('.quickedit-content');
+        const ids = [];
+
+        spans.forEach(span => {
+            const link = span.querySelector('a');
+            if (link) {
+                const href = link.getAttribute('href');
+                const params = new URLSearchParams(href.split('?')[1]);
+                const id = params.get('village');
+                if (id) ids.push(id);
+            }
+        });
+
+        if (ids.length === 0) {
+            alert("Nenhuma aldeia encontrada.");
+            return;
         }
+
+        salvarProgresso(ids, 0);
+        window.location.href = `https://br134.tribalwars.com.br/game.php?village=${ids[0]}&screen=am_farm`;
+        return;
     }
-});
 
-// Função para realizar a ação no link
-function realizarAcao(elemento) {
-    if (elemento) {
-        elemento.click();
-    } else {
-        console.error("Elemento não encontrado:", elemento);
-    }
-}
+    // Segunda fase: na tela de farm, processar a aldeia atual
+    if (url.includes("screen=am_farm")) {
+        const lista = JSON.parse(localStorage.getItem("listaAldeiasFarm") || "[]");
+        let indice = parseInt(localStorage.getItem("indiceAtualFarm") || "0");
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-for (let item of villageIds) {
-    const url = "https://br134.tribalwars.com.br/game.php?village=" + item + "&screen=am_farm";
-    
-    // Atualiza a URL para carregar a página da aldeia (isso vai recarregar a página)
-    window.location.href = url;
-
-    // Seleciona o botão desejado
-    let elemento = document.querySelector('a[class$="farm_icon farm_icon_b"]');
-
-    // Verifica se o elemento está bloqueado
-    if (elemento && elemento.classList.contains('start_locked')) {
-        // Se estiver bloqueado, pula para o próximo item
-        continue;
-    } else {
-        // Se não estiver bloqueado, executa a ação
-        function realizarAcao() {
-            elemento.click();
+        if (!lista.length || indice >= lista.length) {
+            alert("Farm concluído!");
+            localStorage.removeItem("listaAldeiasFarm");
+            localStorage.removeItem("indiceAtualFarm");
+            return;
         }
-        
-        //numeros aleatorios
-        var tempo = Math.floor(Math.random() * (850 - 300)) + 300;
 
-        setTimeout(function() {
-            realizarAcao();
-            setInterval(realizarAcao, tempo);
-        }, tempo);
+        // Espera o carregamento do DOM e executa a ação
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const botao = document.querySelector('a[class$="farm_icon farm_icon_b"]');
+
+                if (botao && !botao.classList.contains('start_locked')) {
+                    botao.click(); // Executa farm
+                }
+
+                indice++;
+                salvarProgresso(lista, indice);
+
+                if (indice < lista.length) {
+                    const proxima = lista[indice];
+                    const delay = Math.floor(Math.random() * (5000 - 3000)) + 3000; // 3 a 5 segundos
+
+                    setTimeout(() => {
+                        window.location.href = `https://br134.tribalwars.com.br/game.php?village=${proxima}&screen=am_farm`;
+                    }, delay);
+                } else {
+                    alert("Farm concluído!");
+                    localStorage.removeItem("listaAldeiasFarm");
+                    localStorage.removeItem("indiceAtualFarm");
+                }
+            }, 1000); // Espera 1s após carregar a página
+        });
     }
-    (async () => {
-        await sleep(60000); // 60000 ms = 1 minuto
-    })();
-}
+})();
