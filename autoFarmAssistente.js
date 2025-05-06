@@ -4,7 +4,7 @@ if (!(urlAtual.includes("screen=overview_villages"))) {
     alert("O script deve ser rodado na tela de visualização de aldeias");
     return;
 }
-
+/*
 // Seleciona todos os spans com a classe 'quickedit-content'
 const spans = document.querySelectorAll('.quickedit-content');
 
@@ -63,3 +63,4 @@ for (let item of villageIds) {
         }
     }, 2000);  // 5000ms de espera para garantir que a página tenha tempo para carregar completamente
 }
+*/
