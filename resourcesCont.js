@@ -1,3 +1,8 @@
+if (!window.location.href.includes("screen=report&mode=all")) {
+    alert("O script precisa ser executado na página de relatórios, na pasta 'Novos Relatórios' ou 'Todos'");
+    throw new Error("Script interrompido. Página incorreta.");
+}
+
 let recursos = {
     Madeira: 0,
     Argila: 0,
