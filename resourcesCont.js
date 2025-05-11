@@ -1,7 +1,15 @@
+/*TRATAMENTOS DE ERRO DE EXECUÇÃO*/
 if (!window.location.href.includes("screen=report&mode=all")) {
     alert("O script precisa ser executado na página de relatórios, na pasta 'Novos Relatórios' ou 'Todos'");
     throw new Error("Script interrompido. Página incorreta.");
 }
+
+const playerFilter = document.getElementById('filter_subject')?.value || '';
+if (playerFilter === '') {
+    alert("Antes de executar você deve filtrar pelo nome (completo e correto) de algum jogador.");
+    throw new Error("Script interrompido. Página incorreta.");
+}
+/*TRATAMENTOS DE ERRO DE EXECUÇÃO*/
 
 let recursos = {
     Madeira: 0,

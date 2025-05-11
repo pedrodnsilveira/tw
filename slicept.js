@@ -1,4 +1,4 @@
-// Não funciona corretamente no mundo com arcos e sem palachindons
+// Não funciona corretamente no mundo com arcos e sem paladinos
 // statistics("Slice");
 
 if (!$("#slicePlanned").length) {
