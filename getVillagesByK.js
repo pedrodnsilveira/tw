@@ -87,7 +87,8 @@ else {
             // within same hour
             console.log("Hour not over yet, waiting to recollect, using old data");
             data = localStorage.getItem("barbmapVillageTxt");
-
+            console.log("Pedro: ")
+            console.log(data);
             finish(data);
         }
     }
