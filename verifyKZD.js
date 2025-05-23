@@ -74,7 +74,6 @@ else {
             console.log("Hour has passed, recollecting the village data");
             $.get("map/village.txt", function (data) {
                 villageListData = data;
-                console.log("Pedro: ")
                 console.log(data);
                 localStorage.setItem("barbmapVillageTime", Date.parse(new Date()));
                 localStorage.setItem("barbmapVillageTxt", data);
