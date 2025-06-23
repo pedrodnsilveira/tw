@@ -1,3 +1,9 @@
+/*TRATAMENTO DE ERRO DE EXECUÇÃO*/
+if (!window.location.href.includes("screen=overview_villages&mode=prod")) {
+    alert("O script precisa ser executado na página de Visualizações -> Produção");
+    throw new Error("Script interrompido. Página incorreta.");
+}
+
 const CAP_POR_MERCADOR = 1000;
 
 const recursosPorCapacidade = {
