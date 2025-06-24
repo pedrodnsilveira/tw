@@ -594,7 +594,7 @@ function calculateResAmounts(wood, stone, iron, warehouse, merchants) {
     localWood = Math.max(0, localWood);
     localStone = Math.max(0, localStone);
     localIron = Math.max(0, localIron);
-	percentMarketRequest = merchantCarry / (wood+stone+iron)
+	percentMarketRequest = merchantCarry / (wood+stone+iron);
 	
 
     //recalculate how much can be sent according to how much is available
@@ -610,6 +610,7 @@ function calculateResAmounts(wood, stone, iron, warehouse, merchants) {
 		merchantStone = (merchantCarry * percentMarketRequest);
 		merchantIron = (merchantCarry * percentMarketRequest);
 		console.log(merchantWood,merchantStone,merchantIron,percentMarketRequest);
+		console.log(wood,stone,iron,merchantCarry);
 		console.log("");
 	}
 
