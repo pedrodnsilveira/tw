@@ -604,6 +604,7 @@ function calculateResAmounts(wood, stone, iron, warehouse, merchants) {
     merchantIron = (merchantCarry * ironPercentage);
 	const selecionado = document.querySelector('input[name="percentual"]:checked');
 	if(selecionado.value == 'mercado'){
+		alert(percentMarketRequest);
 		merchantWood = (merchantCarry * percentMarketRequest);
 		merchantStone = (merchantCarry * percentMarketRequest);
 		merchantIron = (merchantCarry * percentMarketRequest);
