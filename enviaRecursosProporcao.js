@@ -602,14 +602,14 @@ function calculateResAmounts(wood, stone, iron, warehouse, merchants) {
     merchantWood = (merchantCarry * woodPercentage);
     merchantStone = (merchantCarry * stonePercentage);
     merchantIron = (merchantCarry * ironPercentage);
-	console.log(merchantWood,merchantStone,merchantIron,merchantCarry * woodPercentage);
+	console.log(merchantWood,merchantStone,merchantIron,woodPercentage);
 	console.log("******");
 	const selecionado = document.querySelector('input[name="percentual"]:checked');
 	if(selecionado.value == 'mercado'){
 		merchantWood = (merchantCarry * percentMarketRequest);
 		merchantStone = (merchantCarry * percentMarketRequest);
 		merchantIron = (merchantCarry * percentMarketRequest);
-		console.log(merchantWood,merchantStone,merchantIron,merchantCarry * percentMarketRequest);
+		console.log(merchantWood,merchantStone,merchantIron,percentMarketRequest);
 	}
 
     //check each type if we have enough available
