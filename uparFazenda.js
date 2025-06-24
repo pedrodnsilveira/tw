@@ -10,7 +10,7 @@ if (!window.location.href.includes("screen=overview_villages&mode=prod")) {
 // CONSTANTES GLOBAIS E CONFIGURAÇÕES
 // =============================================
 const STORAGE_KEY = "recursos_vilas_usadas";
-const TEMPO_ESPERA = 1 * 60 * 60 * 1000; // 4 horas
+const TEMPO_ESPERA = 1 * 60 * 60 * 1000; // 1 hora
 const CAP_POR_MERCADOR = 1000;
 const recursosPorCapacidade = {
     1002: { madeira: 620, argila: 642, ferro: 383 },
