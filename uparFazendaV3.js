@@ -234,45 +234,38 @@ function substituirCoordenadaPorId(arr, mapa) {
 // =============================================
 // EXECUÇÃO PRINCIPAL
 // =============================================
+(async () => {
+    const tabela = document.getElementById("production_table");
+    const linhas = tabela.querySelectorAll("tr");
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+    const vilasUsadas = carregarVilasValidas();
+    const vilasParaUpar = getVilasNecessariasUparFazenda(linhas);
+    const [vilasFinalizadas, vilasNaoFinalizadas] = getRecursosVilas(linhas);
 
-async function processarEnviosComIntervalo(dados) {
-    for (const item of dados) {
-        sendResource(item[0], item[1], item[2], item[3], item[4]);
-        await sleep(500); // espera 0,5 segundo entre envios
+    const vilasUpando = Object.entries(VillagesIDs)
+        .filter(([coord, id]) => vilasUsadas.hasOwnProperty(id))
+        .map(([coord]) => coord);
+
+    const vilasFiltradas = vilasParaUpar.filter(([coord]) => !vilasUpando.includes(coord));
+    const rotas = distribuirRecursos(vilasFiltradas, vilasFinalizadas, vilasNaoFinalizadas);
+    const rotasComId = substituirCoordenadaPorId(rotas, VillagesIDs);
+
+    if (rotas.length === 0) {
+        alert("Nenhum envio disponível ou necessário");
+        return;
     }
-}
 
-function formatarMensagemEnvios(envios) {
-    let msg = "Envios:\nORIGEM -> DESTINO : Madeira,Argila,Ferro\n";
-    for (const [o, d, m, a, f] of envios) msg += `${o} -> ${d} : ${m},${a},${f}\n`;
-    return msg + "\nComeçar?";
-}
-
-const tabela = document.getElementById("production_table");
-const linhas = tabela.querySelectorAll("tr");
-
-const vilasUsadas = carregarVilasValidas();
-const vilasParaUpar = getVilasNecessariasUparFazenda(linhas);
-const [vilasFinalizadas, vilasNaoFinalizadas] = getRecursosVilas(linhas);
-
-const vilasUpando = Object.entries(VillagesIDs)
-    .filter(([coord, id]) => vilasUsadas.hasOwnProperty(id))
-    .map(([coord]) => coord);
-
-const vilasFiltradas = vilasParaUpar.filter(([coord]) => !vilasUpando.includes(coord));
-const rotas = distribuirRecursos(vilasFiltradas, vilasFinalizadas, vilasNaoFinalizadas);
-const rotasComId = substituirCoordenadaPorId(rotas, VillagesIDs);
-
-if (rotas.length < 1) {
-    alert("Nenhum envio disponível ou necessário");
-}
-else{
     const msg = formatarMensagemEnvios(rotas);
     if (confirm(msg)) {
-        processarEnviosComIntervalo(rotasComId);
+        for (const item of rotasComId) {
+            sendResource(...item);
+            await new Promise(r => setTimeout(r, 500)); // 0.5s entre envios
+        }
     }
-}
+
+    function formatarMensagemEnvios(envios) {
+        let msg = "Envios:\nORIGEM -> DESTINO : Madeira,Argila,Ferro\n";
+        for (const [o, d, m, a, f] of envios) msg += `${o} -> ${d} : ${m},${a},${f}\n`;
+        return msg + "\nComeçar?";
+    }
+})();
