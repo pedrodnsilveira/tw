@@ -594,7 +594,9 @@ function calculateResAmounts(wood, stone, iron, warehouse, merchants) {
     localWood = Math.max(0, localWood);
     localStone = Math.max(0, localStone);
     localIron = Math.max(0, localIron);
-	percentMarketRequest = merchantCarry / (wood+stone+iron);
+
+	const totalRes = Number(wood) + Number(stone) + Number(iron);
+	percentMarketRequest = merchantCarry / totalRes;
 	
 
     //recalculate how much can be sent according to how much is available
