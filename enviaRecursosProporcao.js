@@ -595,19 +595,21 @@ function calculateResAmounts(wood, stone, iron, warehouse, merchants) {
     localStone = Math.max(0, localStone);
     localIron = Math.max(0, localIron);
 	percentMarketRequest = merchantCarry / (wood+stone+iron)
-	console.log(percentMarketRequest);
+	
 
     //recalculate how much can be sent according to how much is available
     //how much the merchant can take maximum
     merchantWood = (merchantCarry * woodPercentage);
     merchantStone = (merchantCarry * stonePercentage);
     merchantIron = (merchantCarry * ironPercentage);
+	console.log(merchantWood,merchantStone,merchantIron,merchantCarry * woodPercentage);
+	console.log("******");
 	const selecionado = document.querySelector('input[name="percentual"]:checked');
 	if(selecionado.value == 'mercado'){
-		alert(percentMarketRequest);
 		merchantWood = (merchantCarry * percentMarketRequest);
 		merchantStone = (merchantCarry * percentMarketRequest);
 		merchantIron = (merchantCarry * percentMarketRequest);
+		console.log(merchantWood,merchantStone,merchantIron,merchantCarry * percentMarketRequest);
 	}
 
     //check each type if we have enough available
