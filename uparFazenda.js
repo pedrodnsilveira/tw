@@ -1,11 +1,17 @@
-/*TRATAMENTO DE ERRO DE EXECUÇÃO*/
+// =============================================
+// VALIDAÇÃO DE CONTEXTO
+// =============================================
 if (!window.location.href.includes("screen=overview_villages&mode=prod")) {
     alert("O script precisa ser executado na página de Visualizações -> Produção");
     throw new Error("Script interrompido. Página incorreta.");
 }
 
+// =============================================
+// CONSTANTES GLOBAIS E CONFIGURAÇÕES
+// =============================================
+const STORAGE_KEY = "recursos_vilas_usadas";
+const TEMPO_ESPERA = 4 * 60 * 60 * 1000; // 4 horas
 const CAP_POR_MERCADOR = 1000;
-
 const recursosPorCapacidade = {
     1002: { madeira: 620, argila: 642, ferro: 383 },
     1174: { madeira: 806, argila: 848, ferro: 494 },
@@ -28,58 +34,34 @@ const recursosPorCapacidade = {
     17469: { madeira: 69763, argila: 95089, ferro: 37466 },
     20476: { madeira: 90692, argila: 125517, ferro: 48331 }
 };
-var VillagesIDs = {};
 
-const tabela = document.getElementById("production_table");
-const linhas = tabela.querySelectorAll("tr");
+const VillagesIDs = {};
 
-const vilasParaUpar = getVilasNecessariasUparFazenda(linhas);
-const [vilasFinalizadas, vilasNaoFinalizadas] = getRecursosVilas(linhas);
-const rotas = distribuirRecursos(vilasParaUpar, vilasFinalizadas, vilasNaoFinalizadas);
-const rotasComId = substituirCoordenadaPorId(rotas,VillagesIDs);
+// =============================================
+// FUNÇÕES DE LOCALSTORAGE
+// =============================================
+function carregarVilasValidas() {
+    const agora = Date.now();
+    const dados = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
 
-/*console.log(vilasParaUpar);
-console.log(vilasFinalizadas);
-console.log(vilasNaoFinalizadas);
-console.log(VillagesIDs);
-console.log(rotasComId);*/
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function processarEnviosComIntervalo(dados) {
-    for (const item of dados) {
-        sendResource(item[0], item[1], item[2], item[3], item[4]);
-        await sleep(500); // espera 0,5 segundo entre envios
-    }
-}
-
-function formatarMensagemEnvios(envios) {
-    let mensagem = "Envios:\nORIGEM -> DESTINO : Madeira,Argila,Ferro\n";
-
-    for (const [origem, destino, madeira, argila, ferro] of envios) {
-        mensagem += `${origem} -> ${destino} : ${madeira},${argila},${ferro}\n`;
+    for (const [vilaId, timestamp] of Object.entries(dados)) {
+        if (agora - timestamp >= TEMPO_ESPERA) {
+            delete dados[vilaId];
+        }
     }
 
-    mensagem += "\nComeçar?";
-    return mensagem;
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(dados));
+    return dados;
 }
 
-if (rotas.length < 1) {
-    alert("Nenhum envio disponível ou necessário");
-}
-else{
-    const msg = formatarMensagemEnvios(rotas);
-    if (confirm(msg)) {
-        processarEnviosComIntervalo(rotasComId);
-    }
+function marcarVilaComoUsada(vilaId, vilasUsadas) {
+    vilasUsadas[vilaId] = Date.now();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(vilasUsadas));
 }
 
-// ================================
-// Funções Auxiliares
-// ================================
-
+// =============================================
+// FUNÇÕES DE COLETA DE DADOS DA TABELA
+// =============================================
 function getCoord(str) {
     const match = str.match(/\((\d+\|\d+)\)/);
     return match ? match[1] : null;
@@ -103,45 +85,27 @@ function getRecursosDeCelula(celula) {
     };
 }
 
-function substituirCoordenadaPorId(array, dicionario) {
-    return array.map(linha => {
-        const novaLinha = [...linha];
-        if (dicionario[linha[0]]) novaLinha[0] = dicionario[linha[0]];
-        if (dicionario[linha[1]]) novaLinha[1] = dicionario[linha[1]];
-        return novaLinha;
-    });
-}
-
-
-// ================================
-// Coleta de Dados da Tabela
-// ================================
-
 function getRecursosVilas(linhas) {
-    const finalizadas = [];
-    const naoFinalizadas = [];
+    const finalizadas = [], naoFinalizadas = [];
 
     linhas.forEach((linha) => {
         const celulas = linha.querySelectorAll("td");
         if (celulas.length < 7) return;
 
         const vila = getCoord(celulas[1].innerText.trim());
-
         const link = celulas[1].querySelector('a[href*="village="]');
-        const url = new URL(link.href, window.location.origin); // Usa a URL base da página atual
-        const villageId = url.searchParams.get("village");
-        VillagesIDs[vila] = villageId;
+        const url = new URL(link.href, window.location.origin);
+        VillagesIDs[vila] = url.searchParams.get("village");
 
         const [atual, max] = celulas[6].innerText.trim().split("/").map(Number);
-
-        const mercadoresDisponiveis = parseInt(celulas[5].innerText.trim().split("/")[0], 10);
+        const mercadores = parseInt(celulas[5].innerText.trim().split("/")[0], 10);
         const recursos = getRecursosDeCelula(celulas[3]);
 
-        if (atual < 23850) naoFinalizadas.push([vila, recursos.madeira, recursos.argila, recursos.ferro, mercadoresDisponiveis]);
-        else finalizadas.push([vila, recursos.madeira, recursos.argila, recursos.ferro, mercadoresDisponiveis]);
+        const destino = [vila, recursos.madeira, recursos.argila, recursos.ferro, mercadores];
+        (atual < 23850 ? naoFinalizadas : finalizadas).push(destino);
     });
 
-    return [finalizadas,naoFinalizadas];
+    return [finalizadas, naoFinalizadas];
 }
 
 function getVilasNecessariasUparFazenda(linhas) {
@@ -152,17 +116,12 @@ function getVilasNecessariasUparFazenda(linhas) {
         if (celulas.length < 7) return;
 
         const [atual, max] = celulas[6].innerText.trim().split("/").map(Number);
-        if (max > 23000 || max - atual >= 100) return;
-
-        const hasFazendaNaFila = celulas[7].querySelector('img[data-title*="Fazenda"]');
-        if (hasFazendaNaFila) return;
+        if (max > 23000 || max - atual >= 400) return;
+        if (celulas[7].querySelector('img[data-title*="Fazenda"]')) return;
 
         const vila = getCoord(celulas[1].innerText.trim());
-
         const link = celulas[1].querySelector('a[href*="village="]');
-        const url = new URL(link.href, window.location.origin); // Usa a URL base da página atual
-        const villageId = url.searchParams.get("village");
-        VillagesIDs[vila] = villageId;
+        VillagesIDs[vila] = new URL(link.href, window.location.origin).searchParams.get("village");
 
         const recursos = getRecursosDeCelula(celulas[3]);
         const nec = recursosPorCapacidade[max];
@@ -178,113 +137,135 @@ function getVilasNecessariasUparFazenda(linhas) {
     return resultado;
 }
 
-// ================================
-// Distribuição de Recursos
-// ================================
-
+// =============================================
+// LÓGICA DE ENVIO DE RECURSOS
+// =============================================
 function distribuirRecursos(uparFazenda, vilasFinalizadas, vilasNaoFinalizadas) {
-    const capacidadePorMercador = 1000;
     const resultado = [];
 
-    // Formata e separa as fontes em iniciais e backup
-    const fontesIniciais = vilasFinalizadas.map(v => ({ ...formataFonte(v), tipo: 'finalizada' }));
-    const fontesBackup = vilasNaoFinalizadas.map(v => ({ ...formataFonte(v), tipo: 'naoFinalizada' }));
+    const fontesIniciais = vilasFinalizadas.map(v => ({ ...formatarFonte(v), tipo: 'finalizada' }));
+    const fontesBackup = vilasNaoFinalizadas.map(v => ({ ...formatarFonte(v), tipo: 'naoFinalizada' }));
 
-    for (const [destino, necMadeira, necArgila, necFerro] of uparFazenda) {
-        let falta = { madeira: necMadeira, argila: necArgila, ferro: necFerro };
+    for (const [dest, mNec, aNec, fNec] of uparFazenda) {
+        let falta = { madeira: mNec, argila: aNec, ferro: fNec };
+        let fontes = fontesIniciais.slice();
         let usandoBackup = false;
-        let fontesAtuais = fontesIniciais.slice();
 
-        while ((falta.madeira > 0 || falta.argila > 0 || falta.ferro > 0) && fontesAtuais.length) {
-            // Ordena pelas mais próximas
-            fontesAtuais.sort((a, b) =>
-                                calcularDistancia(a.coord, destino) - calcularDistancia(b.coord, destino)
-                                );
+        while ((falta.madeira > 0 || falta.argila > 0 || falta.ferro > 0) && fontes.length > 0) {
+            fontes.sort((a, b) => calcularDistancia(a.coord, dest) - calcularDistancia(b.coord, dest));
 
-            for (const fonte of fontesAtuais) {
+            for (const fonte of fontes) {
                 if (fonte.mercadores <= 0) continue;
 
-                const capacidadeTotal = fonte.mercadores * capacidadePorMercador;
+                const capTotal = fonte.mercadores * CAP_POR_MERCADOR;
                 const totalNec = falta.madeira + falta.argila + falta.ferro;
                 if (totalNec <= 0) break;
 
-                // Proporções de cada recurso
                 const proporcao = {
                     madeira: falta.madeira / totalNec,
                     argila: falta.argila / totalNec,
                     ferro: falta.ferro / totalNec
                 };
 
-                // Cálculo inicial
                 let envio = {
-                    madeira: Math.min(fonte.madeira, Math.floor(capacidadeTotal * proporcao.madeira), falta.madeira),
-                    argila: Math.min(fonte.argila, Math.floor(capacidadeTotal * proporcao.argila), falta.argila),
-                    ferro: Math.min(fonte.ferro, Math.floor(capacidadeTotal * proporcao.ferro), falta.ferro)
+                    madeira: Math.min(fonte.madeira, Math.floor(capTotal * proporcao.madeira), falta.madeira),
+                    argila: Math.min(fonte.argila, Math.floor(capTotal * proporcao.argila), falta.argila),
+                    ferro: Math.min(fonte.ferro, Math.floor(capTotal * proporcao.ferro), falta.ferro)
                 };
 
-                // Completa o restante de forma balanceada
-                let totalEnviado = envio.madeira + envio.argila + envio.ferro;
-                let restante = capacidadeTotal - totalEnviado;
+                let total = envio.madeira + envio.argila + envio.ferro;
+                let restante = capTotal - total;
+
                 while (restante > 0) {
-                    if (falta.madeira > envio.madeira && fonte.madeira > envio.madeira) {
-                        envio.madeira++; restante--;
-                    } else if (falta.argila > envio.argila && fonte.argila > envio.argila) {
-                        envio.argila++; restante--;
-                    } else if (falta.ferro > envio.ferro && fonte.ferro > envio.ferro) {
-                        envio.ferro++; restante--;
-                    } else {
-                        break;
-                    }
+                    if (falta.madeira > envio.madeira && fonte.madeira > envio.madeira) envio.madeira++, restante--;
+                    else if (falta.argila > envio.argila && fonte.argila > envio.argila) envio.argila++, restante--;
+                    else if (falta.ferro > envio.ferro && fonte.ferro > envio.ferro) envio.ferro++, restante--;
+                    else break;
                 }
 
-                const usados = envio.madeira + envio.argila + envio.ferro;
-                if (usados <= 0) continue;
+                if (total <= 0) continue;
 
-                // Atualiza fonte
                 fonte.madeira -= envio.madeira;
                 fonte.argila -= envio.argila;
                 fonte.ferro -= envio.ferro;
-                fonte.mercadores -= Math.ceil(usados / capacidadePorMercador);
+                fonte.mercadores -= Math.ceil((envio.madeira + envio.argila + envio.ferro) / CAP_POR_MERCADOR);
 
-                // Atualiza falta
                 falta.madeira -= envio.madeira;
                 falta.argila -= envio.argila;
                 falta.ferro -= envio.ferro;
 
-                resultado.push([fonte.coord, destino, envio.madeira, envio.argila, envio.ferro]);
-
+                resultado.push([fonte.coord, dest, envio.madeira, envio.argila, envio.ferro]);
                 if (falta.madeira <= 0 && falta.argila <= 0 && falta.ferro <= 0) break;
             }
 
-            // Se ainda faltar recurso e já tentou somente fontes iniciais, muda para backup
             if ((falta.madeira > 0 || falta.argila > 0 || falta.ferro > 0) && !usandoBackup) {
+                fontes = fontesBackup.slice();
                 usandoBackup = true;
-                fontesAtuais = fontesBackup.slice();
-            } else {
-                break;
-            }
+            } else break;
         }
     }
 
     return resultado;
 
-    function formataFonte([coord, madeira, argila, ferro, mercadores]) {
+    function formatarFonte([coord, madeira, argila, ferro, mercadores]) {
         return {
             coord,
             madeira: Number(madeira),
-            argila:  Number(argila),
-            ferro:   Number(ferro),
+            argila: Number(argila),
+            ferro: Number(ferro),
             mercadores: Number(mercadores)
         };
     }
 }
 
-function sendResource(sourceID, targetID, woodAmount, stoneAmount, ironAmount) {
-    var e = { "target_id": targetID, "wood": woodAmount, "stone": stoneAmount, "iron": ironAmount };
-    TribalWars.post("market", {
-        ajaxaction: "map_send", village: sourceID
-    }, e, function (e) {
-        UI.SuccessMessage(e.message);
-        console.log(e.message);
-    },!1);
+function sendResource(sourceID, targetID, wood, stone, iron) {
+    const payload = { target_id: targetID, wood, stone, iron };
+    TribalWars.post("market", { ajaxaction: "map_send", village: sourceID }, payload, (res) => {
+        UI.SuccessMessage(res.message);
+        console.log(res.message);
+    }, false);
+    marcarVilaComoUsada(targetID, vilasUsadas);
 }
+
+function substituirCoordenadaPorId(arr, mapa) {
+    return arr.map(([o, d, ...rec]) => [mapa[o] || o, mapa[d] || d, ...rec]);
+}
+
+// =============================================
+// EXECUÇÃO PRINCIPAL
+// =============================================
+(async () => {
+    const tabela = document.getElementById("production_table");
+    const linhas = tabela.querySelectorAll("tr");
+
+    const vilasUsadas = carregarVilasValidas();
+    const vilasParaUpar = getVilasNecessariasUparFazenda(linhas);
+    const [vilasFinalizadas, vilasNaoFinalizadas] = getRecursosVilas(linhas);
+
+    const vilasUpando = Object.entries(VillagesIDs)
+        .filter(([coord, id]) => vilasUsadas.hasOwnProperty(id))
+        .map(([coord]) => coord);
+
+    const vilasFiltradas = vilasParaUpar.filter(([coord]) => !vilasUpando.includes(coord));
+    const rotas = distribuirRecursos(vilasFiltradas, vilasFinalizadas, vilasNaoFinalizadas);
+    const rotasComId = substituirCoordenadaPorId(rotas, VillagesIDs);
+
+    if (rotas.length === 0) {
+        alert("Nenhum envio disponível ou necessário");
+        return;
+    }
+
+    const msg = formatarMensagemEnvios(rotas);
+    if (confirm(msg)) {
+        for (const item of rotasComId) {
+            sendResource(...item);
+            await new Promise(r => setTimeout(r, 500)); // 0.5s entre envios
+        }
+    }
+
+    function formatarMensagemEnvios(envios) {
+        let msg = "Envios:\nORIGEM -> DESTINO : Madeira,Argila,Ferro\n";
+        for (const [o, d, m, a, f] of envios) msg += `${o} -> ${d} : ${m},${a},${f}\n`;
+        return msg + "\nComeçar?";
+    }
+})();
