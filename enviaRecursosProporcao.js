@@ -610,6 +610,7 @@ function calculateResAmounts(wood, stone, iron, warehouse, merchants) {
 		merchantStone = (merchantCarry * percentMarketRequest);
 		merchantIron = (merchantCarry * percentMarketRequest);
 		console.log(merchantWood,merchantStone,merchantIron,percentMarketRequest);
+		console.log("");
 	}
 
     //check each type if we have enough available
