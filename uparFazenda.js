@@ -10,7 +10,7 @@ if (!window.location.href.includes("screen=overview_villages&mode=prod")) {
 // CONSTANTES GLOBAIS E CONFIGURAÇÕES
 // =============================================
 const STORAGE_KEY = "recursos_vilas_usadas";
-const TEMPO_ESPERA = 4 * 60 * 60 * 1000; // 4 horas
+const TEMPO_ESPERA = 1 * 60 * 60 * 1000; // 4 horas
 const CAP_POR_MERCADOR = 1000;
 const recursosPorCapacidade = {
     1002: { madeira: 620, argila: 642, ferro: 383 },
@@ -242,7 +242,7 @@ function sleep(ms) {
 async function processarEnviosComIntervalo(dados) {
     for (const item of dados) {
         sendResource(item[0], item[1], item[2], item[3], item[4]);
-        await sleep(500); // espera 0,5 segundo entre envios
+        await sleep(800); // espera 0,5 segundo entre envios
     }
 }
 
