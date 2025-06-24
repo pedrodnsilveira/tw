@@ -541,8 +541,8 @@ function askCoordinate() {
     </center>
     </p>
     <center> <table><tr><td><center>
-	<input type="radio" name="percentual" value="cunhagem" checked>
-	<input type="radio" name="percentual" value="mercado">
+	<input type="radio" name="percentual" value="cunhagem" checked> Proporção de cunhagem
+	<input type="radio" name="percentual" value="mercado"> Proporção de mercado
 	<br>
     <input type="text" ID="coordinateTargetFirstTime" name="coordinateTargetFirstTime" size="20" margin="5" align=left></center></td></tr>
        <tr></tr>
