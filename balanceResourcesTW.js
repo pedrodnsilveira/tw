@@ -1,284 +1,230 @@
 /**
- * Tribal Wars – Balanceador de Recursos (1 viagem por mercador)
- * By Haja.Paciencia
- * COMO USAR ───────────────
- * 1.  Monte um array `villas` no seguinte formato (exemplo logo abaixo).
- * 2.  Cole ESTE SCRIPT inteiro no console, no “Comando” ou num *bookmarklet*.
- * 3.  Chame `balanceResources(villas, { keepRatio: 0.30 })`.
- * 4.  O script devolve um array `orders` com as remessas (já em múltiplos de 1000).
- * 5.  Gere suas ordens de mercado a partir de `orders`.
+ * Tribal Wars – Balanceador de Recursos (1 viagem por mercador)
+ * Revisão 2025‑06‑29
+ * Autor original: Haja.Paciencia  |  Revisado por ChatGPT
  *
- * PARÂMETROS (opcionais) ───────────────
- *  keepRatio   → fração do armazém que vilas “send‑only” devem manter (0 – 1). Default = 0.30
- *  carry       → carga de 1 mercador. Default = 1000
- *  round       → se true, arredonda cada remessa p/ múltiplo de carry. Default = true
+ * COMO USAR
+ * 1. Abra a visão geral de produção (game.php?screen=overview_villages&mode=prod&page=-1).
+ * 2. Cole TODO este script no console ou em um bookmarklet.
+ * 3. Confirme o prompt “Gerar X ordens de mercado?”.
+ * 4. O script coleta os dados, calcula as remessas e envia (1 viagem/mercador livre).
  *
- * ESTRUTURA DE DADOS ───────────────
- *  vila = {
- *    id:        '12345',        // ou outro identificador
- *    name:      'Aldeia 001',
- *    store:     30000,          // capacidade do armazém
- *    merchants: 18,             // mercadores LIVRES (cada um carrega 1000)
- *    sendOnly:  false,          // true = só envia, nunca recebe
- *    res: { wood: 12000, clay: 8000, iron: 15000 }
- *  }
- *
- *  order = {
- *    from:  'id da origem',
- *    to:    'id do destino',
- *    wood:  0 | 1000 | …,
- *    clay:  0 | 1000 | …,
- *    iron:  0 | 1000 | …
- *  }
+ * Parâmetros de `balanceResources` (opcionais):
+ *   keepRatio – fração mínima de estoque nas vilas send‑only  [0‑1] (padrão 0.30)
+ *   carry     – carga de 1 mercador (padrão 1000)
+ *   round     – arredondar para múltiplos de carry? (padrão true)
  */
 
-// ---------- FUNÇÕES AUXILIARES ----------
+/* ------------------------------------------------------------------ *
+ * F U N Ç Õ E S   A U X I L I A R E S                                 *
+ * ------------------------------------------------------------------ */
 
-// múltiplo superior de `step`
-const ceilTo = (value, step) => Math.ceil(value / step) * step;
+const ceilTo = (v, step) => Math.ceil(v / step) * step;
+const sleep  = ms => new Promise(r => setTimeout(r, ms));
 
-// ordenação DESC por atributo
-const desc = key => (a, b) => b[key] - a[key];
+/* ------------------------------------------------------------------ *
+ * B A L A N C E A M E N T O                                           *
+ * ------------------------------------------------------------------ */
 
-// ---------- FUNÇÃO PRINCIPAL ----------
 function balanceResources(villas, {
   keepRatio = 0.30,
   carry     = 1000,
   round     = true,
 } = {}) {
 
-  // separa conjuntos
+  const TYPES = ['wood', 'stone', 'iron'];
+
   const senders   = villas.filter(v => v.sendOnly);
   const receivers = villas.filter(v => !v.sendOnly);
 
-  // pre‑inicializa estruturas
   villas.forEach(v => {
-    v.excess  = { wood: 0, clay: 0, iron: 0 };
-    v.deficit = { wood: 0, clay: 0, iron: 0 };
-    v.capLeft = v.merchants * carry;           // 1 viagem por mercador
+    v.excess  = { wood:0, stone:0, iron:0 };
+    v.deficit = { wood:0, stone:0, iron:0 };
+    v.capLeft = v.merchants * carry;
   });
 
-  // -------- 1. EXCESSO / DÉFICIT --------
-  ['wood', 'clay', 'iron'].forEach(resType => {
-
-    // soma total do recurso e soma da capacidade receptora
-    const totalRes   = villas.reduce((s, v) => s + v.res[resType], 0);
-    const keepSum    = senders.reduce((s, v) => s + keepRatio * v.store, 0);
-    const recipStore = receivers.reduce((s, v) => s + v.store, 0);
-
-    // nível‑alvo somente entre receptores
+  /* ------------ 1. EXCESSO / DÉFICIT ----------------------------- */
+  TYPES.forEach(r => {
+    const totalRes   = villas   .reduce((s,v) => s + v.res[r], 0);
+    const keepSum    = senders  .reduce((s,v) => s + keepRatio * v.store, 0);
+    const recipStore = receivers.reduce((s,v) => s + v.store, 0);
     const g = (totalRes - keepSum) / recipStore;
 
-    // send‑only
     senders.forEach(v => {
-      const minKeep = keepRatio * v.store;
-      v.excess [resType] = Math.max(0, v.res[resType] - minKeep);
-      // déficit fica zero – nunca recebem
+      v.excess[r] = Math.max(0, v.res[r] - keepRatio * v.store);
     });
 
-    // receptores
     receivers.forEach(v => {
       const target = g * v.store;
-      if (v.res[resType] >= target) {
-        v.excess [resType] = v.res[resType] - target;
+      if (v.res[r] >= target) {
+        v.excess [r] = v.res[r] - target;
       } else {
-        v.deficit[resType] = target - v.res[resType];
+        v.deficit[r] = target - v.res[r];
       }
     });
   });
 
-  // -------- 2. ESCALA PELO LIMITE DE CARGA --------
+  /* ------------ 2. LIMITE DE MERCADORES -------------------------- */
   villas.forEach(v => {
-    const totalExc = ['wood', 'clay', 'iron']
-      .reduce((s, r) => s + v.excess[r], 0);
-
+    const totalExc = TYPES.reduce((s,r) => s + v.excess[r], 0);
     if (totalExc > v.capLeft && totalExc > 0) {
       const f = v.capLeft / totalExc;
-      ['wood', 'clay', 'iron'].forEach(r => v.excess[r] *= f);
+      TYPES.forEach(r => v.excess[r] *= f);
     }
   });
 
-  // -------- 3. EMPARELHAMENTO --------
+  /* ------------ 3. EMPARELHAMENTO -------------------------------- */
   const orders = [];
 
-  ['wood', 'clay', 'iron'].forEach(resType => {
+  TYPES.forEach(r => {
 
-    // listas mutáveis de doadores e receptores
     const donors = villas
-      .filter(v => v.excess[resType] > 0)
-      .sort(desc('excess', resType));
+      .filter(v => v.excess[r]  > 0)
+      .sort((a,b) => b.excess [r] - a.excess [r]);
 
     const takers = receivers
-      .filter(v => v.deficit[resType] > 0)
-      .sort(desc('deficit', resType));
+      .filter(v => v.deficit[r] > 0)
+      .sort((a,b) => b.deficit[r] - a.deficit[r]);
 
-    // ponteiros
     let i = 0, j = 0;
     while (i < donors.length && j < takers.length) {
-      const d = donors[i], t = takers[j];
 
-      // quanto ainda posso enviar/receber
-      const sendable  = Math.min(d.excess[resType], d.capLeft);
+      const d = donors[i];
+      const t = takers[j];
+
+      const sendable   = Math.min(d.excess[r], d.capLeft);
       const receivable = Math.min(
-        t.deficit[resType],
-        t.store - (t.res[resType] + t.incoming?.[resType] || 0)
+        t.deficit[r],
+        t.store - (t.res[r] + (t.incoming?.[r] || 0))
       );
 
-      if (sendable <= 0) { i++; continue; }
+      if (sendable   <= 0) { i++; continue; }
       if (receivable <= 0) { j++; continue; }
 
-      // quantidade bruta a transferir
       let qty = Math.min(sendable, receivable);
 
-      // opcionalmente arredonda p/ múltiplo de carry
-      if (round) qty = ceilTo(qty, carry);
-
-      if (qty > 0) {
-        // registra ordem
-        orders.push({
-          from: d.id, to: t.id,
-          wood:  resType === 'wood' ? qty : 0,
-          clay:  resType === 'clay' ? qty : 0,
-          iron:  resType === 'iron' ? qty : 0
-        });
-
-        // desconta dos saldos
-        d.excess [resType] -= qty;
-        d.capLeft         -= qty;
-        t.deficit[resType] -= qty;
-        t.incoming = t.incoming || { wood:0, clay:0, iron:0 };
-        t.incoming[resType] += qty;
+      if (round) {
+        qty = ceilTo(qty, carry);
+        qty = Math.min(qty, sendable, receivable);
       }
 
-      // avança ponteiros se algum “zerou”
-      if (d.excess[resType] <= 0 || d.capLeft <= 0) i++;
-      if (t.deficit[resType] <= 0)                   j++;
+      if (qty > 0) {
+        orders.push({
+          from: d.id, to: t.id,
+          wood : r === 'wood'  ? qty : 0,
+          stone: r === 'stone' ? qty : 0,
+          iron : r === 'iron'  ? qty : 0
+        });
+
+        d.excess [r] -= qty;
+        d.capLeft     = Math.max(0, d.capLeft - qty);
+        t.deficit[r] -= qty;
+        t.incoming = t.incoming || { wood:0, stone:0, iron:0 };
+        t.incoming[r] += qty;
+      }
+
+      if (d.excess [r] <= 0 || d.capLeft <= 0) i++;
+      if (t.deficit[r] <= 0)                      j++;
     }
   });
 
   return orders;
 }
 
-function getVillas(){
-    /*URLReq = "game.php?&screen=overview_villages&mode=prod&page=-1&";
-    var villagesData = [];
-    $.get(URLReq, function () {
-        console.log("Managed to grab the page");
-    }).done(function (page) {*/
-        const page = document.documentElement.innerHTML;
-        allWoodObjects = $(page).find(".res.wood,.warn_90.wood,.warn.wood");
-        allClayObjects = $(page).find(".res.stone,.warn_90.stone,.warn.stone");
-        allIronObjects = $(page).find(".res.iron,.warn_90.iron,.warn.iron")
-        allVillages = $(page).find(".quickedit-vn");
+/* ------------------------------------------------------------------ *
+ * C O L E T A   D E   D A D O S                                       *
+ * ------------------------------------------------------------------ */
 
-        //grabbing wood amounts
-        for (var i = 0; i < allWoodObjects.length; i++) {
-            n = allWoodObjects[i].textContent;
-            n = n.replace(/\./g, '').replace(',', '');
-            allWoodTotals.push(n);
-        };
+function getVillas() {
 
-        //grabbing clay amounts
-        for (var i = 0; i < allClayObjects.length; i++) {
-            n = allClayObjects[i].textContent;
-            n = n.replace(/\./g, '').replace(',', '');
-            allClayTotals.push(n);
-        };
+  const $page = $(document.documentElement);
 
-        //grabbing iron amounts
-        for (var i = 0; i < allIronObjects.length; i++) {
-            n = allIronObjects[i].textContent;
-            n = n.replace(/\./g, '').replace(',', '');
-            allIronTotals.push(n);
-        };
+  const woodTotals      = [];
+  const stoneTotals     = [];
+  const ironTotals      = [];
+  const warehouseCaps   = [];
+  const availMerchants  = [];
+  const farmUsed        = [];
 
-        //grabbing warehouse capacity
-        for (var i = 0; i < allVillages.length; i++) {
-            warehouseCapacity.push(allIronObjects[i].parentElement.nextElementSibling.innerHTML);
-        };
+  const woodEls  = $page.find('.res.wood, .warn_90.wood, .warn.wood');
+  const stoneEls = $page.find('.res.stone, .warn_90.stone, .warn.stone');
+  const ironEls  = $page.find('.res.iron, .warn_90.iron, .warn.iron');
+  const villageEls = $page.find('.quickedit-vn');
 
-        //grabbing available merchants and total merchants
-        for (var i = 0; i < allVillages.length; i++) {
-            availableMerchants.push(allIronObjects[i].parentElement.nextElementSibling.nextElementSibling.innerText.match(/(\d*)\/(\d*)/)[1]);
-            totalMerchants.push(allIronObjects[i].parentElement.nextElementSibling.nextElementSibling.innerText.match(/(\d*)\/(\d*)/)[2]);
-        };
+  const num = txt => Number(txt.replace(/\./g,'').replace(',',''));
 
-        //grabbing used farmspace and total farmspace
-        for (var i = 0; i < allVillages.length; i++) {
-            farmSpaceUsed.push(allIronObjects[i].parentElement.nextElementSibling.nextElementSibling.nextElementSibling.innerText.match(/(\d*)\/(\d*)/)[1]);
-            farmSpaceTotal.push(allIronObjects[i].parentElement.nextElementSibling.nextElementSibling.nextElementSibling.innerText.match(/(\d*)\/(\d*)/)[2]);
-        };
+  woodEls .each((_,el) => woodTotals .push(num(el.textContent)));
+  stoneEls.each((_,el) => stoneTotals.push(num(el.textContent)));
+  ironEls .each((_,el) => ironTotals .push(num(el.textContent)));
 
-        //making one big array to work with
-        for (var i = 0; i < allVillages.length; i++) {
-            so = false;
-            if (farmSpaceUsed[i] >= 24000) so = true;
-            villagesData.push({
-                "id": allVillages[i].dataset.id,
-                "name": allVillages[i].innerText.trim().match(/\d+\|\d+/)[0],
-                "store": warehouseCapacity[i],
-                "merchants": availableMerchants[i],
-                "sendOnly": so,
-                "res":{"wood": allWoodTotals[i],
-                "stone": allClayTotals[i],
-                "iron": allIronTotals[i]}
-                //"url": allVillages[i].children[0].children[0].href,
-                //"name": allVillages[i].innerText.trim(),
-                //"totalMerchants": totalMerchants[i],
-                //"farmSpaceUsed": farmSpaceUsed[i],
-                //"farmSpaceTotal": farmSpaceTotal[i]
-            });
-        };
-    //});
-    return villagesData;
-}
-console.log("OK");
-const villas = getVillas();
-console.table(villas);
-const orders = balanceResources(villas, { keepRatio:0.0 });
-console.table(orders);
+  villageEls.each((i,el) => {
+    const row = ironEls[i].parentElement;
 
-// ───────── ENVIO ─────────
+    warehouseCaps .push(Number(row.nextElementSibling.textContent.replace(/\D/g,'')));
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+    const mercMatch = row.nextElementSibling.nextElementSibling.textContent.match(/(\d+)\s*\/\s*(\d+)/);
+    availMerchants.push(Number(mercMatch[1]));
+
+    const farmMatch = row.nextElementSibling.nextElementSibling.nextElementSibling.textContent.match(/(\d+)\s*\/\s*(\d+)/);
+    farmUsed.push(Number(farmMatch[1]));
+  });
+
+  /* ----- estrutura final ----------------------------------------- */
+  const villas = [];
+  villageEls.each((i,el) => {
+    villas.push({
+      id:        el.dataset.id,
+      name:      el.textContent.trim().match(/\d+\|\d+/)[0],
+      store:     warehouseCaps [i],
+      merchants: availMerchants[i],
+      sendOnly:  farmUsed[i] >= 24000,
+      res: {
+        wood : woodTotals [i],
+        stone: stoneTotals[i],
+        iron : ironTotals [i]
+      }
+    });
+  });
+
+  return villas;
 }
 
-async function processarEnviosComIntervalo(dados) {
-    for (const item of dados) {
-        sendResource(item[0], item[1], item[2], item[3], item[4]);
-        await sleep(800); // espera 0,5 segundo entre envios
-    }
-}
+/* ------------------------------------------------------------------ *
+ * E N V I O   A U T O M Á T I C O                                     *
+ * ------------------------------------------------------------------ */
 
 function sendResource(sourceID, targetID, wood, stone, iron) {
-    const payload = { target_id: targetID, wood, stone, iron };
-    TribalWars.post("market", { ajaxaction: "map_send", village: sourceID }, payload, (res) => {
-        UI.SuccessMessage(res.message);
-        console.log(res.message);
-    }, false);
+  const payload = { target_id: targetID, wood, stone, iron };
+  TribalWars.post(
+    'market',
+    { ajaxaction:'map_send', village:sourceID },
+    payload,
+    res => UI.SuccessMessage(res.message),
+    false
+  );
 }
 
-if (confirm("Começar?")) {
-    processarEnviosComIntervalo(orders);
-}
-// ───────── EXEMPLO DE USO ─────────
-/*
-const villas = [
-  {
-    id:'001', name:'Vila 1', store:30000, merchants:10, sendOnly:false,
-    res:{ wood:20000, clay:5000, iron:10000 }
-  },
-  {
-    id:'002', name:'Vila 2', store:24000, merchants:12, sendOnly:true,
-    res:{ wood:25000, clay:22000, iron:24000 }
-  },
-  {
-    id:'003', name:'Vila 3', store:18000, merchants: 8, sendOnly:false,
-    res:{ wood: 2000, clay:12000, iron: 3000 }
+async function processarEnviosComIntervalo(orders) {
+  for (const o of orders) {
+    sendResource(o.from, o.to, o.wood, o.stone, o.iron);
+    await sleep(800);   // 0,8 s entre envios
   }
-];
+}
 
-const orders = balanceResources(villas, { keepRatio:0.40 });
+/* ------------------------------------------------------------------ *
+ * I N I C I A                                                        *
+ * ------------------------------------------------------------------ */
+
+console.log('Coletando dados...');
+const villas  = getVillas();
+console.table(villas);
+
+console.log('Calculando remessas...');
+const orders  = balanceResources(villas, { keepRatio:0.0 });
 console.table(orders);
-*/
+
+if (orders.length === 0) {
+  UI.InfoMessage('Nenhuma remessa necessária.');
+} else if (confirm(`Gerar ${orders.length} ordens de mercado?`)) {
+  processarEnviosComIntervalo(orders);
+}
