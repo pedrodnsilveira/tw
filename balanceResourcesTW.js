@@ -160,11 +160,12 @@ function balanceResources(villas, {
 }
 
 function getVillas(){
-    URLReq = "game.php?&screen=overview_villages&mode=prod&page=-1&";
+    /*URLReq = "game.php?&screen=overview_villages&mode=prod&page=-1&";
     var villagesData = [];
     $.get(URLReq, function () {
         console.log("Managed to grab the page");
-    }).done(function (page) {
+    }).done(function (page) {*/
+        const page = document.documentElement.innerHTML;
         allWoodObjects = $(page).find(".res.wood,.warn_90.wood,.warn.wood");
         allClayObjects = $(page).find(".res.stone,.warn_90.stone,.warn.stone");
         allIronObjects = $(page).find(".res.iron,.warn_90.iron,.warn.iron")
@@ -228,10 +229,10 @@ function getVillas(){
                 //"farmSpaceTotal": farmSpaceTotal[i]
             });
         };
-    });
+    //});
     return villagesData;
 }
-
+console.log("OK");
 const villas = getVillas();
 console.table(villas);
 const orders = balanceResources(villas, { keepRatio:0.0 });
