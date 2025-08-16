@@ -413,7 +413,7 @@ function createList() {
                             </td>
                         </tr>
                         <tr style="padding-right: 50px; text-align: right;">
-                            <input type="button" class="btn evt-confirm-btn btn-confirm-yes" id="sendResourcesTotal" value="Enviar tudo" onclick="sendResourcesTotal()">
+                            <input type="button" class="btn btn-confirm-yes" id="sendResourcesTotal" value="Enviar tudo" onclick="sendResourcesTotal()">
                         </tr>
                     </tbody>
                 </table>
