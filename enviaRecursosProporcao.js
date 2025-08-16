@@ -412,10 +412,8 @@ function createList() {
                                 <font size="1">${langShinko[18]}</font>
                             </td>
                         </tr>
-                        <tr>
-                            <td style="text-align: left;">
-                                <input type="button" class="btn evt-confirm-btn btn-confirm-yes" id="sendResourcesTotal" value="Enviar tudo" onclick="sendResourcesTotal()">
-                            </td>
+                        <tr style="padding-right: 50px; text-align: right;">
+                            <input type="button" class="btn evt-confirm-btn btn-confirm-yes" id="sendResourcesTotal" value="Enviar tudo" onclick="sendResourcesTotal()">
                         </tr>
                     </tbody>
                 </table>
