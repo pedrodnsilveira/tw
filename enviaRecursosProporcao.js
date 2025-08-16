@@ -339,15 +339,15 @@ function sendResourcesTotal(){
     );
 
     let index = 0;
-    alert(inputs.length);
-    /*const intervalo = setInterval(() => {
+
+    const intervalo = setInterval(() => {
         if (index >= inputs.length) {
             clearInterval(intervalo); // para o loop quando acabar
             return;
         }
         inputs[index].click(); // dispara o onclick do input
         index++;
-    }, 500); // 500ms = 0,5 segundo*/
+    }, 500); // 500ms = 0,5 segundo
     
 }
 
@@ -413,7 +413,15 @@ function createList() {
                             </td>
                         </tr>
                         <tr style="padding-right: 50px; text-align: right;">
-                            <input type="button" class="btn btn-confirm-yes" id="sendResourcesTotal" value="Enviar tudo" onclick="sendResourcesTotal()">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align:center">
+                                <input type="button" class="btn btn-confirm-yes" id="sendResourcesTotal" value="Enviar tudo" onclick="sendResourcesTotal()">
+                            </td>
                         </tr>
                     </tbody>
                 </table>
