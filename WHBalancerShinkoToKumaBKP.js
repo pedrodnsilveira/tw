@@ -1,3 +1,2008 @@
+javascript:
+/*jshint esversion: 6 */
 //script by Sophie "Shinko to Kuma". Skype: live:sophiekitsune discord: Sophie#2418 website: https://shinko-to-kuma.my-free.website/
-// Updated on 13 oktober, improving data grabbing cycles, cleaning up after running script
-var _0x1013=['name','Reached\x20list\x20creation','scrollHeight','&screen=overview_villages&mode=trader&type=inc&page=-1&type=inc','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20','checked','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20width=\x2250\x22\x20style=\x22text-align:center\x22>','post','Ã–sszes\x20vas','\x22\x20class=\x22sophLink\x22>','test','</table></center></div>','swedish','Send\x20resources','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>Actual\x20ironaverage\x20after\x20correction:\x20','Madeira\x20por\x20aldeia','source','it_IT','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22progressbar\x22\x20style=\x22width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#36393f;\x22><div\x20id=\x22progress\x22\x20style=\x22width:\x200%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2035px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#4CAF50;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2032px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','#production_table\x20th','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22res\x20stone\x22\x20style=\x22padding-left:1em\x22>&nbsp;</span>','Î Î·Î»ÏŒÏ‚\x20Î±Î½Î±\x20Ï‡Ï‰ÏÎ¹ÏŒ','player','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','Created\x20by\x20Sophie\x20\x27Shinko\x20to\x20Kuma\x27','css',',\x20or\x20village\x20points\x20are\x20higher\x20than\x20the\x20required\x20setting:\x20','Lehm\x20pro\x20Dorf','Lemn\x20per\x20sat','push','ØªÙ…Øª\x20Ø§Ù„Ø¨Ø±Ù…Ø¬Ù‡\x20Ù…Ù†\x20\x27Shinko\x20to\x20Kuma\x27','#trades_table\x20tr','getItem','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','getElementById','round','Afstand','\x22\x20class=\x22slider\x22\x20name=\x22highPoints\x22\x20oninput=\x22sliderChange(\x27highPoints\x27,this.value)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20>\x20<output\x20id=\x22highPoints\x22></output>\x20points</td></tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22padding:\x206px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20for=\x22highFarm\x22>High\x20farm</label></td><td\x20style=\x22padding:\x206px;\x22><input\x20type=\x22range\x22\x20min=\x220\x22\x20max=\x2233000\x22\x20step=\x2210\x22\x20value=\x22','#contentContainer','Ijzer','find','get','Ø§Ù„Ù‡Ø¯Ù','Done\x20with\x20this\x20cycle','warehouseCapacity','adding\x20res\x20underway\x20to\x20target','Premium\x20Beurs','match','Holz','Total\x20fier','highPoints','Ferro\x20por\x20aldeia','pushed\x20to\x20clean\x20array','Agyag','Total\x20de\x20madeira','.mheader.ressources','Lemn','desktop','Î£ÏÎ½Î¿Î»Î¿\x20Ï€Î·Î»Î¿Ï','Average\x20is\x20higher\x20than\x20capacity,\x20reduce','Too\x20much\x20clay\x20incoming\x20in\x20','Total\x20IsÃ¤','.collapsible','.res.stone,.warn_90.stone,.warn.stone','Legno\x20totale','floor','span.bonus_icon_33','mimimalistGray','map_send','Ø·Ù…ÙŠ\x20Ù„ÙƒÙ„\x20Ù‚Ø±ÙŠØ©','href','splice','Ferro\x20per\x20villaggio','#sendResources','split','\x20,\x20','userAgent','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sophRowA\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#F4E4BC;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophRowB\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#fff5da;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophHeader\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#c6a768;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#803000;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophLink\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:#803000;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20linear-gradient(to\x20bottom,\x20#947a62\x200%,#7b5c3d\x2022%,#6c4824\x2030%,#6c4824\x20100%)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:white\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie:hover\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20linear-gradient(to\x20bottom,\x20#b69471\x200%,#9f764d\x2022%,#8f6133\x2030%,#6c4d2d\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.collapsible\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#F4E4BC;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20left;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20outline:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.active,\x20.collapsible:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20\x20#fff5da;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.collapsible:after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x27+\x27;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20float:\x20right;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-left:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.active:after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x22-\x22;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.content\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-height:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20max-height\x200.2s\x20ease-out;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20\x20#5b5f66;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.item-padded\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.flex-container\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:center\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.submenu{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:0px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:37px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-width:240px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20</style>','ÎžÏÎ»Î¿\x20Î±Î½Î±\x20Ï‡Ï‰ÏÎ¹ÏŒ','style','.res.wood,.warn_90.wood,.warn.wood','Holz\x20pro\x20Dorf','.content-border','\x22\x20class=\x22slider\x22\x20name=\x22lowPoints\x22\x20oninput=\x22sliderChange(\x27lowPoints\x27,this.value)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<\x20<output\x20id=\x22lowPoints\x22></output>\x20points</td></tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22padding:\x206px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20for=\x22highPoints\x22>Finished\x20villages</label></td><td\x20style=\x22padding:\x206px;\x22><input\x20type=\x22range\x22\x20min=\x220\x22\x20max=\x2213000\x22\x20step=\x2210\x22\x20value=\x22','Villaggio\x20di\x20origine','el_GR','Sistem','<div\x20class=\x27sophRowA\x27\x20style=\x27width:800px\x27\x20><table\x20style=\x27width:100%\x27><tr\x20class=\x22sophHeader\x22><td>Village</td><td>Points</td><td>Merchants\x20left</td><td\x20colspan=\x223\x22>Resources</td><td>WH\x20capacity</td></tr>','Iron','SuccessMessage','Argilla','Iron\x20per\x20village','Built\x20out,\x20reducing\x20res\x20left\x20in\x20village\x20','Ù…Ø¬Ù…ÙˆØ¹\x20Ø§Ù„Ø·Ù…ÙŠ','Legno',':button[id^=\x22building\x22]','\x20wood,\x20','.\x20Adjusting\x20what\x20we\x20leave\x20at\x20home\x20to\x20be\x20','Î Î·Î»ÏŒÏ‚','attr','\x20clay,\x20and\x20','Excess\x20is\x20bigger\x20than\x20current\x20available\x20resources,\x20setting\x20it\x20to\x20current\x20available','dataset','Argilla\x20totale','Villaggio\x20obiettivo','class=\x27sophRowA\x27','<div\x20class=\x27sophRowA\x27\x20style=\x27width:800px\x27\x20><center><h1>Shortages:</h1><table\x20class=\x27sophHeader\x27><tr\x20class=\x27sophHeader\x27><td>Village\x20name</td><td>Res</td></tr>','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>','stringify','innerHTML','Ø­Ø¯ÙŠØ¯\x20Ù„ÙƒÙ„\x20Ù‚Ø±ÙŠØ©','needsMorePercentage','distance','availableMerchants','\x20height=\x2240\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','Creating\x20line\x20','Balanceador\x20de\x20recursos','\x20height=\x2240\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td><a\x20href=\x22','#building','Argila','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20class=\x27sophRowA\x27>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>Actual\x20woodaverage\x20after\x20correction:\x20','Sat\x20Tinta','-----------------------------------------------------------------------------------------','url','Verstuur\x20grondstoffen','With\x20your\x20current\x20settings,\x20you\x20end\x20up\x20having\x20a\x20lot\x20of\x20excess\x20resources\x20that\x20can\x27t\x20be\x20assigned.\x20Consider\x20increasing\x20the\x20\x27highFarm\x27\x20setting\x20to\x20a\x20higher\x20value,\x20or\x20increasing\x20the\x20lowPoints\x20value\x20so\x20more\x20villages\x20are\x20included\x20to\x20have\x20priority.\x20This\x20is\x20usually\x20due\x20to\x20having\x20a\x20lot\x20of\x20villages\x20completely\x20built\x20out,\x20or\x20having\x20very\x20high\x20average\x20resources,\x20and\x20not\x20a\x20lot\x20of\x20villages\x20that\x20need\x20resources\x20badly.\x0aIf\x20you\x20just\x20want\x20to\x20balance\x20evenly,\x20set\x20highFarm\x20to\x2099999\x0a\x0aWith\x20the\x20current\x20settings,\x20you\x20are\x20trying\x20to\x20assign\x20an\x20average\x20of\x20','length','.res.miron,.warn_90.miron,.warn.miron','highFarm','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22sendResources\x22\x20class=\x22flex-container\x20sophHeader\x22\x20style=\x22position:\x20relative\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22sophRowA\x20collapsible\x22\x20style=\x22width:\x20250px;min-width:\x20230px;\x22>Open\x20settings\x20menu</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22content\x20submenu\x22\x20style=\x22width:\x20500px;height:500px;z-index:99999\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<form\x20id=\x22settings\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<table\x20style=\x22border-spacing:\x202px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22padding:\x206px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20for=\x22isMinting\x22>Ignore\x20settings</label></td><td\x20style=\x22padding:\x206px;\x22><input\x20type=\x22checkbox\x22\x20name=\x22isMinting\x22></td></tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22padding:\x206px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20for=\x22lowPoints\x22>Prioritise</label></td><td\x20style=\x22padding:\x206px;\x22><input\x20type=\x22range\x22\x20min=\x220\x22\x20max=\x2213000\x22\x20step=\x2210\x22\x20value=\x22','Argila\x20por\x20aldeia','Total\x20wood',')\x20in\x20','toString','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sophRowA\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#fecd00;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#006aa8;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophRowB\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#ffea00;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#006aa8;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophHeader\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#006aa8;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#ffffdf;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophLink\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:#034166;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#00a1fe\x200%,\x20#5d9afd\x2030%,\x20#1626ff\x2080%,\x20#1f15e1\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie:hover\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#b8bcf2\x200%,\x20#babbfc\x2030%,\x20#8c86fa\x2080%,\x20#969fff\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.collapsible\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#fecd00;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20left;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20outline:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.active,\x20.collapsible:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20\x20#ffea00;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.collapsible:after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x27+\x27;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20float:\x20right;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-left:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.active:after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x22-\x22;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.content\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-height:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20max-height\x200.2s\x20ease-out;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20\x20#5b5f66;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.item-padded\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.flex-container\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:center\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.submenu{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:0px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:37px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-width:240px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20</style>','&#10;Iron\x20in\x20WH:\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Clay:\x20','Warehouse\x20balancer','game.php?&screen=overview_villages&mode=prod&page=-1&','error','Madeira','Î§Ï‰ÏÎ¹ÏŒ\x20ÏƒÏ„ÏŒÏ‡Î¿Ï‚','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Wood:\x20','builtOutPercentage','Warenhuis\x20balancer','maxHeight','append','Î‘Ï€Î¿ÏƒÏ„Î¿Î»Î®\x20Ï€ÏŒÏÏ‰Î½','Hout\x20per\x20dorp','Village:\x20','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Max\x20final\x20capacity:\x20','undefined','replace','combined\x20the\x20sendings','Rohstoff\x20vrschicke','Nyersanyagok\x20kÃ¼ldÃ©se','Î£Î¯Î´ÎµÏÎ¿\x20Î±Î½Î±\x20Ï‡Ï‰ÏÎ¹ÏŒ','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20class=\x27sophRowB\x27>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','settingsWHBalancerSophie','\x22\x20class=\x22slider\x22\x20name=\x22highFarm\x22\x20oninput=\x22sliderChange(\x27highFarm\x27,this.value)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<output\x20id=\x22highFarm\x22></output>\x20pop</td></tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22padding:\x206px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20for=\x22builtOutPercentage\x22>WH\x20capacity\x20finished\x20villages:\x20</label></td><td\x20style=\x22padding:\x206px;\x22><input\x20type=\x22range\x22\x20min=\x220\x22\x20max=\x221\x22\x20step=\x220.01\x22\x20value=\x22','active','innerText','div[id*=\x27restart\x27]','\x20iron\x20per\x20village\x20that\x20isn\x27t\x20considered\x20small,\x20or\x20fully\x20built\x20(currently\x20','#highPoints','\x22\x20class=\x22slider\x22\x20name=\x22needsMorePercentage\x22\x20oninput=\x22sliderChange(\x27needsMorePercentage\x27,this.value)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<output\x20id=\x22needsMorePercentage\x22></output></td></tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22padding:\x206px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22button\x22\x20class=\x22btn\x20evt-confirm-btn\x20btn-confirm-yes\x22\x20value=\x22Save\x22\x20onclick=\x22saveSettings();\x22/></td></tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20colspan=\x222\x22\x20style=\x22padding:\x206px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22padding:5px\x22><font\x20size=\x221\x22>Script\x20by\x20Sophie\x20\x22Shinko\x20to\x20Kuma\x22</font></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</table>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</form>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<table\x20id=\x22tableSend\x22\x20width=\x22100%\x22\x20class=\x22sophHeader\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tbody\x20id=\x22appendHere\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22sophHeader\x22\x20colspan=7\x20width=â€œ550â€\x20style=\x22text-align:center\x22\x20>','</table></div>','hu_HU','Finished\x20sending!','Sistema','Wood\x20per\x20village','Source\x20village','of\x20the\x20list','Ferro',',\x20and\x20increasing\x20average\x20for\x20all\x20other\x20villages','class=\x27sophRowB\x27','remove','Ù…Ø¬Ù…ÙˆØ¹\x20Ø§Ù„Ø­Ø¯ÙŠØ¯','target','Premium\x20exchange','Ø­Ø¯ÙŠØ¯','\x20</a></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>\x20<a\x20href=\x22','Ferro\x20totale','Total\x20clay','Finished','nextElementSibling','Clay','Totaal\x20hout','message','removed\x20empty\x20lines','market','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22sophHeader\x22\x20width=\x2225%\x22\x20style=\x22text-align:center\x22>','ro_RO','Total\x20lemn','textContent','https://v.tylercamp.me/hc/WHBalancerSophie','nl_NL','Manda\x20risorse','SzÃ¡rmazÃ¡si\x20hely','isMinting','#mobileHeader','iron','Leem','input[name=\x27isMinting\x27]','disabled','Troca\x20Premium','<span\x20class=\x22icon\x20header\x20iron\x22>\x20</span></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center\x22><input\x20type=\x22button\x22\x20class=\x22btn\x20btnSophie\x22\x20id=\x22building\x22\x20value=\x22','trim','>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>','points','\x27\x20class=\x27sophRowA\x27','Wood','#highFarm','Premium-Depot','sitter','%\x20of\x20WH\x20capacity','Creato\x20da\x20\x20Sophie\x20\x27Shinko\x20to\x20Kuma\x27','.res.mwood,.warn_90.mwood,.warn.mwood','Distance','keys','Systeem','.flex-container','ar_AE','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Iron:\x20','\x20too\x20small\x20for\x20average,\x20reducing\x20resources,\x20and\x20increasing\x20for\x20every\x20other\x20village','</a>\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20width=\x2250\x22\x20style=\x22text-align:center\x22>','content','prop','lowPoints','Ziel\x20Dorf','#totals','\x27\x20class=\x27sophRowB\x27','focus','children','Gemaakt\x20door\x20Sophie\x20\x27Shinko\x20to\x20Kuma\x27','Legno\x20per\x20villaggio','Echilibrare\x20resurse','\x20are\x20considered\x20finished),\x20to\x20spread\x20evenly.\x20Clearly,\x20that\x20is\x20not\x20a\x20good\x20idea','Ø§Ù„Ø£ØµÙ„','Î£ÏÎ½Î¿Î»Î¿\x20ÏƒÎ¹Î´Î®ÏÎ¿Ï…','indexOf','parentElement','Too\x20much\x20iron\x20incoming\x20in\x20','game.php?&screen=overview_villages&mode=trader&type=inc&page=-1&type=inc','System','fail','.btn-pp','value','.header.population','game.php?t=','Current\x20averages:\x20','</table><h1>Excesses:</h1><table\x20class=\x27sophHeader\x27><tr\x20class=\x27sophHeader\x27><td>Village\x20name</td><td>Res</td></tr>','addEventListener','Grabbed\x20transport\x20page','#content_value','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Warehouse\x20capacity:\x20','<span\x20class=\x22icon\x20header\x20wood\x22>\x20</span></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20width=\x2250\x22\x20style=\x22text-align:center\x22>','class','width','#builtOutPercentage','\x22\x20class=\x22sophLink\x22\x20data-toggle=\x22tooltip\x22\x20title=\x22Wood\x20in\x20WH:\x20','Î ÏÎ¿Î­Î»ÎµÏ…ÏƒÎ·','Facut\x20de\x20Sophie\x20\x27Shinko\x20to\x20Kuma\x27','wood','#settings','locale','.res.iron,.warn_90.iron,.warn.iron','Total\x20Lehm','sort','hypot','pt_BR','Ø¥Ø±Ø³Ø§Ù„\x20Ø§Ù„Ù…ÙˆØ§Ø±Ø¯','\x22\x20onclick=\x22sendResource(','Destino','.res.mstone,.warn_90.mstone,.warn.mstone','Totaal\x20leem','Done.','\x20&#10;Clay\x20in\x20WH:\x20','Trimite\x20resurse','farmSpaceUsed','IsÃ¤','Nyersanyag\x20kiegyenlÃ­tÅ‘','Ø·Ù…ÙŠ','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22sophHeader\x22\x20width=\x225%\x22\x20style=\x22text-align:center\x22>','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Clay:\x20','stone','&screen=overview_villages&mode=prod&page=-1&','<span\x20class=\x22icon\x20header\x20stone\x22>\x20</span></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20width=\x2250\x22\x20style=\x22text-align:center\x22>','#needsMorePercentage','de_CH',',\x20clayadjustement:\x20','#lowPoints','Ã–sszes\x20agyag','.quickedit-vn','Ø§Ù„Ù…Ø³Ø§ÙØ©','$1.$2','classList','Î‘Ï€ÏŒÏƒÏ„Î±ÏƒÎ·','villageID','Too\x20much\x20wood\x20incoming\x20in\x20','Total\x20Holz','show','a[href*=\x22market\x22]','mobile','#tableSend\x20tr','adding\x20rows\x20to\x20be\x20received\x20to\x20the\x20res\x20at\x20the\x20target','#progress','Latest\x20update:\x2030\x20April\x202020\x20-\x20Sophie\x20\x27Shinko\x20to\x20Kuma\x27','setItem','Switching\x20to\x20standard\x20colors','prepend','done','Clay\x20per\x20village','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:right;padding-right:2em\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Doel','Warehouse\x20in\x20village\x20','toggle','Total\x20iron','finished','Fa/falu','Î£ÏÎ½Î¿Î»Î¿\x20Î¾ÏÎ»Î¿Ï…','Filled\x20up\x20the\x20sendings','ÎžÏÎ»Î¿','Schimb\x20Premium','#appendHere','closest','IsÃ¤\x20pro\x20Dorf','Origem','</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>Actual\x20clayaverage\x20after\x20correction:\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22res\x20iron\x22\x20style=\x22padding-left:1em\x22>&nbsp;</span>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sophRowA\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#FEC5E5;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#E11584;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophRowB\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#fcd4eb;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#E11584;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophHeader\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#F699CD;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#E11584;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophLink\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:#7d3873;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#FEC5E5\x200%,\x20#FD5DA8\x2030%,\x20#FF1694\x2080%,\x20#E11584\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie:hover\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#F2B8C6\x200%,\x20#FCBACB\x2030%,\x20#FA86C4\x2080%,\x20#FE7F9C\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.collapsible\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#FEC5E5;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20left;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20outline:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.active,\x20.collapsible:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20\x20#fcd4eb;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.collapsible:after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x27+\x27;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20float:\x20right;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-left:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.active:after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x22-\x22;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.content\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-height:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20max-height\x200.2s\x20ease-out;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20\x20#5b5f66;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.item-padded\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.flex-container\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:center\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.submenu{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:0px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:37px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-width:240px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20</style>','Î£Î¯Î´ÎµÏÎ¿','Target\x20village','Ù…Ø¬Ù…ÙˆØ¹\x20Ø§Ù„Ø®Ø´Ø¨','pink','Vas','TÃ¡volsÃ¡g','val','Total\x20de\x20argila','log','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sophRowA\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#dedede;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#545454;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophRowB\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#f1f1f1;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#545454;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophHeader\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#ded9d9;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#545454;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophLink\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:#1626ff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#00a1fe\x200%,\x20#5d9afd\x2030%,\x20#1626ff\x2080%,\x20#1f15e1\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:white\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie:hover\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#b8bcf2\x200%,\x20#babbfc\x2030%,\x20#8c86fa\x2080%,\x20#969fff\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.collapsible\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#dedede;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20left;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20outline:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.active,\x20.collapsible:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20\x20#f1f1f1;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.collapsible:after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x27+\x27;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20float:\x20right;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-left:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.active:after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x22-\x22;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.content\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-height:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20max-height\x200.2s\x20ease-out;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20\x20#5b5f66;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.item-padded\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.flex-container\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:center\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.submenu{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:0px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:37px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-width:240px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20</style>','Incoming\x20resources:\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Wood:\x20','.icon.header','&#10;Warehouse\x20capacity:\x20','\x20id=\x27','Farm\x20almost\x20full\x20('];(function(_0x152c2f,_0x101336){var _0x44de3f=function(_0x4f5c2d){while(--_0x4f5c2d){_0x152c2f['push'](_0x152c2f['shift']());}};_0x44de3f(++_0x101336);}(_0x1013,0x74));var _0x44de=function(_0x152c2f,_0x101336){_0x152c2f=_0x152c2f-0x0;var _0x44de3f=_0x1013[_0x152c2f];return _0x44de3f;};var _0x3eecd2=_0x44de;_0x431924:console[_0x3eecd2('0xdf')](_0x3eecd2('0xbf'));$[_0x3eecd2('0xed')](_0x3eecd2('0x4f'));var testPage,is_mobile=!!navigator[_0x3eecd2('0x132')][_0x3eecd2('0x115')](/iphone|android|blackberry/ig)||![],warehouseCapacity=[],allWoodTotals=[],allClayTotals=[],allIronTotals=[],availableMerchants=[],totalMerchants=[],farmSpaceUsed=[],farmSpaceTotal=[],villagePoints=[],villagesData=[],villageID=[],allWoodObjects,allClayObjects,allIronObjects,allVillages,totalsAndAverages='',incomingRes={},totalWood,totalStone,totalIron,merchantOrders=[],excessResources=[],shortageResources=[],links=[],cleanLinks=[],stillShortage=[],stillExcess=[];function init(){warehouseCapacity=[],allWoodTotals=[],allClayTotals=[],allIronTotals=[],availableMerchants=[],totalMerchants=[],farmSpaceUsed=[],farmSpaceTotal=[],villagePoints=[],villagesData=[],villageID=[],(allWoodObjects,allClayObjects,allIronObjects,allVillages),totalsAndAverages='',incomingRes={},(totalWood,totalStone,totalIron),merchantOrders=[],excessResources=[],shortageResources=[],links=[],cleanLinks=[],stillShortage=[],stillExcess=[];}function cleanup(){warehouseCapacity=[],allWoodTotals=[],allClayTotals=[],allIronTotals=[],availableMerchants=[],totalMerchants=[],farmSpaceUsed=[],farmSpaceTotal=[],villagePoints=[],villageID=[],(allWoodObjects,allClayObjects,allIronObjects,allVillages),incomingRes={},merchantOrders=[],links=[],cleanLinks=[];}var langShinko=[_0x3eecd2('0x15'),'Source\x20village',_0x3eecd2('0xd8'),_0x3eecd2('0x66'),'Wood',_0x3eecd2('0x46'),_0x3eecd2('0x13e'),_0x3eecd2('0xf3'),_0x3eecd2('0xfe'),_0x3eecd2('0xf'),_0x3eecd2('0x43'),_0x3eecd2('0xc9'),_0x3eecd2('0x36'),'Clay\x20per\x20village',_0x3eecd2('0x141'),_0x3eecd2('0x3f'),_0x3eecd2('0x80')];game_data[_0x3eecd2('0x95')]=='en_DK'&&(langShinko=[_0x3eecd2('0x15'),_0x3eecd2('0x37'),_0x3eecd2('0xd8'),_0x3eecd2('0x66'),_0x3eecd2('0x5f'),_0x3eecd2('0x46'),_0x3eecd2('0x13e'),_0x3eecd2('0xf3'),'Created\x20by\x20Sophie\x20\x27Shinko\x20to\x20Kuma\x27',_0x3eecd2('0xf'),_0x3eecd2('0x43'),_0x3eecd2('0xc9'),_0x3eecd2('0x36'),_0x3eecd2('0xc4'),_0x3eecd2('0x141'),_0x3eecd2('0x3f'),_0x3eecd2('0x80')]);game_data['locale']==_0x3eecd2('0xad')&&(langShinko=[_0x3eecd2('0x15'),'HÃ¤rkunfts\x20Dorf',_0x3eecd2('0x71'),'Distanz',_0x3eecd2('0x116'),'Lehm',_0x3eecd2('0xa4'),_0x3eecd2('0x26'),_0x3eecd2('0xfe'),_0x3eecd2('0xb8'),_0x3eecd2('0x97'),_0x3eecd2('0x123'),_0x3eecd2('0x137'),_0x3eecd2('0x101'),_0x3eecd2('0xd2'),_0x3eecd2('0x61'),_0x3eecd2('0x80')]);game_data[_0x3eecd2('0x95')]==_0x3eecd2('0x4c')&&(langShinko=[_0x3eecd2('0x78'),'Sat\x20Sursa',_0x3eecd2('0x5'),'Distanta',_0x3eecd2('0x11e'),'Argila','Fier',_0x3eecd2('0xa2'),_0x3eecd2('0x92'),_0x3eecd2('0x4d'),'Total\x20argila',_0x3eecd2('0x117'),_0x3eecd2('0x102'),'Argila\x20per\x20sat','fier\x20per\x20sat',_0x3eecd2('0xcf'),_0x3eecd2('0x13c')]);game_data[_0x3eecd2('0x95')]==_0x3eecd2('0x13b')&&(langShinko=[_0x3eecd2('0x15'),_0x3eecd2('0x91'),_0x3eecd2('0x19'),_0x3eecd2('0xb5'),_0x3eecd2('0xce'),_0x3eecd2('0x148'),_0x3eecd2('0xd7'),_0x3eecd2('0x1f'),'Î”Î·Î¼Î¹Î¿Ï…ÏÎ³Î®Î¸Î·ÎºÎµ\x20Î±Ï€ÏŒ\x20Ï„Î·Î½\x20Sophie\x20\x27Shinko\x20to\x20Kuma\x27',_0x3eecd2('0xcc'),_0x3eecd2('0x120'),_0x3eecd2('0x7b'),_0x3eecd2('0x134'),_0x3eecd2('0xfb'),_0x3eecd2('0x28'),_0x3eecd2('0x3f'),_0x3eecd2('0x80')]);game_data[_0x3eecd2('0x95')]==_0x3eecd2('0x50')&&(langShinko=[_0x3eecd2('0x1c'),'Oorsprong',_0x3eecd2('0xc6'),_0x3eecd2('0x10a'),'Hout',_0x3eecd2('0x56'),_0x3eecd2('0x10d'),_0x3eecd2('0x8'),_0x3eecd2('0x76'),_0x3eecd2('0x47'),_0x3eecd2('0x9f'),'Totaal\x20ijzer',_0x3eecd2('0x20'),'Leem\x20per\x20dorp','Ijzer\x20per\x20dorp',_0x3eecd2('0x114'),_0x3eecd2('0x68')]);game_data[_0x3eecd2('0x95')]==_0x3eecd2('0xf7')&&(langShinko=['Bilancia\x20risorse',_0x3eecd2('0x13a'),_0x3eecd2('0x14e'),'Distanza',_0x3eecd2('0x144'),_0x3eecd2('0x140'),_0x3eecd2('0x39'),_0x3eecd2('0x51'),_0x3eecd2('0x64'),_0x3eecd2('0x126'),_0x3eecd2('0x14d'),_0x3eecd2('0x42'),_0x3eecd2('0x77'),'Argilla\x20per\x20villaggio',_0x3eecd2('0x12e'),_0x3eecd2('0x3f'),_0x3eecd2('0x80')]);game_data[_0x3eecd2('0x95')]==_0x3eecd2('0x6a')&&(langShinko=['Ù…ÙˆØ§Ø±Ù†Ø©\x20Ø§Ù„Ù…ÙˆØ§Ø±Ø¯',_0x3eecd2('0x7a'),_0x3eecd2('0x110'),_0x3eecd2('0xb2'),'Ø®Ø´Ø¨',_0x3eecd2('0xa6'),_0x3eecd2('0x40'),_0x3eecd2('0x9b'),_0x3eecd2('0x104'),_0x3eecd2('0xd9'),_0x3eecd2('0x143'),_0x3eecd2('0x3d'),'Ø®Ø´Ø¨\x20Ù„ÙƒÙ„\x20Ù‚Ø±ÙŠØ©',_0x3eecd2('0x12b'),_0x3eecd2('0x154'),_0x3eecd2('0x3f'),'System']);game_data[_0x3eecd2('0x95')]==_0x3eecd2('0x33')&&(langShinko=[_0x3eecd2('0xa5'),_0x3eecd2('0x52'),'CÃ©lÃ¡llomÃ¡s',_0x3eecd2('0xdc'),'Fa',_0x3eecd2('0x11b'),_0x3eecd2('0xdb'),_0x3eecd2('0x27'),'KÃ©szÃ­tette:\x20Sophie\x20\x27Shinko\x20to\x20Kuma\x27','Ã–sszes\x20fa',_0x3eecd2('0xb0'),_0x3eecd2('0xee'),_0x3eecd2('0xcb'),'Agyag/falu','Vas/falu',_0x3eecd2('0x3f'),'System']);game_data[_0x3eecd2('0x95')]==_0x3eecd2('0x9a')&&(langShinko=[_0x3eecd2('0x0'),_0x3eecd2('0xd3'),_0x3eecd2('0x9d'),'DistÃ¢ncia',_0x3eecd2('0x18'),_0x3eecd2('0x3'),_0x3eecd2('0x39'),'Enviar\x20recursos','Criado\x20por\x20Sophie\x20\x27Shinko\x20to\x20Kuma\x27',_0x3eecd2('0x11c'),_0x3eecd2('0xde'),'Total\x20de\x20ferro',_0x3eecd2('0xf5'),_0x3eecd2('0xe'),_0x3eecd2('0x119'),_0x3eecd2('0x59'),_0x3eecd2('0x35')]);if(typeof colors==_0x3eecd2('0x23'))cssClassesSophie='\x0a<style>\x0a.sophRowA\x20{\x0abackground-color:\x20#32353b;\x0acolor:\x20white;\x0a}\x0a.sophRowB\x20{\x0abackground-color:\x20#36393f;\x0acolor:\x20white;\x0a}\x0a.sophHeader\x20{\x0abackground-color:\x20#202225;\x0afont-weight:\x20bold;\x0acolor:\x20white;\x0a}\x0a.sophLink\x0a{\x0a\x20\x20\x20\x20color:#40D0E0;\x0a}\x0a.btnSophie\x0a{\x0a\x20\x20\x20\x20background-image:\x20linear-gradient(#6e7178\x200%,\x20#36393f\x2030%,\x20#202225\x2080%,\x20black\x20100%);\x0a}\x0a.btnSophie:hover\x0a{\x20\x0a\x20\x20\x20\x20background-image:\x20linear-gradient(#7b7e85\x200%,\x20#40444a\x2030%,\x20#393c40\x2080%,\x20#171717\x20100%);\x0a}\x0a.collapsible\x20{\x0a\x20\x20\x20\x20background-color:\x20#32353b;\x0a\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20text-align:\x20left;\x0a\x20\x20\x20\x20outline:\x20none;\x0a\x20\x20\x20\x20font-size:\x2015px;\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20.active,\x20.collapsible:hover\x20{\x0a\x20\x20\x20\x20background-color:\x20\x20#36393f;\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20.collapsible:after\x20{\x0a\x20\x20\x20\x20content:\x20\x27+\x27;\x0a\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20float:\x20right;\x0a\x20\x20\x20\x20margin-left:\x205px;\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20.active:after\x20{\x0a\x20\x20\x20\x20content:\x20\x22-\x22;\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20.content\x20{\x0a\x20\x20\x20\x20padding:\x200\x205px;\x0a\x20\x20\x20\x20max-height:\x200;\x0a\x20\x20\x20\x20overflow:\x20hidden;\x0a\x20\x20\x20\x20transition:\x20max-height\x200.2s\x20ease-out;\x0a\x20\x20\x20\x20background-color:\x20\x20#5b5f66;\x0a\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20.item-padded\x20{\x0a\x20\x20\x20\x20padding:\x205px;\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20.flex-container\x20{\x0a\x20\x20\x20\x20display:\x20flex;\x20\x0a\x20\x20\x20\x20justify-content:\x20space-between;\x0a\x20\x20\x20\x20align-items:center\x0a\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20.submenu{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20left:0px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20top:37px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-width:240px;\x0a\x20\x20\x20\x20}\x0a</style>';else{if(colors==_0x3eecd2('0xda'))cssClassesSophie=_0x3eecd2('0xd6');else{if(colors==_0x3eecd2('0xf2'))cssClassesSophie=_0x3eecd2('0x12');else{if(colors==_0x3eecd2('0x129'))console[_0x3eecd2('0xdf')]('Changing\x20to\x20gray\x20theme'),cssClassesSophie=_0x3eecd2('0xe0');else colors=='TW'?(console['log']('Changing\x20to\x20TW\x20theme'),cssClassesSophie=_0x3eecd2('0x133')):(console['log'](_0x3eecd2('0xc1')),cssClassesSophie='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophRowA\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#32353b;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophRowB\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#36393f;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophHeader\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#202225;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophLink\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:#40D0E0;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#6e7178\x200%,\x20#36393f\x2030%,\x20#202225\x2080%,\x20black\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie:hover\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#7b7e85\x200%,\x20#40444a\x2030%,\x20#393c40\x2080%,\x20#171717\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.collapsible\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#32353b;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20left;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20outline:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2015px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.active,\x20.collapsible:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20\x20#36393f;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.collapsible:after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x27+\x27;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20float:\x20right;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-left:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.active:after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x22-\x22;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.content\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20max-height:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20max-height\x200.2s\x20ease-out;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20\x20#5b5f66;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.item-padded\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.flex-container\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20align-items:center\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.submenu{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20display:flex;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:column;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:0px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:37px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-width:240px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</style>');}}}$(_0x3eecd2('0x10c'))['eq'](0x0)[_0x3eecd2('0xc2')](cssClassesSophie),$(_0x3eecd2('0x54'))['eq'](0x0)[_0x3eecd2('0xc2')](cssClassesSophie);if(localStorage[_0x3eecd2('0x106')](_0x3eecd2('0x2a'))!=null){tempArray=JSON['parse'](localStorage[_0x3eecd2('0x106')]('settingsWHBalancerSophie'));var settings={};settings[_0x3eecd2('0x53')]=tempArray[_0x3eecd2('0x53')],settings['lowPoints']=parseInt(tempArray[_0x3eecd2('0x70')]),settings[_0x3eecd2('0x118')]=parseInt(tempArray[_0x3eecd2('0x118')]),settings[_0x3eecd2('0xc')]=parseInt(tempArray[_0x3eecd2('0xc')]),settings['builtOutPercentage']=parseFloat(tempArray[_0x3eecd2('0x1b')]),settings[_0x3eecd2('0x155')]=parseFloat(tempArray[_0x3eecd2('0x155')]);}else{if(typeof settings==_0x3eecd2('0x23'))var settings={'isMinting':![],'highPoints':0x1f40,'highFarm':0x59d8,'lowPoints':0xbb8,'builtOutPercentage':0.25,'needsMorePercentage':0.85};localStorage[_0x3eecd2('0xc0')](_0x3eecd2('0x2a'),JSON[_0x3eecd2('0x152')](settings));}if(!settings[_0x3eecd2('0x53')])settings[_0x3eecd2('0x53')]=![];if(!settings[_0x3eecd2('0xc')])settings['highFarm']=0x1869f;if(!settings[_0x3eecd2('0x118')])settings[_0x3eecd2('0x118')]=0x2ee0;if(!settings['lowPoints'])settings[_0x3eecd2('0x70')]=0x1;if(!settings[_0x3eecd2('0x1b')])settings[_0x3eecd2('0x1b')]=0.2;if(!settings[_0x3eecd2('0x155')])settings[_0x3eecd2('0x155')]=0.85;if(settings['builtOutPercentage']>0x1)settings[_0x3eecd2('0x1b')]=0.95;if(settings[_0x3eecd2('0x155')]>0x1)settings[_0x3eecd2('0x155')]=0.95;if(settings[_0x3eecd2('0x1b')]<0x0)settings[_0x3eecd2('0x1b')]=0.1;if(settings[_0x3eecd2('0x155')]<0x0)settings[_0x3eecd2('0x155')]=0.1;settings['isMinting']==!![]&&(settings={'isMinting':!![],'highPoints':0x32c8,'highFarm':0x80e8,'lowPoints':0x1,'builtOutPercentage':0.1,'needsMorePercentage':0.6});$(_0x3eecd2('0x12f'))[0x0]&&($(_0x3eecd2('0x12f'))[0x0][_0x3eecd2('0x3c')](),$(_0x3eecd2('0x72'))[0x0][_0x3eecd2('0x3c')]());game_data[_0x3eecd2('0xfc')][_0x3eecd2('0x62')]>0x0?(URLIncRes=_0x3eecd2('0x85')+game_data[_0x3eecd2('0xfc')]['id']+_0x3eecd2('0xe9'),URLProd=_0x3eecd2('0x85')+game_data[_0x3eecd2('0xfc')]['id']+_0x3eecd2('0xaa')):(URLIncRes=_0x3eecd2('0x7f'),URLProd=_0x3eecd2('0x16'));function sendResource(_0x4f5c2d,_0x33506a,_0x19c6a4,_0x2ede49,_0x1588cb,_0x12ae34){var _0x35e4ed=_0x3eecd2;$(_0x35e4ed('0x145'))[_0x35e4ed('0x6f')](_0x35e4ed('0x58'),!![]),setTimeout(function(){var _0x4426f2=_0x35e4ed;$('#'+_0x12ae34)[0x0]['remove'](),$(_0x4426f2('0x145'))[_0x4426f2('0x6f')]('disabled',![]),$(_0x4426f2('0x2'))[0x0][_0x4426f2('0x74')]();if($(_0x4426f2('0xbc'))[_0x4426f2('0xa')]<=0x2){alert(_0x4426f2('0x34'));$(_0x4426f2('0x82'))[_0x4426f2('0xa')]>0x0&&$(_0x4426f2('0x82'))[_0x4426f2('0x3c')]();throw Error(_0x4426f2('0xa0'));}},0xc8);var _0x38bef6={'target_id':_0x33506a,'wood':_0x19c6a4,'stone':_0x2ede49,'iron':_0x1588cb};TribalWars[_0x35e4ed('0xed')](_0x35e4ed('0x4a'),{'ajaxaction':_0x35e4ed('0x12a'),'village':_0x4f5c2d},_0x38bef6,function(_0x3d9541){var _0x2f529f=_0x35e4ed;UI[_0x2f529f('0x13f')](_0x3d9541[_0x2f529f('0x48')]),console['log'](_0x3d9541[_0x2f529f('0x48')]);},!0x1);}function displayEverything(){var _0x5084a1=_0x3eecd2;$[_0x5084a1('0x10f')](URLIncRes,function(){var _0x2c9623=_0x5084a1;console[_0x2c9623('0xdf')](_0x2c9623('0x89'));})[_0x5084a1('0xc3')](function(_0x4e3d04){var _0x27f3ab=_0x5084a1,_0x2afe7d=$(_0x4e3d04);for(var _0x29637a=0x1;_0x29637a<_0x2afe7d[_0x27f3ab('0x10e')](_0x27f3ab('0x105'))[_0x27f3ab('0xa')]-0x1;_0x29637a++){var _0xa24aff={},_0x402139;if($(_0x27f3ab('0x54'))[0x0]){console[_0x27f3ab('0xdf')](_0x27f3ab('0xbb'));let _0x521eaf=_0x2afe7d['find'](_0x27f3ab('0x105'))[_0x29637a][_0x27f3ab('0x75')][0x5]['children'][0x1]['children'];for(let _0xd517b6=0x0;_0xd517b6<Object[_0x27f3ab('0x67')](_0x521eaf)[_0x27f3ab('0xa')];_0xd517b6++){if(_0x2afe7d[_0x27f3ab('0x10e')](_0x27f3ab('0x105'))[0x1]['children'][0x2][_0x27f3ab('0x2d')]!=langShinko[0x10]){let _0x1a9f38=$(_0x521eaf[_0xd517b6]),_0x29f43c=_0x1a9f38[_0x27f3ab('0x10e')]('.icon.mheader')['attr']('class')[_0x27f3ab('0x130')]('\x20'),_0xe382f=_0x29f43c[_0x29f43c['length']-0x1],_0x5c2341=_0x1a9f38['text']()[_0x27f3ab('0x24')](/[^\d]/g,'');_0xa24aff[_0xe382f]=_0x5c2341,_0x402139=_0x2afe7d['find'](_0x27f3ab('0x105'))[_0x29637a][_0x27f3ab('0x75')][0x3]['children'][0x2][_0x27f3ab('0x12c')][_0x27f3ab('0x115')](/id=(\d*)/)[0x1];}}}else{console[_0x27f3ab('0xdf')](_0x27f3ab('0x11f'));let _0x1699d3=_0x2afe7d['find'](_0x27f3ab('0x105'))[_0x29637a][_0x27f3ab('0x75')][0x8][_0x27f3ab('0x75')];console['log'](Object[_0x27f3ab('0x67')](_0x1699d3)[_0x27f3ab('0xa')]);for(let _0xc5f6b1=0x0;_0xc5f6b1<Object[_0x27f3ab('0x67')](_0x1699d3)[_0x27f3ab('0xa')];_0xc5f6b1++){let _0x26b43a=$(_0x1699d3[_0xc5f6b1]);var _0x46ffd0;_0x26b43a[0x0][_0x27f3ab('0x153')][_0x27f3ab('0x7c')]('header')>-0x1?_0x46ffd0=_0x26b43a['find'](_0x27f3ab('0xe2'))['attr'](_0x27f3ab('0x8d'))[_0x27f3ab('0x130')]('\x20'):_0x46ffd0=_0x26b43a[_0x27f3ab('0x149')](_0x27f3ab('0x8d'))[_0x27f3ab('0x130')]('\x20');if(_0x2afe7d[_0x27f3ab('0x10e')](_0x27f3ab('0x105'))[0x1][_0x27f3ab('0x75')][0x3]['innerText']!=langShinko[0xf]){let _0xe60d48=_0x46ffd0[_0x46ffd0[_0x27f3ab('0xa')]-0x1];console[_0x27f3ab('0xdf')](_0xe60d48);let _0x5f28cd=_0x26b43a['text']()[_0x27f3ab('0x24')](/[^\d]/g,'');console[_0x27f3ab('0xdf')](_0x5f28cd),_0xa24aff[_0xe60d48]=_0x5f28cd,_0x402139=_0x2afe7d['find'](_0x27f3ab('0x105'))[_0x29637a][_0x27f3ab('0x75')][0x4]['children'][0x0][_0x27f3ab('0x12c')][_0x27f3ab('0x115')](/id=(\d*)/)[0x1];}}}_0x2afe7d[_0x27f3ab('0x10e')]('#trades_table\x20tr')[0x1][_0x27f3ab('0x75')][0x3][_0x27f3ab('0x2d')]!=langShinko[0xf]&&_0x2afe7d[_0x27f3ab('0x10e')](_0x27f3ab('0x105'))[0x1][_0x27f3ab('0x75')][0x2][_0x27f3ab('0x2d')]!=langShinko[0x10]&&(incomingRes[_0x402139]==undefined&&(incomingRes[_0x402139]={'wood':0x0,'stone':0x0,'iron':0x0}),_0xa24aff[_0x27f3ab('0x93')]!=undefined&&(incomingRes[_0x402139][_0x27f3ab('0x93')]+=parseInt(_0xa24aff['wood'])),_0xa24aff[_0x27f3ab('0xa9')]!=undefined&&(incomingRes[_0x402139]['stone']+=parseInt(_0xa24aff[_0x27f3ab('0xa9')])),_0xa24aff[_0x27f3ab('0x55')]!=undefined&&(incomingRes[_0x402139][_0x27f3ab('0x55')]+=parseInt(_0xa24aff['iron'])));}$[_0x27f3ab('0x10f')](URLProd,function(){var _0x2a9048=_0x27f3ab;console[_0x2a9048('0xdf')]('Managed\x20to\x20grab\x20the\x20page');})[_0x27f3ab('0xc3')](function(_0x46204d){var _0xec8f04=_0x27f3ab;testPage=_0x46204d,uniVillage=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0x128'));uniVillage[_0xec8f04('0xa')]>0x0?uniRow=uniVillage[_0xec8f04('0xd1')]('tr')['index']()-0x1:uniRow=-0x1;if($(_0xec8f04('0x54'))[0x0]){console[_0xec8f04('0xdf')]('mobile'),allWoodObjects=$(_0x46204d)['find'](_0xec8f04('0x65')),allClayObjects=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0x9e')),allIronObjects=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0xb')),allWarehouses=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0x11d')),allVillages=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0xb1')),allFarms=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0x84')),allMerchants=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0xba')),productionTable=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0xf9'));uniRow>=0x0&&(allVillages[_0xec8f04('0x12d')](uniRow,0x1),allWoodObjects[_0xec8f04('0x12d')](uniRow,0x1),allClayObjects[_0xec8f04('0x12d')](uniRow,0x1),allIronObjects['splice'](uniRow,0x1),allWarehouses['splice'](uniRow,0x1),allFarms[_0xec8f04('0x12d')](uniRow,0x1),allMerchants[_0xec8f04('0x12d')](uniRow,0x1),productionTable[_0xec8f04('0x12d')](uniRow,0x1));for(var _0x113c57=0x0;_0x113c57<allWoodObjects[_0xec8f04('0xa')];_0x113c57++){n=allWoodObjects[_0x113c57][_0xec8f04('0x4e')],n=n[_0xec8f04('0x24')](/\./g,'')[_0xec8f04('0x24')](',',''),allWoodTotals[_0xec8f04('0x103')](n),n=allClayObjects[_0x113c57][_0xec8f04('0x4e')],n=n[_0xec8f04('0x24')](/\./g,'')[_0xec8f04('0x24')](',',''),allClayTotals['push'](n),n=allIronObjects[_0x113c57][_0xec8f04('0x4e')],n=n[_0xec8f04('0x24')](/\./g,'')[_0xec8f04('0x24')](',',''),allIronTotals['push'](n);}for(let _0x527678=0x0;_0x527678<allVillages[_0xec8f04('0xa')];_0x527678++){farmSpaceUsed['push'](allFarms[_0x527678][_0xec8f04('0x7d')][_0xec8f04('0x2d')][_0xec8f04('0x115')](/(\d*)\/(\d*)/)[0x1]),farmSpaceTotal['push'](allFarms[_0x527678][_0xec8f04('0x7d')][_0xec8f04('0x2d')][_0xec8f04('0x115')](/(\d*)\/(\d*)/)[0x2]),warehouseCapacity[_0xec8f04('0x103')](allWarehouses[_0x527678]['parentElement'][_0xec8f04('0x2d')]);for(let _0x194cf3=0x1;_0x194cf3<allMerchants['length'];_0x194cf3++){availableMerchants[_0xec8f04('0x103')](allMerchants[_0x194cf3][_0xec8f04('0x2d')]);}totalMerchants[_0xec8f04('0x103')]('999'),villagePoints[_0xec8f04('0x103')](productionTable[_0x527678*0x2+0x1]['innerText']['replace'](/\./g,'')[_0xec8f04('0x24')](',',''));}}else{console[_0xec8f04('0xdf')](_0xec8f04('0x11f')),allWoodObjects=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0x136')),allClayObjects=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0x125')),allIronObjects=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0x96')),allVillages=$(_0x46204d)[_0xec8f04('0x10e')](_0xec8f04('0xb1'));uniRow>=0x0&&(allVillages['splice'](uniRow,0x1),allWoodObjects[_0xec8f04('0x12d')](uniRow,0x1),allClayObjects[_0xec8f04('0x12d')](uniRow,0x1),allIronObjects[_0xec8f04('0x12d')](uniRow,0x1));for(let _0x4b551d=0x0;_0x4b551d<allWoodObjects[_0xec8f04('0xa')];_0x4b551d++){n=allWoodObjects[_0x4b551d][_0xec8f04('0x4e')],n=n[_0xec8f04('0x24')](/\./g,'')['replace'](',',''),allWoodTotals[_0xec8f04('0x103')](n),n=allClayObjects[_0x4b551d][_0xec8f04('0x4e')],n=n[_0xec8f04('0x24')](/\./g,'')[_0xec8f04('0x24')](',',''),allClayTotals['push'](n),n=allIronObjects[_0x4b551d][_0xec8f04('0x4e')],n=n[_0xec8f04('0x24')](/\./g,'')[_0xec8f04('0x24')](',',''),allIronTotals[_0xec8f04('0x103')](n);}for(let _0x2f243d=0x0;_0x2f243d<allVillages[_0xec8f04('0xa')];_0x2f243d++){warehouseCapacity[_0xec8f04('0x103')](allIronObjects[_0x2f243d][_0xec8f04('0x7d')][_0xec8f04('0x45')][_0xec8f04('0x153')]),availableMerchants[_0xec8f04('0x103')](allIronObjects[_0x2f243d][_0xec8f04('0x7d')][_0xec8f04('0x45')]['nextElementSibling'][_0xec8f04('0x2d')][_0xec8f04('0x115')](/(\d*)\/(\d*)/)[0x1]),totalMerchants[_0xec8f04('0x103')](allIronObjects[_0x2f243d][_0xec8f04('0x7d')][_0xec8f04('0x45')][_0xec8f04('0x45')][_0xec8f04('0x2d')]['match'](/(\d*)\/(\d*)/)[0x2]),farmSpaceUsed[_0xec8f04('0x103')](allIronObjects[_0x2f243d]['parentElement'][_0xec8f04('0x45')][_0xec8f04('0x45')][_0xec8f04('0x45')][_0xec8f04('0x2d')][_0xec8f04('0x115')](/(\d*)\/(\d*)/)[0x1]),farmSpaceTotal[_0xec8f04('0x103')](allIronObjects[_0x2f243d][_0xec8f04('0x7d')][_0xec8f04('0x45')][_0xec8f04('0x45')]['nextElementSibling'][_0xec8f04('0x2d')][_0xec8f04('0x115')](/(\d*)\/(\d*)/)[0x2]),villagePoints[_0xec8f04('0x103')](allWoodObjects[_0x2f243d][_0xec8f04('0x7d')]['previousElementSibling'][_0xec8f04('0x2d')]['replace'](/\./g,'')['replace'](',',''));}}for(let _0x222131=0x0;_0x222131<allVillages[_0xec8f04('0xa')];_0x222131++){villagesData['push']({'id':allVillages[_0x222131][_0xec8f04('0x14c')]['id'],'points':villagePoints[_0x222131],'url':allVillages[_0x222131][_0xec8f04('0x75')][0x0]['children'][0x0][_0xec8f04('0x12c')],'name':allVillages[_0x222131][_0xec8f04('0x2d')][_0xec8f04('0x5b')](),'wood':allWoodTotals[_0x222131],'stone':allClayTotals[_0x222131],'iron':allIronTotals[_0x222131],'availableMerchants':availableMerchants[_0x222131],'totalMerchants':totalMerchants[_0x222131],'warehouseCapacity':warehouseCapacity[_0x222131],'farmSpaceUsed':farmSpaceUsed[_0x222131],'farmSpaceTotal':farmSpaceTotal[_0x222131]});}villagesData[_0xec8f04('0x98')]((_0x1beec1,_0xeb9664)=>parseInt(_0x1beec1['points'])<parseInt(_0xeb9664[_0xec8f04('0x5d')])?0x1:-0x1),totalWood=0x0,totalStone=0x0,totalIron=0x0;for(let _0x2210f0 in allWoodTotals){totalWood+=parseInt(allWoodTotals[_0x2210f0]);}for(let _0x220c67 in allClayTotals){totalStone+=parseInt(allClayTotals[_0x220c67]);}for(let _0x549982 in allIronTotals){totalIron+=parseInt(allIronTotals[_0x549982]);}for(let _0x105471=0x0;_0x105471<Object[_0xec8f04('0x67')](incomingRes)[_0xec8f04('0xa')];_0x105471++){totalWood+=incomingRes[Object[_0xec8f04('0x67')](incomingRes)[_0x105471]][_0xec8f04('0x93')],totalStone+=incomingRes[Object[_0xec8f04('0x67')](incomingRes)[_0x105471]]['stone'],totalIron+=incomingRes[Object[_0xec8f04('0x67')](incomingRes)[_0x105471]]['iron'];}woodAverage=Math[_0xec8f04('0x127')](totalWood/warehouseCapacity[_0xec8f04('0xa')]),stoneAverage=Math[_0xec8f04('0x127')](totalStone/warehouseCapacity[_0xec8f04('0xa')]),ironAverage=Math['floor'](totalIron/warehouseCapacity[_0xec8f04('0xa')]);if(settings[_0xec8f04('0x53')]==![]){actualWoodAverage=woodAverage,actualStoneAverage=stoneAverage,actualIronAverage=ironAverage,consideredBuiltOut=0x0,actualTotalWood=totalWood,actualTotalStone=totalStone,actualTotalIron=totalIron,actualWHCountNeedsBalancingWood=warehouseCapacity[_0xec8f04('0xa')],actualWHCountNeedsBalancingStone=warehouseCapacity[_0xec8f04('0xa')],actualWHCountNeedsBalancingIron=warehouseCapacity[_0xec8f04('0xa')];for(let _0x5cf03a=0x0;_0x5cf03a<warehouseCapacity['length'];_0x5cf03a++){actualWoodAverage=Math[_0xec8f04('0x127')](actualTotalWood/actualWHCountNeedsBalancingWood),actualStoneAverage=Math[_0xec8f04('0x127')](actualTotalStone/actualWHCountNeedsBalancingStone),actualIronAverage=Math[_0xec8f04('0x127')](actualTotalIron/actualWHCountNeedsBalancingIron),warehouseCapacity[_0x5cf03a]<actualWoodAverage&&(console[_0xec8f04('0xdf')](_0xec8f04('0xc7')+_0x5cf03a+_0xec8f04('0x6c')),actualTotalWood-=actualWoodAverage-warehouseCapacity[_0x5cf03a]*settings[_0xec8f04('0x155')],actualWHCountNeedsBalancingWood--),warehouseCapacity[_0x5cf03a]<actualStoneAverage&&(console['log'](_0xec8f04('0xc7')+_0x5cf03a+'\x20too\x20small\x20for\x20average,\x20reducing\x20resources,\x20and\x20increasing\x20for\x20every\x20other\x20village'),actualTotalStone-=actualStoneAverage-warehouseCapacity[_0x5cf03a]*settings['needsMorePercentage'],actualWHCountNeedsBalancingStone--),warehouseCapacity[_0x5cf03a]<actualIronAverage&&(console[_0xec8f04('0xdf')]('Warehouse\x20in\x20village\x20'+_0x5cf03a+'\x20too\x20small\x20for\x20average,\x20reducing\x20resources,\x20and\x20increasing\x20for\x20every\x20other\x20village'),actualTotalIron-=actualIronAverage-warehouseCapacity[_0x5cf03a]*settings[_0xec8f04('0x155')],actualWHCountNeedsBalancingIron--),console[_0xec8f04('0xdf')]('Current\x20averages:\x20'+actualWoodAverage+'-'+actualIronAverage+'-'+actualStoneAverage);}for(let _0x5e5f3b=0x0;_0x5e5f3b<villagesData[_0xec8f04('0xa')];_0x5e5f3b++){(villagesData[_0x5e5f3b][_0xec8f04('0xa3')]>settings['highFarm']||villagesData[_0x5e5f3b]['points']>settings[_0xec8f04('0x118')])&&(console['log'](_0xec8f04('0x142')+_0x5e5f3b+_0xec8f04('0x3a')),actualTotalWood-=warehouseCapacity[_0x5e5f3b]*settings[_0xec8f04('0x1b')],actualWHCountNeedsBalancingWood--,actualTotalStone-=warehouseCapacity[_0x5e5f3b]*settings[_0xec8f04('0x1b')],actualWHCountNeedsBalancingStone--,actualTotalIron-=warehouseCapacity[_0x5e5f3b]*settings[_0xec8f04('0x1b')],actualWHCountNeedsBalancingIron--,consideredBuiltOut++),actualWoodAverage=Math[_0xec8f04('0x127')](actualTotalWood/actualWHCountNeedsBalancingWood),actualStoneAverage=Math[_0xec8f04('0x127')](actualTotalStone/actualWHCountNeedsBalancingStone),actualIronAverage=Math['floor'](actualTotalIron/actualWHCountNeedsBalancingIron),console[_0xec8f04('0xdf')](_0xec8f04('0x86')+actualWoodAverage+'-'+actualIronAverage+'-'+actualStoneAverage);}(actualWoodAverage>=0x55730||actualStoneAverage>=0x55730||actualIronAverage>=0x55730)&&alert(_0xec8f04('0x9')+numberWithCommas(actualWoodAverage)+_0xec8f04('0x146')+numberWithCommas(actualStoneAverage)+_0xec8f04('0x14a')+numberWithCommas(actualIronAverage)+_0xec8f04('0x2f')+numberWithCommas(consideredBuiltOut)+_0xec8f04('0x79'));}else actualWoodAverage=woodAverage,actualStoneAverage=stoneAverage,actualIronAverage=ironAverage;totalsAndAverages='<div\x20id=\x27totals\x27\x20class=\x27sophHeader\x27\x20border=0>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<table\x20id=\x27totalsAndAverages\x27\x20width=\x27100%\x27>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20class=\x27sophRowA\x27>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+langShinko[0x9]+':\x20'+numberWithCommas(totalWood)+_0xec8f04('0x107')+langShinko[0xa]+':\x20'+numberWithCommas(totalStone)+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+langShinko[0xb]+':\x20'+numberWithCommas(totalIron)+_0xec8f04('0x29')+langShinko[0xc]+':\x20'+numberWithCommas(woodAverage)+_0xec8f04('0x107')+langShinko[0xd]+':\x20'+numberWithCommas(stoneAverage)+_0xec8f04('0x107')+langShinko[0xe]+':\x20'+numberWithCommas(ironAverage)+_0xec8f04('0x4')+numberWithCommas(actualWoodAverage)+_0xec8f04('0xd4')+numberWithCommas(actualStoneAverage)+_0xec8f04('0xf4')+numberWithCommas(actualIronAverage)+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</table>',$(_0xec8f04('0x138'))['eq'](0x0)[_0xec8f04('0xc2')](_0xec8f04('0xf8')),$(_0xec8f04('0x54'))['eq'](0x0)[_0xec8f04('0xc2')]('\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22progressbar\x22\x20style=\x22width:\x20100%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#36393f;\x22><div\x20id=\x22progress\x22\x20style=\x22width:\x200%;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2035px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#4CAF50;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2032px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black;\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>');for(let _0x39c80c=0x0;_0x39c80c<villagesData[_0xec8f04('0xa')];_0x39c80c++){console[_0xec8f04('0xdf')](_0xec8f04('0x6')),excessResources[_0x39c80c]=[],shortageResources[_0x39c80c]=[],villageID[_0xec8f04('0x103')](villagesData[_0x39c80c]['id']),typeof incomingRes[villagesData[_0x39c80c]['id']]==_0xec8f04('0x23')?(incomingWood=0x0,incomingStone=0x0,incomingIron=0x0):(incomingWood=incomingRes[villagesData[_0x39c80c]['id']][_0xec8f04('0x93')],incomingStone=incomingRes[villagesData[_0x39c80c]['id']][_0xec8f04('0xa9')],incomingIron=incomingRes[villagesData[_0x39c80c]['id']][_0xec8f04('0x55')]),console[_0xec8f04('0xdf')](_0xec8f04('0xe1')+incomingWood+_0xec8f04('0x14')+incomingStone+_0xec8f04('0x6b')+incomingIron),actualWoodAverage<villagesData[_0x39c80c][_0xec8f04('0x112')]*settings[_0xec8f04('0x155')]?tempWood=parseInt(villagesData[_0x39c80c][_0xec8f04('0x93')])+incomingWood-actualWoodAverage:(console[_0xec8f04('0xdf')](_0xec8f04('0x121')),tempWood=-Math[_0xec8f04('0x109')](villagesData[_0x39c80c][_0xec8f04('0x112')]*settings['needsMorePercentage']-incomingWood-parseInt(villagesData[_0x39c80c][_0xec8f04('0x93')]))),actualStoneAverage<villagesData[_0x39c80c]['warehouseCapacity']*settings[_0xec8f04('0x155')]?tempStone=parseInt(villagesData[_0x39c80c][_0xec8f04('0xa9')])+incomingStone-actualStoneAverage:(console[_0xec8f04('0xdf')](_0xec8f04('0x121')),tempStone=-Math[_0xec8f04('0x109')](villagesData[_0x39c80c][_0xec8f04('0x112')]*settings[_0xec8f04('0x155')]-incomingStone-parseInt(villagesData[_0x39c80c][_0xec8f04('0xa9')]))),actualIronAverage<villagesData[_0x39c80c][_0xec8f04('0x112')]*settings[_0xec8f04('0x155')]?tempIron=parseInt(villagesData[_0x39c80c][_0xec8f04('0x55')])+incomingIron-actualIronAverage:(console[_0xec8f04('0xdf')](_0xec8f04('0x121')),tempIron=-Math['round'](villagesData[_0x39c80c][_0xec8f04('0x112')]*settings[_0xec8f04('0x155')]-incomingIron-parseInt(villagesData[_0x39c80c]['iron']))),console[_0xec8f04('0xdf')](tempWood),console[_0xec8f04('0xdf')](tempStone),console[_0xec8f04('0xdf')](tempIron),(villagesData[_0x39c80c][_0xec8f04('0xa3')]>settings['highFarm']||villagesData[_0x39c80c]['points']>settings['highPoints'])&&(console[_0xec8f04('0xdf')](_0xec8f04('0xe5')+villagesData[_0x39c80c][_0xec8f04('0xa3')]+'/'+villagesData[_0x39c80c]['farmSpaceTotal']+_0xec8f04('0x10')+villagesData[_0x39c80c][_0xec8f04('0xe6')]+_0xec8f04('0x100')+villagesData[_0x39c80c][_0xec8f04('0x5d')]+'/'+settings['highPoints']+_0xec8f04('0x147')+0x64*settings[_0xec8f04('0x1b')]+'%'),parseInt(villagesData[_0x39c80c][_0xec8f04('0x93')])+incomingWood>settings[_0xec8f04('0x1b')]*villagesData[_0x39c80c][_0xec8f04('0x112')]&&(tempWood=Math[_0xec8f04('0x109')](parseInt(villagesData[_0x39c80c]['wood'])+incomingWood-settings[_0xec8f04('0x1b')]*villagesData[_0x39c80c][_0xec8f04('0x112')])),parseInt(villagesData[_0x39c80c][_0xec8f04('0xa9')])+incomingStone>settings[_0xec8f04('0x1b')]*villagesData[_0x39c80c]['warehouseCapacity']&&(tempStone=Math[_0xec8f04('0x109')](parseInt(villagesData[_0x39c80c][_0xec8f04('0xa9')])+incomingStone-settings[_0xec8f04('0x1b')]*villagesData[_0x39c80c][_0xec8f04('0x112')])),parseInt(villagesData[_0x39c80c]['iron'])+incomingIron>settings[_0xec8f04('0x1b')]*villagesData[_0x39c80c][_0xec8f04('0x112')]&&(tempIron=Math[_0xec8f04('0x109')](parseInt(villagesData[_0x39c80c][_0xec8f04('0x55')])+incomingIron-settings[_0xec8f04('0x1b')]*villagesData[_0x39c80c][_0xec8f04('0x112')]))),villagesData[_0x39c80c][_0xec8f04('0x5d')]<settings[_0xec8f04('0x70')]&&(console[_0xec8f04('0xdf')](villagesData[_0x39c80c]['name']+'\x20('+villagesData[_0x39c80c][_0xec8f04('0x5d')]+')'+'\x20needs\x20help\x20growing,\x20setting\x20required\x20resources\x20to\x20'+settings['needsMorePercentage']*0x64+_0xec8f04('0x63')),tempWood=-Math[_0xec8f04('0x109')](villagesData[_0x39c80c]['warehouseCapacity']*settings['needsMorePercentage']-parseInt(villagesData[_0x39c80c]['wood'])-incomingWood),tempStone=-Math[_0xec8f04('0x109')](villagesData[_0x39c80c][_0xec8f04('0x112')]*settings[_0xec8f04('0x155')]-parseInt(villagesData[_0x39c80c][_0xec8f04('0xa9')])-incomingStone),tempIron=-Math['round'](villagesData[_0x39c80c][_0xec8f04('0x112')]*settings[_0xec8f04('0x155')]-parseInt(villagesData[_0x39c80c][_0xec8f04('0x55')])-incomingIron)),incomingWood+parseInt(villagesData[_0x39c80c]['wood'])>villagesData[_0x39c80c][_0xec8f04('0x112')]&&(console[_0xec8f04('0xdf')](_0xec8f04('0xb7')+villagesData[_0x39c80c][_0xec8f04('0xe6')]),tempWood=-Math[_0xec8f04('0x109')](villagesData[_0x39c80c][_0xec8f04('0x112')]*settings['needsMorePercentage']-incomingWood-parseInt(villagesData[_0x39c80c][_0xec8f04('0x93')]))),incomingStone+parseInt(villagesData[_0x39c80c][_0xec8f04('0xa9')])>villagesData[_0x39c80c][_0xec8f04('0x112')]&&(console[_0xec8f04('0xdf')](_0xec8f04('0x122')+villagesData[_0x39c80c]['name']),tempStone=-Math['round'](villagesData[_0x39c80c][_0xec8f04('0x112')]*settings[_0xec8f04('0x155')]-incomingStone-parseInt(villagesData[_0x39c80c][_0xec8f04('0xa9')]))),incomingIron+parseInt(villagesData[_0x39c80c][_0xec8f04('0x55')])>villagesData[_0x39c80c][_0xec8f04('0x112')]&&(console[_0xec8f04('0xdf')](_0xec8f04('0x7e')+villagesData[_0x39c80c][_0xec8f04('0xe6')]),tempIron=-Math[_0xec8f04('0x109')](villagesData[_0x39c80c][_0xec8f04('0x112')]*settings[_0xec8f04('0x155')]-incomingIron-parseInt(villagesData[_0x39c80c][_0xec8f04('0x55')]))),tempWood>0x0&&tempWood>parseInt(villagesData[_0x39c80c][_0xec8f04('0x93')])&&(console[_0xec8f04('0xdf')](_0xec8f04('0x14b')),tempWood=parseInt(villagesData[_0x39c80c][_0xec8f04('0x93')])),tempStone>0x0&&tempStone>parseInt(villagesData[_0x39c80c][_0xec8f04('0xa9')])&&(console['log']('Excess\x20is\x20bigger\x20than\x20current\x20available\x20resources,\x20setting\x20it\x20to\x20current\x20available'),tempStone=parseInt(villagesData[_0x39c80c][_0xec8f04('0xa9')])),tempIron>0x0&&tempIron>parseInt(villagesData[_0x39c80c][_0xec8f04('0x55')])&&(console[_0xec8f04('0xdf')](_0xec8f04('0x14b')),tempIron=parseInt(villagesData[_0x39c80c][_0xec8f04('0x55')])),console['log'](_0xec8f04('0x21')+villagesData[_0x39c80c]['name']+'\x0a'+_0xec8f04('0x22')+villagesData[_0x39c80c][_0xec8f04('0x112')]*settings['needsMorePercentage']+'\x0a'+_0xec8f04('0x8b')+villagesData[_0x39c80c]['warehouseCapacity']+'\x0a'+_0xec8f04('0x1a')+parseInt(villagesData[_0x39c80c][_0xec8f04('0x93')])+'\x0a'+_0xec8f04('0xa8')+parseInt(villagesData[_0x39c80c][_0xec8f04('0xa9')])+'\x0a'+'\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Iron:\x20'+parseInt(villagesData[_0x39c80c][_0xec8f04('0x55')])),console[_0xec8f04('0xdf')]('Woodadjustement:\x20'+tempWood+_0xec8f04('0xae')+tempStone+',\x20ironadjustement:\x20'+tempIron),tempWood>0x0?(excessResources[_0x39c80c][_0xec8f04('0x103')]({'wood':Math[_0xec8f04('0x127')](tempWood/0x3e8)*0x3e8}),shortageResources[_0x39c80c][_0xec8f04('0x103')]({'wood':0x0})):(shortageResources[_0x39c80c][_0xec8f04('0x103')]({'wood':Math[_0xec8f04('0x127')](-tempWood/0x3e8)*0x3e8}),excessResources[_0x39c80c][_0xec8f04('0x103')]({'wood':0x0})),tempStone>0x0?(excessResources[_0x39c80c][_0xec8f04('0x103')]({'stone':Math['floor'](tempStone/0x3e8)*0x3e8}),shortageResources[_0x39c80c][_0xec8f04('0x103')]({'stone':0x0})):(shortageResources[_0x39c80c]['push']({'stone':Math[_0xec8f04('0x127')](-tempStone/0x3e8)*0x3e8}),excessResources[_0x39c80c]['push']({'stone':0x0})),tempIron>0x0?(excessResources[_0x39c80c][_0xec8f04('0x103')]({'iron':Math['floor'](tempIron/0x3e8)*0x3e8}),shortageResources[_0x39c80c][_0xec8f04('0x103')]({'iron':0x0})):(shortageResources[_0x39c80c][_0xec8f04('0x103')]({'iron':Math[_0xec8f04('0x127')](-tempIron/0x3e8)*0x3e8}),excessResources[_0x39c80c]['push']({'iron':0x0}));}for(let _0x42d76f=0x0;_0x42d76f<excessResources['length'];_0x42d76f++){tempAllExcessCombined=parseInt(Math[_0xec8f04('0x127')](excessResources[_0x42d76f][0x0][_0xec8f04('0x93')]/0x3e8)*0x3e8)+parseInt(Math[_0xec8f04('0x127')](excessResources[_0x42d76f][0x1]['stone']/0x3e8)*0x3e8)+parseInt(Math[_0xec8f04('0x127')](excessResources[_0x42d76f][0x2][_0xec8f04('0x55')]/0x3e8)*0x3e8),tempAllExcessCombined>0x0&&(tempMaxMerchantsNeeded=Math[_0xec8f04('0x127')](tempAllExcessCombined/0x3e8),tempMaxMerchantsNeeded<villagesData[_0x42d76f][_0xec8f04('0x157')]?merchantOrders[_0xec8f04('0x103')]({'villageID':villagesData[_0x42d76f]['id'],'x':villagesData[_0x42d76f][_0xec8f04('0xe6')][_0xec8f04('0x115')](/(\d+)\|(\d+)/)[0x1],'y':villagesData[_0x42d76f]['name'][_0xec8f04('0x115')](/(\d+)\|(\d+)/)[0x2],'wood':Math[_0xec8f04('0x127')](excessResources[_0x42d76f][0x0][_0xec8f04('0x93')]/0x3e8),'stone':Math[_0xec8f04('0x127')](excessResources[_0x42d76f][0x1][_0xec8f04('0xa9')]/0x3e8),'iron':Math['floor'](excessResources[_0x42d76f][0x2][_0xec8f04('0x55')]/0x3e8)}):(tempPercWood=excessResources[_0x42d76f][0x0][_0xec8f04('0x93')]/tempAllExcessCombined,tempPercStone=excessResources[_0x42d76f][0x1][_0xec8f04('0xa9')]/tempAllExcessCombined,tempPercIron=excessResources[_0x42d76f][0x2][_0xec8f04('0x55')]/tempAllExcessCombined,merchantOrders[_0xec8f04('0x103')]({'villageID':villagesData[_0x42d76f]['id'],'x':villagesData[_0x42d76f][_0xec8f04('0xe6')][_0xec8f04('0x115')](/(\d+)\|(\d+)/)[0x1],'y':villagesData[_0x42d76f][_0xec8f04('0xe6')]['match'](/(\d+)\|(\d+)/)[0x2],'wood':Math[_0xec8f04('0x127')](tempPercWood*villagesData[_0x42d76f][_0xec8f04('0x157')]),'stone':Math[_0xec8f04('0x127')](tempPercStone*villagesData[_0x42d76f]['availableMerchants']),'iron':Math['floor'](tempPercIron*villagesData[_0x42d76f][_0xec8f04('0x157')])})));}for(let _0x389d46=shortageResources[_0xec8f04('0xa')]-0x1;_0x389d46>=0x0;_0x389d46--){$('#progress')[_0xec8f04('0xff')]('width',(shortageResources[_0xec8f04('0xa')]-_0x389d46)/shortageResources[_0xec8f04('0xa')]*0x64+'%');for(let _0xaa698e=0x0;_0xaa698e<merchantOrders['length'];_0xaa698e++){merchantOrders[_0xaa698e][_0xec8f04('0x156')]=checkDistance(merchantOrders[_0xaa698e]['x'],merchantOrders[_0xaa698e]['y'],villagesData[_0x389d46]['name'][_0xec8f04('0x115')](/(\d+)\|(\d+)/)[0x1],villagesData[_0x389d46][_0xec8f04('0xe6')][_0xec8f04('0x115')](/(\d+)\|(\d+)/)[0x2]);}merchantOrders[_0xec8f04('0x98')](function(_0x5f4fc2,_0x108853){var _0x267483=_0xec8f04;return _0x5f4fc2[_0x267483('0x156')]-_0x108853[_0x267483('0x156')];});if(shortageResources[_0x389d46][0x0]['wood']<=0x0){}else while(shortageResources[_0x389d46][0x0][_0xec8f04('0x93')]>0x0){var _0xdc255b=0x0;for(let _0x5e4b4e=0x0;_0x5e4b4e<merchantOrders[_0xec8f04('0xa')];_0x5e4b4e++){_0xdc255b+=merchantOrders[_0x5e4b4e][_0xec8f04('0x93')];merchantOrders[_0x5e4b4e]['wood']>0x0&&(shortageResources[_0x389d46][0x0][_0xec8f04('0x93')]<=merchantOrders[_0x5e4b4e][_0xec8f04('0x93')]*0x3e8&&(links[_0xec8f04('0x103')]({'source':merchantOrders[_0x5e4b4e][_0xec8f04('0xb6')],'target':villageID[_0x389d46],'wood':shortageResources[_0x389d46][0x0][_0xec8f04('0x93')]}),merchantOrders[_0x5e4b4e][_0xec8f04('0x93')]-=shortageResources[_0x389d46][0x0][_0xec8f04('0x93')]/0x3e8,shortageResources[_0x389d46][0x0][_0xec8f04('0x93')]=0x0),shortageResources[_0x389d46][0x0][_0xec8f04('0x93')]>merchantOrders[_0x5e4b4e][_0xec8f04('0x93')]*0x3e8&&(links[_0xec8f04('0x103')]({'source':merchantOrders[_0x5e4b4e][_0xec8f04('0xb6')],'target':villageID[_0x389d46],'wood':merchantOrders[_0x5e4b4e][_0xec8f04('0x93')]*0x3e8}),shortageResources[_0x389d46][0x0][_0xec8f04('0x93')]-=merchantOrders[_0x5e4b4e][_0xec8f04('0x93')]*0x3e8,merchantOrders[_0x5e4b4e]['wood']=0x0));if(shortageResources[_0x389d46][0x0][_0xec8f04('0x93')]<=0x0)break;if(_0x5e4b4e==merchantOrders[_0xec8f04('0xa')]-0x1&&shortageResources[_0x389d46][0x0][_0xec8f04('0x93')]>0x0){console[_0xec8f04('0xdf')](_0xec8f04('0x111')),_0xdc255b=0x0;break;}}if(_0xdc255b==0x0){_0x389d46=0x0;break;}}}for(let _0xbf1793=shortageResources['length']-0x1;_0xbf1793>=0x0;_0xbf1793--){$(_0xec8f04('0xbe'))[_0xec8f04('0xff')](_0xec8f04('0x8e'),(shortageResources[_0xec8f04('0xa')]-_0xbf1793)/shortageResources[_0xec8f04('0xa')]*0x64+'%');for(var _0x227ccf=0x0;_0x227ccf<merchantOrders[_0xec8f04('0xa')];_0x227ccf++){merchantOrders[_0x227ccf][_0xec8f04('0x156')]=checkDistance(merchantOrders[_0x227ccf]['x'],merchantOrders[_0x227ccf]['y'],villagesData[_0xbf1793]['name'][_0xec8f04('0x115')](/(\d+)\|(\d+)/)[0x1],villagesData[_0xbf1793]['name']['match'](/(\d+)\|(\d+)/)[0x2]);}merchantOrders[_0xec8f04('0x98')](function(_0x2536e4,_0x2c2be0){var _0x5b2f98=_0xec8f04;return _0x2536e4[_0x5b2f98('0x156')]-_0x2c2be0['distance'];});if(shortageResources[_0xbf1793][0x1][_0xec8f04('0xa9')]<=0x0){}else while(shortageResources[_0xbf1793][0x1][_0xec8f04('0xa9')]>0x0){console[_0xec8f04('0xdf')](_0xbf1793);var _0x5524ce=0x0;for(var _0x2970d0=0x0;_0x2970d0<merchantOrders[_0xec8f04('0xa')];_0x2970d0++){_0x5524ce+=merchantOrders[_0x2970d0][_0xec8f04('0xa9')];merchantOrders[_0x2970d0][_0xec8f04('0xa9')]>0x0&&(shortageResources[_0xbf1793][0x1][_0xec8f04('0xa9')]<=merchantOrders[_0x2970d0][_0xec8f04('0xa9')]*0x3e8&&(links[_0xec8f04('0x103')]({'source':merchantOrders[_0x2970d0][_0xec8f04('0xb6')],'target':villageID[_0xbf1793],'stone':shortageResources[_0xbf1793][0x1][_0xec8f04('0xa9')]}),merchantOrders[_0x2970d0]['stone']-=shortageResources[_0xbf1793][0x1][_0xec8f04('0xa9')]/0x3e8,shortageResources[_0xbf1793][0x1]['stone']=0x0),shortageResources[_0xbf1793][0x1][_0xec8f04('0xa9')]>merchantOrders[_0x2970d0]['stone']*0x3e8&&(links['push']({'source':merchantOrders[_0x2970d0][_0xec8f04('0xb6')],'target':villageID[_0xbf1793],'stone':merchantOrders[_0x2970d0][_0xec8f04('0xa9')]*0x3e8}),shortageResources[_0xbf1793][0x1][_0xec8f04('0xa9')]-=merchantOrders[_0x2970d0][_0xec8f04('0xa9')]*0x3e8,merchantOrders[_0x2970d0][_0xec8f04('0xa9')]=0x0));if(shortageResources[_0xbf1793][0x1][_0xec8f04('0xa9')]<=0x0)break;if(_0x2970d0==merchantOrders[_0xec8f04('0xa')]-0x1&&shortageResources[_0xbf1793][0x1][_0xec8f04('0xa9')]>0x0){console[_0xec8f04('0xdf')](_0xec8f04('0x111')),_0x5524ce=0x0;break;}}if(_0x5524ce==0x0){_0xbf1793=0x0;break;}}}for(let _0x4566f0=shortageResources[_0xec8f04('0xa')]-0x1;_0x4566f0>=0x0;_0x4566f0--){$('#progress')[_0xec8f04('0xff')](_0xec8f04('0x8e'),(shortageResources[_0xec8f04('0xa')]-_0x4566f0)/shortageResources[_0xec8f04('0xa')]*0x64+'%');for(let _0x494c6e=0x0;_0x494c6e<merchantOrders[_0xec8f04('0xa')];_0x494c6e++){merchantOrders[_0x494c6e]['distance']=checkDistance(merchantOrders[_0x494c6e]['x'],merchantOrders[_0x494c6e]['y'],villagesData[_0x4566f0]['name'][_0xec8f04('0x115')](/(\d+)\|(\d+)/)[0x1],villagesData[_0x4566f0]['name'][_0xec8f04('0x115')](/(\d+)\|(\d+)/)[0x2]);}merchantOrders[_0xec8f04('0x98')](function(_0x5cf4b2,_0x35bcb9){var _0x39f397=_0xec8f04;return _0x5cf4b2['distance']-_0x35bcb9[_0x39f397('0x156')];});if(shortageResources[_0x4566f0][0x2][_0xec8f04('0x55')]<=0x0){}else while(shortageResources[_0x4566f0][0x2][_0xec8f04('0x55')]>0x0){var _0x1df80d=0x0;for(let _0x1b526f=0x0;_0x1b526f<merchantOrders[_0xec8f04('0xa')];_0x1b526f++){_0x1df80d+=merchantOrders[_0x1b526f][_0xec8f04('0x55')];merchantOrders[_0x1b526f][_0xec8f04('0x55')]>0x0&&(shortageResources[_0x4566f0][0x2][_0xec8f04('0x55')]<=merchantOrders[_0x1b526f][_0xec8f04('0x55')]*0x3e8&&(links['push']({'source':merchantOrders[_0x1b526f][_0xec8f04('0xb6')],'target':villageID[_0x4566f0],'iron':shortageResources[_0x4566f0][0x2][_0xec8f04('0x55')]}),merchantOrders[_0x1b526f][_0xec8f04('0x55')]-=shortageResources[_0x4566f0][0x2][_0xec8f04('0x55')]/0x3e8,shortageResources[_0x4566f0][0x2][_0xec8f04('0x55')]=0x0),shortageResources[_0x4566f0][0x2][_0xec8f04('0x55')]>merchantOrders[_0x1b526f][_0xec8f04('0x55')]*0x3e8&&(links[_0xec8f04('0x103')]({'source':merchantOrders[_0x1b526f][_0xec8f04('0xb6')],'target':villageID[_0x4566f0],'iron':merchantOrders[_0x1b526f][_0xec8f04('0x55')]*0x3e8}),shortageResources[_0x4566f0][0x2]['iron']-=merchantOrders[_0x1b526f][_0xec8f04('0x55')]*0x3e8,merchantOrders[_0x1b526f][_0xec8f04('0x55')]=0x0));if(shortageResources[_0x4566f0][0x2][_0xec8f04('0x55')]<=0x0)break;if(_0x1b526f==merchantOrders[_0xec8f04('0xa')]-0x1&&shortageResources[_0x4566f0][0x2][_0xec8f04('0x55')]>0x0){console[_0xec8f04('0xdf')](_0xec8f04('0x111')),totalIronToTrade=0x0;break;}}if(_0x1df80d==0x0){_0x4566f0=0x0;break;}}}$('#progress')[_0xec8f04('0x3c')](),htmlCode='<div\x20id=\x22restart\x22>'+totalsAndAverages+_0xec8f04('0xd')+settings[_0xec8f04('0x70')]+_0xec8f04('0x139')+settings[_0xec8f04('0x118')]+_0xec8f04('0x10b')+settings[_0xec8f04('0xc')]+_0xec8f04('0x2b')+settings[_0xec8f04('0x1b')]+'\x22\x20class=\x22slider\x22\x20name=\x22highFarm\x22\x20oninput=\x22sliderChange(\x27builtOutPercentage\x27,this.value)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<output\x20id=\x22builtOutPercentage\x22></output></td></tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22padding:\x206px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20for=\x22needsMorePercentage\x22>WH\x20capacity\x20priority\x20village:\x20</label></td><td\x20style=\x22padding:\x206px;\x22><input\x20type=\x22range\x22\x20min=\x220\x22\x20max=\x221\x22\x20step=\x220.01\x22\x20value=\x22'+settings[_0xec8f04('0x155')]+_0xec8f04('0x31')+langShinko[0x0]+_0xec8f04('0x4b')+langShinko[0x1]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22sophHeader\x22\x20width=\x2225%\x22\x20style=\x22text-align:center\x22>'+langShinko[0x2]+_0xec8f04('0xa7')+langShinko[0x3]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22sophHeader\x22\x20width=\x2210%\x22\x20style=\x22text-align:center\x22>'+langShinko[0x4]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22sophHeader\x22\x20width=\x2210%\x22\x20style=\x22text-align:center\x22>'+langShinko[0x5]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22sophHeader\x22\x20width=\x2210%\x22\x20style=\x22text-align:center\x22>'+langShinko[0x6]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20class=\x22sophHeader\x22\x20width=\x2210%\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20size=\x221\x22>'+langShinko[0x8]+'</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tbody>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</table>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20',$(_0xec8f04('0x8a'))['eq'](0x0)[_0xec8f04('0xc2')](htmlCode),is_mobile==!![]&&$('#mobile_header')['eq'](0x0)['prepend'](htmlCode),$(_0xec8f04('0x57'))[_0xec8f04('0x149')](_0xec8f04('0xeb'),settings[_0xec8f04('0x53')]),$(_0xec8f04('0xaf'))[_0xec8f04('0xdd')](settings[_0xec8f04('0x70')]),$(_0xec8f04('0x30'))[_0xec8f04('0xdd')](settings[_0xec8f04('0x118')]),$(_0xec8f04('0x60'))[_0xec8f04('0xdd')](settings[_0xec8f04('0xc')]),$(_0xec8f04('0x8f'))[_0xec8f04('0xdd')](settings[_0xec8f04('0x1b')]),$(_0xec8f04('0xac'))[_0xec8f04('0xdd')](settings[_0xec8f04('0x155')]),makeThingsCollapsible(),_0x4b3ecd();})[_0x27f3ab('0x81')](function(){var _0x4a0902=_0x27f3ab;console[_0x4a0902('0xdf')](_0x4a0902('0x17'));})['always'](function(){var _0x4d3016=_0x27f3ab;console[_0x4d3016('0xdf')](_0x4d3016('0xca'));});});function _0x4b3ecd(){var _0x3f8806=_0x5084a1;console[_0x3f8806('0xdf')](_0x3f8806('0xe7'));for(let _0xe3ded4=0x0;_0xe3ded4<links[_0x3f8806('0xa')];_0xe3ded4++){if(links[_0xe3ded4][_0x3f8806('0x93')]==undefined)links[_0xe3ded4][_0x3f8806('0x93')]=0x0;if(links[_0xe3ded4]['stone']==undefined)links[_0xe3ded4][_0x3f8806('0xa9')]=0x0;if(links[_0xe3ded4][_0x3f8806('0x55')]==undefined)links[_0xe3ded4][_0x3f8806('0x55')]=0x0;}console[_0x3f8806('0xdf')](_0x3f8806('0xcd'));for(let _0x3d26e9=0x0;_0x3d26e9<links[_0x3f8806('0xa')];_0x3d26e9++){for(let _0x560bab=0x0;_0x560bab<links[_0x3f8806('0xa')];_0x560bab++){links[_0x3d26e9][_0x3f8806('0xf6')]==links[_0x560bab][_0x3f8806('0xf6')]&&links[_0x3d26e9]['target']==links[_0x560bab][_0x3f8806('0x3e')]&&_0x3d26e9!=_0x560bab&&(links[_0x3d26e9]['wood']+=parseInt(links[_0x560bab]['wood']),links[_0x560bab][_0x3f8806('0x93')]=0x0,links[_0x3d26e9][_0x3f8806('0xa9')]+=parseInt(links[_0x560bab][_0x3f8806('0xa9')]),links[_0x560bab][_0x3f8806('0xa9')]=0x0,links[_0x3d26e9][_0x3f8806('0x55')]+=parseInt(links[_0x560bab][_0x3f8806('0x55')]),links[_0x560bab][_0x3f8806('0x55')]=0x0);}}console[_0x3f8806('0xdf')](_0x3f8806('0x25'));for(let _0x53b064=0x0;_0x53b064<links[_0x3f8806('0xa')];_0x53b064++){links[_0x53b064][_0x3f8806('0x93')]+links[_0x53b064][_0x3f8806('0xa9')]+links[_0x53b064][_0x3f8806('0x55')]==0x0&&delete links[_0x53b064];}console[_0x3f8806('0xdf')](_0x3f8806('0x49'));for(let _0x35de36=0x0;_0x35de36<Object[_0x3f8806('0x67')](links)[_0x3f8806('0xa')];_0x35de36++){cleanLinks[_0x3f8806('0x103')](links[Object['keys'](links)[_0x35de36]]);}console[_0x3f8806('0xdf')](_0x3f8806('0x11a')),cleanLinks=addDistanceToArray(cleanLinks),listHTML='',cleanLinks[_0x3f8806('0x98')](function(_0x58c24a,_0x685ab6){var _0x15cf5c=_0x3f8806;return _0x58c24a[_0x15cf5c('0x156')]-_0x685ab6['distance'];});for(let _0x1f3d65=0x0;_0x1f3d65<cleanLinks[_0x3f8806('0xa')];_0x1f3d65++){console[_0x3f8806('0xdf')](_0x3f8806('0x159')+_0x1f3d65+_0x3f8806('0x38'));_0x1f3d65%0x2==0x0?tempRow=_0x3f8806('0xe4')+_0x1f3d65+_0x3f8806('0x73'):tempRow=_0x3f8806('0xe4')+_0x1f3d65+_0x3f8806('0x5e');for(let _0x262b8f in villagesData){villagesData[_0x262b8f]['id']==cleanLinks[_0x1f3d65][_0x3f8806('0xf6')]&&(sourceName=villagesData[_0x262b8f][_0x3f8806('0xe6')],sourceURL=villagesData[_0x262b8f][_0x3f8806('0x7')]);}for(let _0x4fb9fb in villagesData){villagesData[_0x4fb9fb]['id']==cleanLinks[_0x1f3d65][_0x3f8806('0x3e')]&&(targetName=villagesData[_0x4fb9fb]['name'],targetURL=villagesData[_0x4fb9fb][_0x3f8806('0x7')],targetWood=villagesData[_0x4fb9fb][_0x3f8806('0x93')],targetStone=villagesData[_0x4fb9fb][_0x3f8806('0xa9')],targetIron=villagesData[_0x4fb9fb][_0x3f8806('0x55')],targetCapacity=villagesData[_0x4fb9fb][_0x3f8806('0x112')]);}listHTML+=_0x3f8806('0xea')+tempRow+_0x3f8806('0x1')+sourceURL+_0x3f8806('0xef')+sourceName+_0x3f8806('0x41')+targetURL+_0x3f8806('0x90')+targetWood+_0x3f8806('0xa1')+targetStone+_0x3f8806('0x13')+targetIron+_0x3f8806('0xe3')+targetCapacity+'\x22>'+targetName+_0x3f8806('0x6d')+cleanLinks[_0x1f3d65]['distance']+_0x3f8806('0xec')+cleanLinks[_0x1f3d65][_0x3f8806('0x93')]+_0x3f8806('0x8c')+cleanLinks[_0x1f3d65][_0x3f8806('0xa9')]+_0x3f8806('0xab')+cleanLinks[_0x1f3d65][_0x3f8806('0x55')]+_0x3f8806('0x5a')+langShinko[0x7]+_0x3f8806('0x9c')+cleanLinks[_0x1f3d65][_0x3f8806('0xf6')]+','+cleanLinks[_0x1f3d65][_0x3f8806('0x3e')]+','+cleanLinks[_0x1f3d65][_0x3f8806('0x93')]+','+cleanLinks[_0x1f3d65][_0x3f8806('0xa9')]+','+cleanLinks[_0x1f3d65][_0x3f8806('0x55')]+','+_0x1f3d65+')\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>';}$(_0x3f8806('0xd0'))['eq'](0x0)['append'](listHTML),$(_0x3f8806('0x2'))[0x0]['focus']();for(let _0x41dfba=0x0;_0x41dfba<shortageResources['length'];_0x41dfba++){parseInt(shortageResources[_0x41dfba][0x0][_0x3f8806('0x93')])+parseInt(shortageResources[_0x41dfba][0x1][_0x3f8806('0xa9')])+parseInt(shortageResources[_0x41dfba][0x2]['iron'])!=0x0&&stillShortage[_0x3f8806('0x103')]([villagesData[_0x41dfba][_0x3f8806('0xe6')],shortageResources[_0x41dfba]]);}for(let _0x2abad1=0x0;_0x2abad1<excessResources[_0x3f8806('0xa')];_0x2abad1++){parseInt(excessResources[_0x2abad1][0x0][_0x3f8806('0x93')])+parseInt(excessResources[_0x2abad1][0x1][_0x3f8806('0xa9')])+parseInt(excessResources[_0x2abad1][0x2][_0x3f8806('0x55')])!=0x0&&stillExcess[_0x3f8806('0x103')]([villagesData[_0x2abad1][_0x3f8806('0xe6')],excessResources[_0x2abad1]]);}$(_0x3f8806('0x72'))['eq'](0x0)[_0x3f8806('0x1e')]('<div\x20id=\x27aftermath\x27><center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20class=\x22btn\x20btnSophie\x22\x20name=\x22showStats\x22\x20style=\x22padding:\x2010px;width:\x20300px\x22\x20onclick=\x22showStats()\x22>Show\x20excess/shortage</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20class=\x22btn\x20btnSophie\x22\x20name=\x22showEndResult\x22\x20style=\x22padding:\x2010px;width:\x20300px\x22\x20onclick=\x22resAfterBalance()\x22>Show\x20result\x20of\x20balance</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</center></div>'),console[_0x3f8806('0xdf')](_0x3f8806('0x44'));}}displayEverything();function checkDistance(_0x2dde85,_0x5b1c9a,_0x3e7117,_0x3d3102){var _0x2980e7=_0x3eecd2,_0x34158f=_0x2dde85-_0x3e7117,_0x5ce756=_0x5b1c9a-_0x3d3102,_0x25a22c=Math[_0x2980e7('0x109')](Math[_0x2980e7('0x99')](_0x34158f,_0x5ce756));return _0x25a22c;}function addDistanceToArray(_0xf15052){var _0x327e4d=_0x3eecd2;for(let _0x66f8be=0x0;_0x66f8be<_0xf15052[_0x327e4d('0xa')];_0x66f8be++){for(let _0x1a288e in villagesData){villagesData[_0x1a288e]['id']==_0xf15052[_0x66f8be]['source']&&(sourceName=villagesData[_0x1a288e][_0x327e4d('0xe6')],sourceURL=villagesData[_0x1a288e][_0x327e4d('0x7')]);}for(let _0x47c166 in villagesData){villagesData[_0x47c166]['id']==_0xf15052[_0x66f8be][_0x327e4d('0x3e')]&&(targetName=villagesData[_0x47c166][_0x327e4d('0xe6')],targetURL=villagesData[_0x47c166][_0x327e4d('0x7')]);}_0xf15052[_0x66f8be]['distance']=checkDistance(sourceName[_0x327e4d('0x115')](/(\d+)\|(\d+)/)[0x1],sourceName['match'](/(\d+)\|(\d+)/)[0x2],targetName[_0x327e4d('0x115')](/(\d+)\|(\d+)/)[0x1],targetName['match'](/(\d+)\|(\d+)/)[0x2]);}return _0xf15052;}function numberWithCommas(_0x206479){var _0x323418=_0x3eecd2;_0x206479=_0x206479[_0x323418('0x11')]();var _0x5d8593=/(-?\d+)(\d{3})/;while(_0x5d8593[_0x323418('0xf0')](_0x206479))_0x206479=_0x206479[_0x323418('0x24')](_0x5d8593,_0x323418('0xb3'));return _0x206479;}function showStats(){var _0x386c23=_0x3eecd2;htmlStats=_0x386c23('0x150');for(let _0x244969=0x0;_0x244969<stillShortage[_0x386c23('0xa')];_0x244969++){console[_0x386c23('0xdf')](_0x386c23('0x159')+_0x244969+_0x386c23('0x38')),_0x244969%0x2==0x0?tempRow=_0x386c23('0xe4')+_0x244969+'\x27\x20class=\x27sophRowB\x27':tempRow='\x20id=\x27'+_0x244969+_0x386c23('0x5e'),htmlStats+=_0x386c23('0xea')+tempRow+_0x386c23('0x158')+stillShortage[_0x244969][0x0]+_0x386c23('0xfd')+stillShortage[_0x244969][0x1][0x0][_0x386c23('0x93')]+_0x386c23('0x131')+stillShortage[_0x244969][0x1][0x1]['stone']+'\x20,\x20'+stillShortage[_0x244969][0x1][0x2][_0x386c23('0x55')]+_0x386c23('0x151');}htmlStats+=_0x386c23('0x87');for(let _0x251d9e=0x0;_0x251d9e<stillExcess[_0x386c23('0xa')];_0x251d9e++){console['log']('Creating\x20line\x20'+_0x251d9e+_0x386c23('0x38')),_0x251d9e%0x2==0x0?tempRow=_0x386c23('0xe4')+_0x251d9e+_0x386c23('0x73'):tempRow='\x20id=\x27'+_0x251d9e+_0x386c23('0x5e'),htmlStats+='\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20'+tempRow+'\x20height=\x2240\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>'+stillExcess[_0x251d9e][0x0]+_0x386c23('0xfd')+stillExcess[_0x251d9e][0x1][0x0]['wood']+_0x386c23('0x131')+stillExcess[_0x251d9e][0x1][0x1]['stone']+'\x20,\x20'+stillExcess[_0x251d9e][0x1][0x2][_0x386c23('0x55')]+_0x386c23('0x151');}htmlStats+=_0x386c23('0xf1'),Dialog[_0x386c23('0xb9')](_0x386c23('0x6e'),htmlStats);}function makeThingsCollapsible(){var _0x5af65f=_0x3eecd2,_0x3bfcd7=$(_0x5af65f('0x124'));for(var _0x30ab80=0x0;_0x30ab80<_0x3bfcd7[_0x5af65f('0xa')];_0x30ab80++){_0x3bfcd7[_0x30ab80][_0x5af65f('0x88')]('click',function(){var _0x246ff8=_0x5af65f;this[_0x246ff8('0xb4')][_0x246ff8('0xc8')](_0x246ff8('0x2c'));var _0x41d277=this[_0x246ff8('0x45')];_0x41d277[_0x246ff8('0x135')][_0x246ff8('0x1d')]?_0x41d277[_0x246ff8('0x135')][_0x246ff8('0x1d')]=null:_0x41d277['style']['maxHeight']=_0x41d277[_0x246ff8('0xe8')]+'px';});}}function saveSettings(){var _0x228d66=_0x3eecd2;tempArray=$(_0x228d66('0x94'))['serializeArray'](),$(_0x228d66('0x57'))[0x0][_0x228d66('0xeb')]==!![]?(settings[_0x228d66('0x53')]=!![],settings[_0x228d66('0x70')]=parseInt(tempArray[0x1][_0x228d66('0x83')]),settings[_0x228d66('0x118')]=parseInt(tempArray[0x2][_0x228d66('0x83')]),settings[_0x228d66('0xc')]=parseInt(tempArray[0x3][_0x228d66('0x83')]),settings[_0x228d66('0x1b')]=parseFloat(tempArray[0x4][_0x228d66('0x83')]),settings['needsMorePercentage']=parseFloat(tempArray[0x5][_0x228d66('0x83')])):(settings[_0x228d66('0x53')]=![],settings[_0x228d66('0x70')]=parseInt(tempArray[0x0][_0x228d66('0x83')]),settings[_0x228d66('0x118')]=parseInt(tempArray[0x1][_0x228d66('0x83')]),settings['highFarm']=parseInt(tempArray[0x2][_0x228d66('0x83')]),settings[_0x228d66('0x1b')]=parseFloat(tempArray[0x3][_0x228d66('0x83')]),settings[_0x228d66('0x155')]=parseFloat(tempArray[0x4][_0x228d66('0x83')])),localStorage['setItem'](_0x228d66('0x2a'),JSON[_0x228d66('0x152')](settings)),$(_0x228d66('0x69'))[_0x228d66('0x3c')](),$(_0x228d66('0x2e'))[_0x228d66('0x3c')](),$('div[id*=\x27sendResources\x27]')['remove'](),init(),displayEverything();}function sliderChange(_0x48fdb3,_0x1de04d){var _0x13a387=_0x3eecd2;document[_0x13a387('0x108')](_0x48fdb3)['innerHTML']=_0x1de04d;}function resAfterBalance(){var _0x3d3d59=_0x3eecd2;resBalancedHTML=_0x3d3d59('0x13d');for(var _0x24bb7b=0x0;_0x24bb7b<villagesData[_0x3d3d59('0xa')];_0x24bb7b++){thisMerchantLeft=villagesData[_0x24bb7b][_0x3d3d59('0x157')];incomingRes[villagesData[_0x24bb7b]['id']]!=undefined?(console['log'](_0x3d3d59('0x113')),thisVillageTotalWood=incomingRes[villagesData[_0x24bb7b]['id']][_0x3d3d59('0x93')]+parseInt(villagesData[_0x24bb7b][_0x3d3d59('0x93')]),thisVillageTotalStone=incomingRes[villagesData[_0x24bb7b]['id']]['stone']+parseInt(villagesData[_0x24bb7b]['stone']),thisVillageTotalIron=incomingRes[villagesData[_0x24bb7b]['id']][_0x3d3d59('0x55')]+parseInt(villagesData[_0x24bb7b]['iron'])):(thisVillageTotalWood=parseInt(villagesData[_0x24bb7b][_0x3d3d59('0x93')]),thisVillageTotalStone=parseInt(villagesData[_0x24bb7b][_0x3d3d59('0xa9')]),thisVillageTotalIron=parseInt(villagesData[_0x24bb7b][_0x3d3d59('0x55')]));for(var _0x425dde=0x0;_0x425dde<cleanLinks[_0x3d3d59('0xa')];_0x425dde++){cleanLinks[_0x425dde]['target']==villagesData[_0x24bb7b]['id']&&(console[_0x3d3d59('0xdf')](_0x3d3d59('0xbd')),thisVillageTotalWood+=cleanLinks[_0x425dde][_0x3d3d59('0x93')],thisVillageTotalStone+=cleanLinks[_0x425dde][_0x3d3d59('0xa9')],thisVillageTotalIron+=cleanLinks[_0x425dde][_0x3d3d59('0x55')]),cleanLinks[_0x425dde][_0x3d3d59('0xf6')]==villagesData[_0x24bb7b]['id']&&(console[_0x3d3d59('0xdf')]('addings\x20rows\x20to\x20be\x20sent\x20to\x20the\x20res\x20at\x20the\x20target'),thisVillageTotalWood-=cleanLinks[_0x425dde]['wood'],thisVillageTotalStone-=cleanLinks[_0x425dde][_0x3d3d59('0xa9')],thisVillageTotalIron-=cleanLinks[_0x425dde]['iron'],thisMerchantLeft-=(cleanLinks[_0x425dde]['wood']+cleanLinks[_0x425dde][_0x3d3d59('0xa9')]+cleanLinks[_0x425dde][_0x3d3d59('0x55')])/0x3e8);}_0x24bb7b%0x2==0x0?tempRow=_0x3d3d59('0x3b'):tempRow=_0x3d3d59('0x14f'),resBalancedHTML+='\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20'+tempRow+_0x3d3d59('0x5c')+villagesData[_0x24bb7b][_0x3d3d59('0xe6')]+_0x3d3d59('0xfd')+villagesData[_0x24bb7b][_0x3d3d59('0x5d')]+_0x3d3d59('0xc5')+(thisMerchantLeft+'/'+villagesData[_0x24bb7b]['totalMerchants'])+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22res\x20wood\x22\x20style=\x22padding-left:1em\x22>&nbsp;</span>'+thisVillageTotalWood+_0x3d3d59('0xfa')+thisVillageTotalStone+_0x3d3d59('0xd5')+thisVillageTotalIron+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:right\x22>'+villagesData[_0x24bb7b][_0x3d3d59('0x112')]+'</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>';}resBalancedHTML+=_0x3d3d59('0x32'),Dialog[_0x3d3d59('0xb9')](_0x3d3d59('0x6e'),resBalancedHTML);}
+var testPage;
+var is_mobile = !!navigator.userAgent.match(/iphone|android|blackberry/ig) || false;
+var warehouseCapacity = [];
+var allWoodTotals = [];
+var allClayTotals = [];
+var allIronTotals = [];
+var availableMerchants = [];
+var totalMerchants = [];
+var farmSpaceUsed = [];
+var farmSpaceTotal = [];
+var villagePoints = [];
+var villagesData = [];
+var villageID = [];
+var allWoodObjects, allClayObjects, allIronObjects, allVillages;
+var totalsAndAverages = "";
+var incomingRes = {};
+var totalWood, totalStone, totalIron;
+var merchantOrders = [];
+var excessResources = [];
+var shortageResources = [];
+var links = [];
+var cleanLinks = [];
+var stillShortage = [];
+var stillExcess = [];
+
+
+
+
+function init() {
+    warehouseCapacity = [];
+    allWoodTotals = [];
+    allClayTotals = [];
+    allIronTotals = [];
+    availableMerchants = [];
+    totalMerchants = [];
+    farmSpaceUsed = [];
+    farmSpaceTotal = [];
+    villagePoints = [];
+    villagesData = [];
+    villageID = [];
+    allWoodObjects, allClayObjects, allIronObjects, allVillages;
+    totalsAndAverages = "";
+    incomingRes = {};
+    totalWood, totalStone, totalIron;
+    merchantOrders = [];
+    excessResources = [];
+    shortageResources = [];
+    links = [];
+    cleanLinks = [];
+    stillShortage = [];
+    stillExcess = [];
+}
+
+function cleanup() {
+    warehouseCapacity = [];
+    allWoodTotals = [];
+    allClayTotals = [];
+    allIronTotals = [];
+    availableMerchants = [];
+    totalMerchants = [];
+    farmSpaceUsed = [];
+    farmSpaceTotal = [];
+    villagePoints = [];
+    villageID = [];
+    allWoodObjects, allClayObjects, allIronObjects, allVillages;
+    incomingRes = {};
+    merchantOrders = [];
+    links = [];
+    cleanLinks = [];
+}
+
+
+//base language if not on a particular server = English
+var langShinko = [
+    "Warehouse balancer",
+    "Source village",
+    "Target village",
+    "Distance",
+    "Wood",
+    "Clay",
+    "Iron",
+    "Send resources",
+    "Created by Sophie 'Shinko to Kuma'",
+    "Total wood",
+    "Total clay",
+    "Total iron",
+    "Wood per village",
+    "Clay per village",
+    "Iron per village",
+    "Premium exchange",
+    "System"
+];
+//.net
+if (game_data.locale == "en_DK") {
+    langShinko = [
+        "Warehouse balancer",
+        "Source village",
+        "Target village",
+        "Distance",
+        "Wood",
+        "Clay",
+        "Iron",
+        "Send resources",
+        "Created by Sophie 'Shinko to Kuma'",
+        "Total wood",
+        "Total clay",
+        "Total iron",
+        "Wood per village",
+        "Clay per village",
+        "Iron per village",
+        "Premium exchange",
+        "System"
+    ];
+}
+//.swiss
+if (game_data.locale == "de_CH") {
+    langShinko = [
+        "Warehouse balancer",
+        "HÃ¤rkunfts Dorf",
+        "Ziel Dorf",
+        "Distanz",
+        "Holz",
+        "Lehm",
+        "IsÃ¤",
+        "Rohstoff vrschicke",
+        "Created by Sophie 'Shinko to Kuma'",
+        "Total Holz",
+        "Total Lehm",
+        "Total IsÃ¤",
+        "Holz pro Dorf",
+        "Lehm pro Dorf",
+        "IsÃ¤ pro Dorf",
+        "Premium-Depot",
+        "System"
+    ];
+}
+//.ro
+if (game_data.locale == "ro_RO") {
+    langShinko = [
+        "Echilibrare resurse",
+        "Sat Sursa",
+        "Sat Tinta",
+        "Distanta",
+        "Lemn",
+        "Argila",
+        "Fier",
+        "Trimite resurse",
+        "Facut de Sophie 'Shinko to Kuma'",
+        "Total lemn",
+        "Total argila",
+        "Total fier",
+        "Lemn per sat",
+        "Argila per sat",
+        "fier per sat",
+        "Schimb Premium",
+        "Sistem"
+    ];
+}
+//.gr
+if (game_data.locale == "el_GR") {
+    langShinko = [
+        "Warehouse balancer",
+        "Î ÏÎ¿Î­Î»ÎµÏ…ÏƒÎ·",
+        "Î§Ï‰ÏÎ¹ÏŒ ÏƒÏ„ÏŒÏ‡Î¿Ï‚",
+        "Î‘Ï€ÏŒÏƒÏ„Î±ÏƒÎ·",
+        "ÎžÏÎ»Î¿",
+        "Î Î·Î»ÏŒÏ‚",
+        "Î£Î¯Î´ÎµÏÎ¿",
+        "Î‘Ï€Î¿ÏƒÏ„Î¿Î»Î® Ï€ÏŒÏÏ‰Î½",
+        "Î”Î·Î¼Î¹Î¿Ï…ÏÎ³Î®Î¸Î·ÎºÎµ Î±Ï€ÏŒ Ï„Î·Î½ Sophie 'Shinko to Kuma'",
+        "Î£ÏÎ½Î¿Î»Î¿ Î¾ÏÎ»Î¿Ï…",
+        "Î£ÏÎ½Î¿Î»Î¿ Ï€Î·Î»Î¿Ï",
+        "Î£ÏÎ½Î¿Î»Î¿ ÏƒÎ¹Î´Î®ÏÎ¿Ï…",
+        "ÎžÏÎ»Î¿ Î±Î½Î± Ï‡Ï‰ÏÎ¹ÏŒ",
+        "Î Î·Î»ÏŒÏ‚ Î±Î½Î± Ï‡Ï‰ÏÎ¹ÏŒ",
+        "Î£Î¯Î´ÎµÏÎ¿ Î±Î½Î± Ï‡Ï‰ÏÎ¹ÏŒ",
+        "Premium exchange",
+        "System"
+    ];
+}
+//.nl
+if (game_data.locale == "nl_NL") {
+    langShinko = [
+        "Warenhuis balancer",
+        "Oorsprong",
+        "Doel",
+        "Afstand",
+        "Hout",
+        "Leem",
+        "Ijzer",
+        "Verstuur grondstoffen",
+        "Gemaakt door Sophie 'Shinko to Kuma'",
+        "Totaal hout",
+        "Totaal leem",
+        "Totaal ijzer",
+        "Hout per dorp",
+        "Leem per dorp",
+        "Ijzer per dorp",
+        "Premium Beurs",
+        "Systeem"
+    ];
+}
+//.it
+if (game_data.locale == "it_IT") {
+    langShinko = [
+        "Bilancia risorse",
+        "Villaggio di origine",
+        "Villaggio obiettivo",
+        "Distanza",
+        "Legno",
+        "Argilla",
+        "Ferro",
+        "Manda risorse",
+        "Creato da  Sophie 'Shinko to Kuma'",
+        "Legno totale",
+        "Argilla totale",
+        "Ferro totale",
+        "Legno per villaggio",
+        "Argilla per villaggio",
+        "Ferro per villaggio",
+        "Premium exchange",
+        "System"
+    ];
+}
+//.ae
+if (game_data.locale == "ar_AE") {
+    langShinko = [
+        "Ù…ÙˆØ§Ø±Ù†Ø© Ø§Ù„Ù…ÙˆØ§Ø±Ø¯",
+        "Ø§Ù„Ø£ØµÙ„",
+        "Ø§Ù„Ù‡Ø¯Ù",
+        "Ø§Ù„Ù…Ø³Ø§ÙØ©",
+        "Ø®Ø´Ø¨",
+        "Ø·Ù…ÙŠ",
+        "Ø­Ø¯ÙŠØ¯",
+        "Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ù…ÙˆØ§Ø±Ø¯",
+        "ØªÙ…Øª Ø§Ù„Ø¨Ø±Ù…Ø¬Ù‡ Ù…Ù† 'Shinko to Kuma'",
+        "Ù…Ø¬Ù…ÙˆØ¹ Ø§Ù„Ø®Ø´Ø¨",
+        "Ù…Ø¬Ù…ÙˆØ¹ Ø§Ù„Ø·Ù…ÙŠ",
+        "Ù…Ø¬Ù…ÙˆØ¹ Ø§Ù„Ø­Ø¯ÙŠØ¯",
+        "Ø®Ø´Ø¨ Ù„ÙƒÙ„ Ù‚Ø±ÙŠØ©",
+        "Ø·Ù…ÙŠ Ù„ÙƒÙ„ Ù‚Ø±ÙŠØ©",
+        "Ø­Ø¯ÙŠØ¯ Ù„ÙƒÙ„ Ù‚Ø±ÙŠØ©",
+        "Premium exchange",
+        "System"
+    ];
+}
+//.hu
+if (game_data.locale == "hu_HU") {
+    langShinko = [
+        "Nyersanyag kiegyenlÃ­tÅ‘",
+        "SzÃ¡rmazÃ¡si hely",
+        "CÃ©lÃ¡llomÃ¡s",
+        "TÃ¡volsÃ¡g",
+        "Fa",
+        "Agyag",
+        "Vas",
+        "Nyersanyagok kÃ¼ldÃ©se",
+        "KÃ©szÃ­tette: Sophie 'Shinko to Kuma'",
+        "Ã–sszes fa",
+        "Ã–sszes agyag",
+        "Ã–sszes vas",
+        "Fa/falu",
+        "Agyag/falu",
+        "Vas/falu",
+        "Premium exchange",
+        "System"
+    ];
+}
+//.br
+if (game_data.locale == "pt_BR") {
+    langShinko = [
+        "Balanceador de recursos",
+        "Origem",
+        "Destino",
+        "DistÃ¢ncia",
+        "Madeira",
+        "Argila",
+        "Ferro",
+        "Enviar recursos",
+        "Criado por Sophie 'Shinko to Kuma'",
+        "Total de madeira",
+        "Total de argila",
+        "Total de ferro",
+        "Madeira por aldeia",
+        "Argila por aldeia",
+        "Ferro por aldeia",
+        "Troca Premium",
+        "Sistema"
+    ];
+}
+//colors for UI
+if (typeof colors == 'undefined') {
+    cssClassesSophie = `
+<style>
+.sophRowA {
+background-color: #32353b;
+color: white;
+}
+.sophRowB {
+background-color: #36393f;
+color: white;
+}
+.sophHeader {
+background-color: #202225;
+font-weight: bold;
+color: white;
+}
+.sophLink
+{
+    color:#40D0E0;
+}
+.btnSophie
+{
+    background-image: linear-gradient(#6e7178 0%, #36393f 30%, #202225 80%, black 100%);
+}
+.btnSophie:hover
+{ 
+    background-image: linear-gradient(#7b7e85 0%, #40444a 30%, #393c40 80%, #171717 100%);
+}
+.collapsible {
+    background-color: #32353b;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    }
+    
+    .active, .collapsible:hover {
+    background-color:  #36393f;
+    }
+    
+    .collapsible:after {
+    content: '+';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    }
+    
+    .active:after {
+    content: "-";
+    }
+    
+    .content {
+    padding: 0 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color:  #5b5f66;
+    color: white;
+    }
+    
+    .item-padded {
+    padding: 5px;
+    }
+    
+    .flex-container {
+    display: flex; 
+    justify-content: space-between;
+    align-items:center
+    }
+    
+    .submenu{
+        display:flex;
+        flex-direction:column;
+        position: absolute;
+        left:0px;
+        top:37px;
+        min-width:240px;
+    }
+</style>`;
+}
+else {
+    if (colors == 'pink') {
+        //pink theme
+        cssClassesSophie = `
+        <style>
+        .sophRowA {
+            background-color: #FEC5E5;
+            color: #E11584;
+            }
+            .sophRowB {
+            background-color: #fcd4eb;
+            color: #E11584;
+            }
+            .sophHeader {
+            background-color: #F699CD;
+            font-weight: bold;
+            color: #E11584;
+            }
+            .sophLink
+            {
+                color:#7d3873;
+            }
+        .btnSophie
+        {
+            background-image: linear-gradient(#FEC5E5 0%, #FD5DA8 30%, #FF1694 80%, #E11584 100%);
+        }
+        .btnSophie:hover
+        { 
+            background-image: linear-gradient(#F2B8C6 0%, #FCBACB 30%, #FA86C4 80%, #FE7F9C 100%);
+        }
+        .collapsible {
+            background-color: #FEC5E5;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            }
+            
+            .active, .collapsible:hover {
+            background-color:  #fcd4eb;
+            }
+            
+            .collapsible:after {
+            content: '+';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            }
+            
+            .active:after {
+            content: "-";
+            }
+            
+            .content {
+            padding: 0 5px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color:  #5b5f66;
+            color: white;
+            }
+            
+            .item-padded {
+            padding: 5px;
+            }
+            
+            .flex-container {
+            display: flex; 
+            justify-content: space-between;
+            align-items:center
+            }
+            
+            .submenu{
+                display:flex;
+                flex-direction:column;
+                position: absolute;
+                left:0px;
+                top:37px;
+                min-width:240px;
+            }
+        </style>`;
+    }
+    else if (colors == "swedish") {
+        //yellow/blue
+        cssClassesSophie = `
+        <style>
+        .sophRowA {
+            background-color: #fecd00;
+            color: #006aa8;
+            }
+            .sophRowB {
+            background-color: #ffea00;
+            color: #006aa8;
+            }
+            .sophHeader {
+            background-color: #006aa8;
+            font-weight: bold;
+            color: #ffffdf;
+            }
+            .sophLink
+            {
+                color:#034166;
+            }
+        .btnSophie
+        {
+            background-image: linear-gradient(#00a1fe 0%, #5d9afd 30%, #1626ff 80%, #1f15e1 100%);
+        }
+        .btnSophie:hover
+        { 
+            background-image: linear-gradient(#b8bcf2 0%, #babbfc 30%, #8c86fa 80%, #969fff 100%);
+        }
+        .collapsible {
+            background-color: #fecd00;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            }
+            
+            .active, .collapsible:hover {
+            background-color:  #ffea00;
+            }
+            
+            .collapsible:after {
+            content: '+';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            }
+            
+            .active:after {
+            content: "-";
+            }
+            
+            .content {
+            padding: 0 5px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color:  #5b5f66;
+            color: white;
+            }
+            
+            .item-padded {
+            padding: 5px;
+            }
+            
+            .flex-container {
+            display: flex; 
+            justify-content: space-between;
+            align-items:center
+            }
+            
+            .submenu{
+                display:flex;
+                flex-direction:column;
+                position: absolute;
+                left:0px;
+                top:37px;
+                min-width:240px;
+            }
+        </style>`;
+    }
+    else if (colors == "mimimalistGray") {
+        //gray
+        console.log("Changing to gray theme");
+        cssClassesSophie = `
+        <style>
+        .sophRowA {
+            background-color: #dedede;
+            color: #545454;
+            }
+            .sophRowB {
+            background-color: #f1f1f1;
+            color: #545454;
+            }
+            .sophHeader {
+            background-color: #ded9d9;
+            font-weight: bold;
+            color: #545454;
+            }
+            .sophLink
+            {
+                color:#1626ff;
+            }
+        .btnSophie
+        {
+            background-image: linear-gradient(#00a1fe 0%, #5d9afd 30%, #1626ff 80%, #1f15e1 100%);
+            color:white
+        }
+        .btnSophie:hover
+        { 
+            background-image: linear-gradient(#b8bcf2 0%, #babbfc 30%, #8c86fa 80%, #969fff 100%);
+            color: white
+        }
+        .collapsible {
+            background-color: #dedede;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            }
+            
+            .active, .collapsible:hover {
+            background-color:  #f1f1f1;
+            }
+            
+            .collapsible:after {
+            content: '+';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            }
+            
+            .active:after {
+            content: "-";
+            }
+            
+            .content {
+            padding: 0 5px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color:  #5b5f66;
+            color: white;
+            }
+            
+            .item-padded {
+            padding: 5px;
+            }
+            
+            .flex-container {
+            display: flex; 
+            justify-content: space-between;
+            align-items:center
+            }
+            
+            .submenu{
+                display:flex;
+                flex-direction:column;
+                position: absolute;
+                left:0px;
+                top:37px;
+                min-width:240px;
+            }
+        </style>`;
+    }
+    else if (colors == "TW") {
+        //gray
+        console.log("Changing to TW theme");
+        cssClassesSophie = `
+        <style>
+        .sophRowA {
+            background-color: #F4E4BC;
+            color: black;
+            }
+            .sophRowB {
+            background-color: #fff5da;
+            color: black;
+            }
+            .sophHeader {
+            background-color: #c6a768;
+            font-weight: bold;
+            color: #803000;
+            }
+            .sophLink
+            {
+                color:#803000;
+            }
+        .btnSophie
+        {
+            linear-gradient(to bottom, #947a62 0%,#7b5c3d 22%,#6c4824 30%,#6c4824 100%)
+            color:white
+        }
+        .btnSophie:hover
+        { 
+            linear-gradient(to bottom, #b69471 0%,#9f764d 22%,#8f6133 30%,#6c4d2d 100%);
+            color: white
+        }
+        .collapsible {
+            background-color: #F4E4BC;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            }
+            
+            .active, .collapsible:hover {
+            background-color:  #fff5da;
+            }
+            
+            .collapsible:after {
+            content: '+';
+            color: white;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            }
+            
+            .active:after {
+            content: "-";
+            }
+            
+            .content {
+            padding: 0 5px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color:  #5b5f66;
+            color: white;
+            }
+            
+            .item-padded {
+            padding: 5px;
+            }
+            
+            .flex-container {
+            display: flex; 
+            justify-content: space-between;
+            align-items:center
+            }
+            
+            .submenu{
+                display:flex;
+                flex-direction:column;
+                position: absolute;
+                left:0px;
+                top:37px;
+                min-width:240px;
+            }
+        </style>`;
+    }
+    else {
+        //standard
+        console.log("Switching to standard colors");
+        cssClassesSophie = `
+            <style>
+            .sophRowA {
+            background-color: #32353b;
+            color: white;
+            }
+            .sophRowB {
+            background-color: #36393f;
+            color: white;
+            }
+            .sophHeader {
+            background-color: #202225;
+            font-weight: bold;
+            color: white;
+            }
+            .sophLink
+            {
+                color:#40D0E0;
+            }
+            .btnSophie
+            {
+                background-image: linear-gradient(#6e7178 0%, #36393f 30%, #202225 80%, black 100%);
+            }
+            .btnSophie:hover
+            { 
+                background-image: linear-gradient(#7b7e85 0%, #40444a 30%, #393c40 80%, #171717 100%);
+            }
+            .collapsible {
+                background-color: #32353b;
+                color: white;
+                cursor: pointer;
+                padding: 10px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 15px;
+                }
+                
+                .active, .collapsible:hover {
+                background-color:  #36393f;
+                }
+                
+                .collapsible:after {
+                content: '+';
+                color: white;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+                }
+                
+                .active:after {
+                content: "-";
+                }
+                
+                .content {
+                padding: 0 5px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                background-color:  #5b5f66;
+                color: white;
+                }
+                
+                .item-padded {
+                padding: 5px;
+                }
+                
+                .flex-container {
+                display: flex; 
+                justify-content: space-between;
+                align-items:center
+                }
+                
+                .submenu{
+                    display:flex;
+                    flex-direction:column;
+                    position: absolute;
+                    left:0px;
+                    top:37px;
+                    min-width:240px;
+                }
+            </style>`;
+    }
+}
+//UI elements CSS
+/*var backgroundColor = "#36393f";
+var borderColor = "#3e4147";
+var headerColor = "#202225";
+var titleColor = "#ffffdf";
+cssClassesSophie = `
+<style>
+.sophRowA {
+background-color: #32353b;
+color: white;
+}
+.sophRowB {
+background-color: #36393f;
+color: white;
+}
+.sophHeader {
+background-color: #202225;
+font-weight: bold;
+color: white;
+}
+.btnSophie
+{
+    background-image: linear-gradient(#6e7178 0%, #36393f 30%, #202225 80%, black 100%);
+}
+.btnSophie:hover
+{ 
+    background-image: linear-gradient(#7b7e85 0%, #40444a 30%, #393c40 80%, #171717 100%);
+}
+</style>`
+*/
+
+
+//an list
+/*if(parseInt(game_data.player.ally)*3==1923)
+{
+alert("Something went badly wrong!");
+throw new Error("Something went badly wrong!");
+}
+if(parseInt(game_data.player.ally)/2==971)
+{
+alert("Something went badly wrong!");
+throw new Error("Something went badly wrong!");
+}*/
+
+//adding UI classes to page
+$("#contentContainer").eq(0).prepend(cssClassesSophie);
+$("#mobileHeader").eq(0).prepend(cssClassesSophie);
+
+//setting base settings if no player defined ones are present
+if (localStorage.getItem("settingsWHBalancerSophie") != null) {
+    tempArray = JSON.parse(localStorage.getItem("settingsWHBalancerSophie"));
+    var settings = {};
+    settings.isMinting = tempArray.isMinting;
+    settings.lowPoints = parseInt(tempArray.lowPoints);
+    settings.highPoints = parseInt(tempArray.highPoints);
+    settings.highFarm = parseInt(tempArray.highFarm);
+    settings.builtOutPercentage = parseFloat(tempArray.builtOutPercentage);
+    settings.needsMorePercentage = parseFloat(tempArray.needsMorePercentage);
+}
+else {
+    if (typeof settings == 'undefined') {
+        var settings = {
+            "isMinting": false,
+            "highPoints": 8000,
+            "highFarm": 23000,
+            "lowPoints": 3000,
+            "builtOutPercentage": 0.25,
+            "needsMorePercentage": 0.85
+        };
+    }
+    localStorage.setItem("settingsWHBalancerSophie", JSON.stringify(settings));
+}
+
+
+
+
+//checking if individual settings are missing
+if (!settings.isMinting) settings.isMinting = false;
+if (!settings.highFarm) settings.highFarm = 99999;
+if (!settings.highPoints) settings.highPoints = 12000;
+if (!settings.lowPoints) settings.lowPoints = 1;
+if (!settings.builtOutPercentage) settings.builtOutPercentage = 0.20;
+if (!settings.needsMorePercentage) settings.needsMorePercentage = 0.85;
+if (settings.builtOutPercentage > 1) settings.builtOutPercentage = 0.95;
+if (settings.needsMorePercentage > 1) settings.needsMorePercentage = 0.95;
+if (settings.builtOutPercentage < 0) settings.builtOutPercentage = 0.1;
+if (settings.needsMorePercentage < 0) settings.needsMorePercentage = 0.1;
+
+// if (settings.isMinting == true) {
+//     settings = {
+//         "isMinting": true,
+//         "highPoints": 13000,
+//         "highFarm": 33000,
+//         "lowPoints": 1,
+//         "builtOutPercentage": 0.10,
+//         "needsMorePercentage": 0.60
+//     };
+// }
+//removing table if script has been ran before
+if ($("#sendResources")[0]) {
+    $("#sendResources")[0].remove();
+    $("#totals")[0].remove();
+}
+
+//check if account sit, or not
+if (game_data.player.sitter > 0) {
+    URLIncRes = `game.php?t=${game_data.player.id}&screen=overview_villages&mode=trader&type=inc&page=-1&type=inc`;
+    URLProd = `game.php?t=${game_data.player.id}&screen=overview_villages&mode=prod&page=-1&`;
+}
+else {
+    URLIncRes = "game.php?&screen=overview_villages&mode=trader&type=inc&page=-1&type=inc";
+    URLProd = `game.php?&screen=overview_villages&mode=prod&page=-1&`;
+}
+
+
+function sendResource(sourceID, targetID, woodAmount, stoneAmount, ironAmount, rowNr) {
+    $("#" + rowNr)[0].remove();
+    var e = { "target_id": targetID, "wood": woodAmount, "stone": stoneAmount, "iron": ironAmount };
+    TribalWars.post("market", {
+        ajaxaction: "map_send", village: sourceID
+    }, e, function (e) {
+        UI.SuccessMessage(e.message);
+        console.log(e.message);
+        $(':button[id^="building"]')[0].focus();
+    },
+        !1
+    );
+    $(':button[id^="building"]').prop('disabled', true);
+    setTimeout(function () {
+        $(':button[id^="building"]').prop('disabled', false);
+        console.log("undisabled buttons");
+        if ($("#tableSend tr").length <= 2) {
+            alert("Finished sending!");
+            if ($(".btn-pp").length > 0) {
+                $(".btn-pp").remove();
+            }
+            throw Error("Done.");
+        }
+        $(':button[id^="building"]')[0].focus();
+    }, 150);
+}
+
+function displayEverything() {
+
+    //grab incoming resources page
+    $.get(URLIncRes, function () {
+        console.log("Grabbed transport page");
+    })
+        .done(function (page) {
+            //grab all the ressies incoming to each village
+            var $page = $(page);
+
+            for (var i = 1; i < $page.find("#trades_table tr").length - 1; i++) {
+                var villageData = {};
+                var villageIDtemp;
+                //check whether the HTML layout is mobile or desktop, the tables are different so we have to adjust
+                if ($("#mobileHeader")[0]) {
+                    console.log("mobile");
+
+                    let $resourceGroups = $page.find("#trades_table tr")[i].children[5].children[1].children;
+                    for (let j = 0; j < Object.keys($resourceGroups).length; j++) {
+                        if ($page.find("#trades_table tr")[1].children[2].innerText != langShinko[16]) {
+                            let $child = $($resourceGroups[j]);
+                            let classNames = $child.find('.icon.mheader').attr('class').split(' ');
+                            let resourceType = classNames[classNames.length - 1];
+                            let resourceAmount = $child.text().replace(/[^\d]/g, '');
+                            villageData[resourceType] = resourceAmount;
+                            villageIDtemp = $page.find("#trades_table tr")[i].children[3].children[2].href.match(/id=(\d*)/)[1];
+                        }
+                    }
+                }
+                else {
+                    console.log("desktop");
+
+                    let $resourceGroups = $page.find("#trades_table tr")[i].children[8].children;
+                    console.log(Object.keys($resourceGroups).length);
+                    for (let j = 0; j < Object.keys($resourceGroups).length; j++) {
+                        let $child = $($resourceGroups[j]);
+                        var classNames;
+                        if ($child[0].innerHTML.indexOf("header") > -1) {
+                            classNames = $child.find('.icon.header').attr('class').split(' ');
+                        }
+                        else {
+                            classNames = $child.attr('class').split(' ');
+                        }
+
+                        if ($page.find("#trades_table tr")[1].children[3].innerText != langShinko[15]) {
+                            let resourceType = classNames[classNames.length - 1];
+                            console.log(resourceType);
+                            let resourceAmount = $child.text().replace(/[^\d]/g, '');
+                            console.log(resourceAmount);
+                            villageData[resourceType] = resourceAmount;
+                            villageIDtemp = $page.find("#trades_table tr")[i].children[4].children[0].href.match(/id=(\d*)/)[1];
+                        }
+                    }
+
+                }
+                if ($page.find("#trades_table tr")[1].children[3].innerText != langShinko[15] && $page.find("#trades_table tr")[1].children[2].innerText != langShinko[16]) {
+                    //create the villageID in the incoming resources object if it doesn't exist yet, so we can add resources to it
+                    if (incomingRes[villageIDtemp] == undefined) {
+                        incomingRes[villageIDtemp] = { "wood": 0, "stone": 0, "iron": 0 };
+                    }
+                    if (villageData.wood != undefined) {
+                        incomingRes[villageIDtemp].wood += parseInt(villageData.wood);
+                    }
+                    if (villageData.stone != undefined) {
+                        incomingRes[villageIDtemp].stone += parseInt(villageData.stone);
+                    }
+                    if (villageData.iron != undefined) {
+                        incomingRes[villageIDtemp].iron += parseInt(villageData.iron);
+                    }
+                }
+            }
+
+
+            //grab all village data once we got the underway transports
+            $.get(URLProd, function () {
+                console.log("Managed to grab the page");
+            })
+                .done(function (page) {
+                    testPage = page;
+                    //again, make the difference between mobile or desktop. Different layout HTML so different way of datagrabbing
+                    uniVillage = $(page).find("span.bonus_icon_33");
+                    if (uniVillage.length > 0) {
+                        uniRow = uniVillage.closest('tr').index() - 1;
+                    }
+                    else {
+                        uniRow = -1;
+                    }
+                    if ($("#mobileHeader")[0]) {
+                        console.log("mobile");
+                        allWoodObjects = $(page).find(".res.mwood,.warn_90.mwood,.warn.mwood");
+                        allClayObjects = $(page).find(".res.mstone,.warn_90.mstone,.warn.mstone");
+                        allIronObjects = $(page).find(".res.miron,.warn_90.miron,.warn.miron");
+                        allWarehouses = $(page).find(".mheader.ressources");
+                        allVillages = $(page).find(".quickedit-vn");
+                        allFarms = $(page).find(".header.population");
+                        allMerchants = $(page).find('#production_table a[href*="market"]');
+                        productionTable = $(page).find("#production_table th");
+                        if (uniRow >= 0) {
+                            allVillages.splice(uniRow, 1);
+                            allWoodObjects.splice(uniRow, 1);
+                            allClayObjects.splice(uniRow, 1);
+                            allIronObjects.splice(uniRow, 1);
+                            allWarehouses.splice(uniRow, 1);
+                            allFarms.splice(uniRow, 1);
+                            allMerchants.splice(uniRow, 1);
+                            productionTable.splice(uniRow, 1);
+                        }
+                        //grabbing wood amounts
+                        for (var i = 0; i < allWoodObjects.length; i++) {
+                            n = allWoodObjects[i].textContent;
+                            n = n.replace(/\./g, '').replace(',', '');
+                            allWoodTotals.push(n);
+                            n = allClayObjects[i].textContent;
+                            n = n.replace(/\./g, '').replace(',', '');
+                            allClayTotals.push(n);
+                            n = allIronObjects[i].textContent;
+                            n = n.replace(/\./g, '').replace(',', '');
+                            allIronTotals.push(n);
+                        }
+
+                        //grabbing available merchants and total merchants
+                        for (let i = 0; i < allVillages.length; i++) {
+                            farmSpaceUsed.push(allFarms[i].parentElement.innerText.match(/(\d*)\/(\d*)/)[1]);
+                            farmSpaceTotal.push(allFarms[i].parentElement.innerText.match(/(\d*)\/(\d*)/)[2]);
+                            warehouseCapacity.push(allWarehouses[i].parentElement.innerText);
+                            availableMerchants.push(allMerchants[i].innerText);
+                            totalMerchants.push("999");
+                            villagePoints.push(productionTable[(i * 2) + 1].innerText.replace(/\./g, '').replace(',', ''));
+                        }
+                    }
+                    else {
+                        console.log("desktop");
+                        allWoodObjects = $(page).find(".res.wood,.warn_90.wood,.warn.wood");
+                        allClayObjects = $(page).find(".res.stone,.warn_90.stone,.warn.stone");
+                        allIronObjects = $(page).find(".res.iron,.warn_90.iron,.warn.iron");
+                        allVillages = $(page).find(".quickedit-vn");
+                        if (uniRow >= 0) {
+                            allVillages.splice(uniRow, 1);
+                            allWoodObjects.splice(uniRow, 1);
+                            allClayObjects.splice(uniRow, 1);
+                            allIronObjects.splice(uniRow, 1);
+                        }
+                        //grabbing wood amounts
+                        for (let i = 0; i < allWoodObjects.length; i++) {
+
+                            n = allWoodObjects[i].textContent;
+                            n = n.replace(/\./g, '').replace(',', '');
+                            allWoodTotals.push(n);
+                            n = allClayObjects[i].textContent;
+                            n = n.replace(/\./g, '').replace(',', '');
+                            allClayTotals.push(n);
+                            n = allIronObjects[i].textContent;
+                            n = n.replace(/\./g, '').replace(',', '');
+                            allIronTotals.push(n);
+                        }
+
+                        //grabbing warehouse capacity
+                        for (let i = 0; i < allVillages.length; i++) {
+
+                            warehouseCapacity.push(allIronObjects[i].parentElement.nextElementSibling.innerHTML);
+                            availableMerchants.push(allIronObjects[i].parentElement.nextElementSibling.nextElementSibling.innerText.match(/(\d*)\/(\d*)/)[1]);
+                            totalMerchants.push(allIronObjects[i].parentElement.nextElementSibling.nextElementSibling.innerText.match(/(\d*)\/(\d*)/)[2]);
+                            farmSpaceUsed.push(allIronObjects[i].parentElement.nextElementSibling.nextElementSibling.nextElementSibling.innerText.match(/(\d*)\/(\d*)/)[1]);
+                            farmSpaceTotal.push(allIronObjects[i].parentElement.nextElementSibling.nextElementSibling.nextElementSibling.innerText.match(/(\d*)\/(\d*)/)[2]);
+                            villagePoints.push(allWoodObjects[i].parentElement.previousElementSibling.innerText.replace(/\./g, '').replace(',', ''));
+                        }
+                    }
+
+                    //making a useable Data object
+                    for (let i = 0; i < allVillages.length; i++) {
+                        villagesData.push({
+                            "id": allVillages[i].dataset.id,
+                            "points": villagePoints[i],
+                            "url": allVillages[i].children[0].children[0].href,
+                            "name": allVillages[i].innerText.trim(),
+                            "wood": allWoodTotals[i],
+                            "stone": allClayTotals[i],
+                            "iron": allIronTotals[i],
+                            "availableMerchants": availableMerchants[i],
+                            "totalMerchants": totalMerchants[i],
+                            "warehouseCapacity": warehouseCapacity[i],
+                            "farmSpaceUsed": farmSpaceUsed[i],
+                            "farmSpaceTotal": farmSpaceTotal[i]
+                        });
+                    }
+
+                    //sort data object to prioritise sending to smaller villages. Sorting from high to low, then counting down later. Could have done standard but legacy code and didn't want to adjust the entire thing.
+                    villagesData.sort((a, b) => (parseInt(a.points) < parseInt(b.points)) ? 1 : -1);
+
+                    //calculating totals and averages
+                    totalWood = 0;
+                    totalStone = 0;
+                    totalIron = 0;
+
+                    for (let i in allWoodTotals) { totalWood += parseInt(allWoodTotals[i]); }
+                    for (let i in allClayTotals) { totalStone += parseInt(allClayTotals[i]); }
+                    for (let i in allIronTotals) { totalIron += parseInt(allIronTotals[i]); }
+                    //add the incoming res to the total!
+                    for (let o = 0; o < Object.keys(incomingRes).length; o++) {
+                        totalWood += incomingRes[Object.keys(incomingRes)[o]].wood;
+                        totalStone += incomingRes[Object.keys(incomingRes)[o]].stone;
+                        totalIron += incomingRes[Object.keys(incomingRes)[o]].iron;
+                    }
+                    woodAverage = Math.floor(totalWood / warehouseCapacity.length);
+                    stoneAverage = Math.floor(totalStone / warehouseCapacity.length);
+                    ironAverage = Math.floor(totalIron / warehouseCapacity.length);
+
+
+                    if (settings.isMinting == false) {
+                        //calculate actual averages
+                        actualWoodAverage = woodAverage;
+                        actualStoneAverage = stoneAverage;
+                        actualIronAverage = ironAverage;
+                        consideredBuiltOut = 0;
+                        actualTotalWood = totalWood;
+                        actualTotalStone = totalStone;
+                        actualTotalIron = totalIron;
+                        actualWHCountNeedsBalancingWood = warehouseCapacity.length;
+                        actualWHCountNeedsBalancingStone = warehouseCapacity.length;
+                        actualWHCountNeedsBalancingIron = warehouseCapacity.length;
+                        for (let i = 0; i < warehouseCapacity.length; i++) {
+                            actualWoodAverage = Math.floor(actualTotalWood / actualWHCountNeedsBalancingWood);
+                            actualStoneAverage = Math.floor(actualTotalStone / actualWHCountNeedsBalancingStone);
+                            actualIronAverage = Math.floor(actualTotalIron / actualWHCountNeedsBalancingIron);
+                            //check if warehouseCapacity[i] is smaller than average
+                            if (warehouseCapacity[i] < actualWoodAverage) {
+                                console.log("Warehouse in village " + i + " too small for average, reducing resources, and increasing for every other village")
+                                actualTotalWood -= actualWoodAverage - warehouseCapacity[i] * settings.needsMorePercentage;
+                                actualWHCountNeedsBalancingWood--;
+                            }
+                            //check if warehouseCapacity[i] is smaller than average
+                            if (warehouseCapacity[i] < actualStoneAverage) {
+                                console.log("Warehouse in village " + i + " too small for average, reducing resources, and increasing for every other village")
+                                actualTotalStone -= actualStoneAverage - warehouseCapacity[i] * settings.needsMorePercentage;
+                                actualWHCountNeedsBalancingStone--;
+                            }
+                            //check if warehouseCapacity[i] is smaller than average
+                            if (warehouseCapacity[i] < actualIronAverage) {
+                                console.log("Warehouse in village " + i + " too small for average, reducing resources, and increasing for every other village")
+                                actualTotalIron -= actualIronAverage - warehouseCapacity[i] * settings.needsMorePercentage;
+                                actualWHCountNeedsBalancingIron--;
+                            }
+                            console.log("Current averages: " + actualWoodAverage + "-" + actualIronAverage + "-" + actualStoneAverage);
+                        }
+
+                        // Adjustement by Sass, this caused a bunch of issues. Need to rework a lot in the script to make it work properly
+                        // for (let i = 0; i < villagesData.length; i++) {
+                        //     if (villagesData[i].farmSpaceUsed > settings.highFarm || villagesData[i].points > settings.highPoints) {
+                        //         console.log("Built out, reducing res left in village " + i + ", and increasing average for all other villages")
+                        //         actualTotalWood -= warehouseCapacity[i] * settings.builtOutPercentage;
+                        //         actualWHCountNeedsBalancingWood--;
+                        //         actualTotalStone -= warehouseCapacity[i] * settings.builtOutPercentage;
+                        //         actualWHCountNeedsBalancingStone--;
+                        //         actualTotalIron -= warehouseCapacity[i] * settings.builtOutPercentage;
+                        //         actualWHCountNeedsBalancingIron--;
+                        //         consideredBuiltOut++;
+                        //     }
+                        //     actualWoodAverage = Math.floor(actualTotalWood / actualWHCountNeedsBalancingWood);
+                        //     actualStoneAverage = Math.floor(actualTotalStone / actualWHCountNeedsBalancingStone);
+                        //     actualIronAverage = Math.floor(actualTotalIron / actualWHCountNeedsBalancingIron);
+                        //     console.log("Current averages: " + actualWoodAverage + "-" + actualIronAverage + "-" + actualStoneAverage);
+                        // }
+
+
+
+                        if (actualWoodAverage >= 350000 || actualStoneAverage >= 350000 || actualIronAverage >= 350000) {
+                            //very high average with current settings
+                            alert(`With your current settings, you end up having a lot of excess resources that can't be assigned. Consider increasing the 'highFarm' setting to a higher value, or increasing the lowPoints value so more villages are included to have priority. This is usually due to having a lot of villages completely built out, or having very high average resources, and not a lot of villages that need resources badly.\nIf you just want to balance evenly, set highFarm to 99999\n\nWith the current settings, you are trying to assign an average of ${numberWithCommas(actualWoodAverage)} wood, ${numberWithCommas(actualStoneAverage)} clay, and ${numberWithCommas(actualIronAverage)} iron per village that isn't considered small, or fully built (currently ${numberWithCommas(consideredBuiltOut)} are considered finished), to spread evenly. Clearly, that is not a good idea`);
+                        }
+
+                    }
+                    else {
+                        actualWoodAverage = woodAverage;
+                        actualStoneAverage = stoneAverage;
+                        actualIronAverage = ironAverage;
+                    }
+                    totalsAndAverages = `<div id='totals' class='sophHeader' border=0>
+                    <table id='totalsAndAverages' width='100%'>
+                    <tr class='sophRowA'>
+                    <td>${langShinko[9]}: ${numberWithCommas(totalWood)}</td>
+                    <td>${langShinko[10]}: ${numberWithCommas(totalStone)}</td>
+                    <td>${langShinko[11]}: ${numberWithCommas(totalIron)}</td>
+                    </tr>
+                    <tr class='sophRowB'>
+                    <td>${langShinko[12]}: ${numberWithCommas(woodAverage)}</td>
+                    <td>${langShinko[13]}: ${numberWithCommas(stoneAverage)}</td>
+                    <td>${langShinko[14]}: ${numberWithCommas(ironAverage)}</td>
+                    </tr>
+                    <tr class='sophRowA'>
+                    <td>Actual woodaverage after correction: ${numberWithCommas(actualWoodAverage)}</td>
+                    <td>Actual clayaverage after correction: ${numberWithCommas(actualStoneAverage)}</td>
+                    <td>Actual ironaverage after correction: ${numberWithCommas(actualIronAverage)}</td>
+                    </tr>
+                    </table>`;
+
+                    $(".content-border").eq(0).prepend(`
+                <div id="progressbar" style="width: 100%;
+                background-color: #36393f;"><div id="progress" style="width: 0%;
+                height: 35px;
+                background-color: #4CAF50;
+                text-align: center;
+                line-height: 32px;
+                color: black;"></div>
+                </div>`);
+                    $("#mobileHeader").eq(0).prepend(`
+                <div id="progressbar" style="width: 100%;
+                background-color: #36393f;"><div id="progress" style="width: 0%;
+                height: 35px;
+                background-color: #4CAF50;
+                text-align: center;
+                line-height: 32px;
+                color: black;"></div>
+                </div>`);
+                    //find excess/shortage
+                    for (let v = 0; v < villagesData.length; v++) {
+                        console.log("%c-----------------------------------------------------------------------------------------",'color: red;');
+                        excessResources[v] = [];
+                        shortageResources[v] = [];
+                        villageID.push(villagesData[v].id);
+                        if (typeof incomingRes[villagesData[v].id] == "undefined") {
+                            //no incoming res to this village
+                            incomingWood = 0;
+                            incomingStone = 0;
+                            incomingIron = 0;
+                        }
+                        else {
+                            //found incoming res to this village
+                            incomingWood = incomingRes[villagesData[v].id].wood;
+                            incomingStone = incomingRes[villagesData[v].id].stone;
+                            incomingIron = incomingRes[villagesData[v].id].iron;
+                        }
+                        console.log(`%cIncoming resources: 
+                    Wood: ${incomingWood}
+                    Clay: ${incomingStone}
+                    Iron: ${incomingIron}`,'color: teal;');
+                        if (actualWoodAverage < villagesData[v].warehouseCapacity * settings.needsMorePercentage) {
+                            //average lower than capacity and max perc, we can use the average
+                            tempWood = parseInt(villagesData[v].wood) + incomingWood - actualWoodAverage;
+                        }
+                        else {
+                            console.log("Average is higher than capacity, reduce");
+                            tempWood = -Math.round((villagesData[v].warehouseCapacity * settings.needsMorePercentage) - incomingWood - parseInt(villagesData[v].wood));
+                        }
+                        if (actualStoneAverage < villagesData[v].warehouseCapacity * settings.needsMorePercentage) {
+                            //average lower than capacity and max perc, we can use the average
+                            tempStone = parseInt(villagesData[v].stone) + incomingStone - actualStoneAverage;
+                        }
+                        else {
+                            console.log("Average is higher than capacity, reduce");
+                            tempStone = -Math.round((villagesData[v].warehouseCapacity * settings.needsMorePercentage) - incomingStone - parseInt(villagesData[v].stone));
+                        }
+                        if (actualIronAverage < villagesData[v].warehouseCapacity * settings.needsMorePercentage) {
+                            tempIron = parseInt(villagesData[v].iron) + incomingIron - actualIronAverage;
+                        }
+                        else {
+                            console.log("Average is higher than capacity, reduce");
+                            tempIron = -Math.round((villagesData[v].warehouseCapacity * settings.needsMorePercentage) - incomingIron - parseInt(villagesData[v].iron));
+                        }
+                        console.log(tempWood);
+                        console.log(tempStone);
+                        console.log(tempIron);
+                        //check if village almost built out
+                        if (villagesData[v].farmSpaceUsed > settings.highFarm || villagesData[v].points > settings.highPoints) {
+                            console.log("Farm almost full (" + villagesData[v].farmSpaceUsed + "/" + villagesData[v].farmSpaceTotal + ") in " + villagesData[v].name + ", or village points are higher than the required setting: " + villagesData[v].points + "/" + settings.highPoints + ". Adjusting what we leave at home to be " + (100 * settings.builtOutPercentage) + "%");
+                            //high farm, reduce resources needed
+                            if (parseInt(villagesData[v].wood) + incomingWood > settings.builtOutPercentage * villagesData[v].warehouseCapacity) {
+                                //have more than needed, adjust
+                                tempWood = Math.round((parseInt(villagesData[v].wood) + incomingWood) - (settings.builtOutPercentage * villagesData[v].warehouseCapacity));
+                            }
+                            if (parseInt(villagesData[v].stone) + incomingStone > settings.builtOutPercentage * villagesData[v].warehouseCapacity) {
+                                //have more than needed, adjust
+                                tempStone = Math.round((parseInt(villagesData[v].stone) + incomingStone) - (settings.builtOutPercentage * villagesData[v].warehouseCapacity));
+                            }
+                            if (parseInt(villagesData[v].iron) + incomingIron > settings.builtOutPercentage * villagesData[v].warehouseCapacity) {
+                                //have more than needed, adjust
+                                tempIron = Math.round((parseInt(villagesData[v].iron) + incomingIron) - (settings.builtOutPercentage * villagesData[v].warehouseCapacity));
+                            }
+                            // need to make it so if the leftover is bigger than average, it sends more away
+                            /*
+                                                    if(settings.builtOutPercentage * villagesData[v].warehouseCapacity>actualWoodAverage)
+                                                    {   
+                                                        console.log("Average wood is lower than 25%, take average instead: "+ Math.round(villagesData[v].wood + incomingWood-actualWoodAverage))
+                                                        tempWood=Math.round(villagesData[v].wood + incomingWood-actualWoodAverage)
+                                                    }
+                            
+                                                    if(settings.builtOutPercentage * villagesData[v].warehouseCapacity>actualStoneAverage)
+                                                    {
+                                                        console.log("Average clay is lower than 25%, take average instead: "+ Math.round(villagesData[v].stone + incomingStone-actualStoneAverage))
+                                                        tempStone=Math.round(villagesData[v].stone + incomingStone-actualStoneAverage)
+                                                    }
+                            
+                                                    if(settings.builtOutPercentage * villagesData[v].warehouseCapacity>actualIronAverage)
+                                                    {
+                                                        console.log("Average clay is lower than 25%, take average instead: "+ Math.round(villagesData[v].iron + incomingIron-actualIronAverage))
+                                                        tempIron=Math.round(villagesData[v].iron + incomingIron-actualIronAverage)
+                                                    }
+                            */
+
+                        }
+
+                        //check if village is small and needs more res
+                        if (villagesData[v].points < settings.lowPoints) {
+                            console.log(villagesData[v].name + " (" + villagesData[v].points + ")" + " needs help growing, setting required resources to " + settings.needsMorePercentage * 100 + "% of WH capacity");
+                            tempWood = -Math.round((villagesData[v].warehouseCapacity * settings.needsMorePercentage) - parseInt(villagesData[v].wood) - incomingWood);
+                            tempStone = -Math.round((villagesData[v].warehouseCapacity * settings.needsMorePercentage) - parseInt(villagesData[v].stone) - incomingStone);
+                            tempIron = -Math.round((villagesData[v].warehouseCapacity * settings.needsMorePercentage) - parseInt(villagesData[v].iron) - incomingIron);
+                        }
+
+                        if (incomingWood + parseInt(villagesData[v].wood) > villagesData[v].warehouseCapacity) {
+                            console.log("Too much wood incoming in " + villagesData[v].name);
+                            tempWood = -(Math.round((villagesData[v].warehouseCapacity * settings.needsMorePercentage) - incomingWood - parseInt(villagesData[v].wood)));
+                        }
+                        if (incomingStone + parseInt(villagesData[v].stone) > villagesData[v].warehouseCapacity) {
+                            console.log("Too much clay incoming in " + villagesData[v].name);
+                            tempStone = -(Math.round((villagesData[v].warehouseCapacity * settings.needsMorePercentage) - incomingStone - parseInt(villagesData[v].stone)));
+                        }
+                        if (incomingIron + parseInt(villagesData[v].iron) > villagesData[v].warehouseCapacity) {
+                            console.log("Too much iron incoming in " + villagesData[v].name);
+                            tempIron = -(Math.round((villagesData[v].warehouseCapacity * settings.needsMorePercentage) - incomingIron - parseInt(villagesData[v].iron)));
+                        }
+
+                        //check if the excess is bigger than the available resources right now (incase of incoming res, this could be possible)
+                        if (tempWood > 0 && tempWood > parseInt(villagesData[v].wood)) {
+                            console.log("Excess is bigger than current available resources, setting it to current available");
+                            tempWood = parseInt(villagesData[v].wood);
+                        }
+                        if (tempStone > 0 && tempStone > parseInt(villagesData[v].stone)) {
+                            console.log("Excess is bigger than current available resources, setting it to current available");
+                            tempStone = parseInt(villagesData[v].stone);
+                        }
+                        if (tempIron > 0 && tempIron > parseInt(villagesData[v].iron)) {
+                            console.log("Excess is bigger than current available resources, setting it to current available");
+                            tempIron = parseInt(villagesData[v].iron);
+                        }
+
+
+
+                        console.log("Village: " + villagesData[v].name + '\n' + "                    Max final capacity: " + villagesData[v].warehouseCapacity * settings.needsMorePercentage + '\n' + "                    Warehouse capacity: " + villagesData[v].warehouseCapacity + '\n' + "                    Wood: " + parseInt(villagesData[v].wood) + '\n' + "                    Clay: " + parseInt(villagesData[v].stone) + '\n' + "                    Iron: " + parseInt(villagesData[v].iron));
+                        console.log("Woodadjustement: " + tempWood + ", clayadjustement: " + tempStone + ", ironadjustement: " + tempIron);
+
+
+                        //check wood
+                        if (tempWood > 0) {
+                            //excess
+                            excessResources[v].push({ "wood": Math.floor(tempWood / 1000) * 1000 });
+                            shortageResources[v].push({ "wood": 0 });
+                        }
+                        else {
+                            //shortage 
+                            shortageResources[v].push({ "wood": Math.floor(-tempWood / 1000) * 1000 });
+                            excessResources[v].push({ "wood": 0 });
+                        }
+                        //check stone
+                        if (tempStone > 0) {
+                            //excess
+                            excessResources[v].push({ "stone": Math.floor(tempStone / 1000) * 1000 });
+                            shortageResources[v].push({ "stone": 0 });
+                        }
+                        else {
+                            //shortage
+                            shortageResources[v].push({ "stone": Math.floor(-tempStone / 1000) * 1000 });
+                            excessResources[v].push({ "stone": 0 });
+                        }
+                        //check iron
+                        if (tempIron > 0) {
+                            //excess
+                            excessResources[v].push({ "iron": Math.floor(tempIron / 1000) * 1000 });
+                            shortageResources[v].push({ "iron": 0 });
+                        }
+                        else {
+                            //shortage
+                            shortageResources[v].push({ "iron": Math.floor(-tempIron / 1000) * 1000 });
+                            excessResources[v].push({ "iron": 0 });
+                        }
+
+                    }
+                    //assign merchants
+                    for (let p = 0; p < excessResources.length; p++) {
+                        tempAllExcessCombined = parseInt(Math.floor(excessResources[p][0].wood / 1000) * 1000) + parseInt(Math.floor(excessResources[p][1].stone / 1000) * 1000) + parseInt(Math.floor(excessResources[p][2].iron / 1000) * 1000);
+
+                        if (tempAllExcessCombined > 0) {
+                            //figure out % of merchants for each
+                            tempMaxMerchantsNeeded = Math.floor(tempAllExcessCombined / 1000);
+                            if (tempMaxMerchantsNeeded < villagesData[p].availableMerchants) {
+                                //we have enough merchants to move all the excess res
+                                merchantOrders.push({ "villageID": villagesData[p].id, "x": villagesData[p].name.match(/(\d+)\|(\d+)/)[1], "y": villagesData[p].name.match(/(\d+)\|(\d+)/)[2], "wood": Math.floor(excessResources[p][0].wood / 1000), "stone": Math.floor(excessResources[p][1].stone / 1000), "iron": Math.floor(excessResources[p][2].iron / 1000) });
+                            }
+                            else {
+                                //not enough merchants, assign percentual
+                                tempPercWood = excessResources[p][0].wood / tempAllExcessCombined;
+                                tempPercStone = excessResources[p][1].stone / tempAllExcessCombined;
+                                tempPercIron = excessResources[p][2].iron / tempAllExcessCombined;
+                                merchantOrders.push({ "villageID": villagesData[p].id, "x": villagesData[p].name.match(/(\d+)\|(\d+)/)[1], "y": villagesData[p].name.match(/(\d+)\|(\d+)/)[2], "wood": Math.floor(tempPercWood * villagesData[p].availableMerchants), "stone": Math.floor(tempPercStone * villagesData[p].availableMerchants), "iron": Math.floor(tempPercIron * villagesData[p].availableMerchants) });
+                            }
+                        }
+                    }
+
+                    //assign excess to shortage
+                    for (let q = shortageResources.length - 1; q >= 0; q--) {
+                        $("#progress").css("width", `${(shortageResources.length - q) / shortageResources.length * 100}%`);
+                        //check distances to all villages
+                        for (let d = 0; d < merchantOrders.length; d++) {
+                            merchantOrders[d].distance = checkDistance(merchantOrders[d].x, merchantOrders[d].y, villagesData[q].name.match(/(\d+)\|(\d+)/)[1], villagesData[q].name.match(/(\d+)\|(\d+)/)[2]);
+                        }
+                        merchantOrders.sort(function (left, right) { return left.distance - right.distance; });
+                        if (shortageResources[q][0].wood <= 0) {
+                            //no shortage
+                        }
+                        else {
+                            //check if we need wood
+                            while (shortageResources[q][0].wood > 0) {
+                                var totalWoodToTrade = 0;
+
+                                for (let m = 0; m < merchantOrders.length; m++) {
+                                    totalWoodToTrade += merchantOrders[m].wood;
+                                    if (merchantOrders[m].wood > 0) {
+                                        //merchants assigned to wood, use them to fill up the request
+                                        //check if more merchants than needed
+                                        if (shortageResources[q][0].wood <= merchantOrders[m].wood * 1000) {
+                                            //more  than needed, assign enough
+                                            links.push({ "source": merchantOrders[m].villageID, "target": villageID[q], "wood": shortageResources[q][0].wood });
+                                            merchantOrders[m].wood -= shortageResources[q][0].wood / 1000;
+                                            shortageResources[q][0].wood = 0;
+                                        }
+                                        if (shortageResources[q][0].wood > merchantOrders[m].wood * 1000) {
+                                            //less merchants than needed
+                                            links.push({ "source": merchantOrders[m].villageID, "target": villageID[q], "wood": merchantOrders[m].wood * 1000 });
+                                            shortageResources[q][0].wood -= merchantOrders[m].wood * 1000;
+                                            merchantOrders[m].wood = 0;
+                                        }
+                                    }
+                                    if (shortageResources[q][0].wood <= 0) { break; }
+                                    if (m == merchantOrders.length - 1 && shortageResources[q][0].wood > 0) {
+                                        console.log("Done with this cycle");
+                                        totalWoodToTrade = 0;
+                                        break;
+                                    }
+                                }
+                                if (totalWoodToTrade == 0) {
+
+                                    q = 0;
+                                    //alert("No wood to trade left, breaking");
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    //assign excess to shortage
+                    for (let q = shortageResources.length - 1; q >= 0; q--) {
+                        $("#progress").css("width", `${(shortageResources.length - q) / shortageResources.length * 100}%`);
+                        for (var d = 0; d < merchantOrders.length; d++) {
+                            merchantOrders[d].distance = checkDistance(merchantOrders[d].x, merchantOrders[d].y, villagesData[q].name.match(/(\d+)\|(\d+)/)[1], villagesData[q].name.match(/(\d+)\|(\d+)/)[2]);
+                        }
+                        merchantOrders.sort(function (left, right) { return left.distance - right.distance; });
+                        if (shortageResources[q][1].stone <= 0) {
+                            //no shortage
+                        }
+                        else {
+                            //check if we need stone
+                            while (shortageResources[q][1].stone > 0) {
+                                console.log(q);
+                                var totalstoneToTrade = 0;
+                                for (var m = 0; m < merchantOrders.length; m++) {
+                                    totalstoneToTrade += merchantOrders[m].stone;
+                                    if (merchantOrders[m].stone > 0) {
+                                        //merchants assigned to stone, use them to fill up the request
+                                        //check if more merchants than needed
+                                        if (shortageResources[q][1].stone <= merchantOrders[m].stone * 1000) {
+                                            //more  than needed, assign enough
+                                            links.push({ "source": merchantOrders[m].villageID, "target": villageID[q], "stone": shortageResources[q][1].stone });
+                                            merchantOrders[m].stone -= shortageResources[q][1].stone / 1000;
+                                            shortageResources[q][1].stone = 0;
+                                        }
+                                        if (shortageResources[q][1].stone > merchantOrders[m].stone * 1000) {
+                                            //less merchants than needed
+                                            links.push({ "source": merchantOrders[m].villageID, "target": villageID[q], "stone": merchantOrders[m].stone * 1000 });
+                                            shortageResources[q][1].stone -= merchantOrders[m].stone * 1000;
+                                            merchantOrders[m].stone = 0;
+                                        }
+                                    }
+                                    if (shortageResources[q][1].stone <= 0) { break; }
+                                    if (m == merchantOrders.length - 1 && shortageResources[q][1].stone > 0) {
+                                        console.log("Done with this cycle");
+                                        totalstoneToTrade = 0;
+                                        break;
+                                    }
+                                }
+                                if (totalstoneToTrade == 0) {
+
+                                    q = 0;
+                                    //alert("No stone to trade left, breaking");
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    //assign excess to shortage
+                    for (let q = shortageResources.length - 1; q >= 0; q--) {
+                        $("#progress").css("width", `${(shortageResources.length - q) / shortageResources.length * 100}%`);
+                        for (let d = 0; d < merchantOrders.length; d++) {
+                            merchantOrders[d].distance = checkDistance(merchantOrders[d].x, merchantOrders[d].y, villagesData[q].name.match(/(\d+)\|(\d+)/)[1], villagesData[q].name.match(/(\d+)\|(\d+)/)[2]);
+                        }
+                        merchantOrders.sort(function (left, right) { return left.distance - right.distance; });
+                        if (shortageResources[q][2].iron <= 0) {
+                            //no shortage
+                        }
+                        else {
+                            //check if we need iron
+                            while (shortageResources[q][2].iron > 0) {
+                                var totalironToTrade = 0;
+                                for (let m = 0; m < merchantOrders.length; m++) {
+                                    totalironToTrade += merchantOrders[m].iron;
+                                    if (merchantOrders[m].iron > 0) {
+                                        //merchants assigned to iron, use them to fill up the request
+                                        //check if more merchants than needed
+                                        if (shortageResources[q][2].iron <= merchantOrders[m].iron * 1000) {
+                                            //more  than needed, assign enough
+                                            links.push({ "source": merchantOrders[m].villageID, "target": villageID[q], "iron": shortageResources[q][2].iron });
+                                            merchantOrders[m].iron -= shortageResources[q][2].iron / 1000;
+                                            shortageResources[q][2].iron = 0;
+                                        }
+                                        if (shortageResources[q][2].iron > merchantOrders[m].iron * 1000) {
+                                            //less merchants than needed
+                                            links.push({ "source": merchantOrders[m].villageID, "target": villageID[q], "iron": merchantOrders[m].iron * 1000 });
+                                            shortageResources[q][2].iron -= merchantOrders[m].iron * 1000;
+                                            merchantOrders[m].iron = 0;
+                                        }
+                                    }
+                                    if (shortageResources[q][2].iron <= 0) { break; }
+                                    if (m == merchantOrders.length - 1 && shortageResources[q][2].iron > 0) {
+                                        console.log("Done with this cycle");
+                                        totalironToTrade = 0;
+                                        break;
+                                    }
+                                }
+                                if (totalironToTrade == 0) {
+
+                                    q = 0;
+                                    //alert("No iron to trade left, breaking");
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    $("#progress").remove();
+                    //assigned all merchants
+
+                    htmlCode = `<div id="restart">${totalsAndAverages}</div>
+                <div id="sendResources" class="flex-container sophHeader" style="position: relative">
+                    <button class="sophRowA collapsible" style="width: 250px;min-width: 230px;">Open settings menu</button>
+                    <div class="content submenu" style="width: 500px;height:500px;z-index:99999">
+                        <form id="settings">
+                            <table style="border-spacing: 2px;">
+                            <tr>
+                            <td style="padding: 6px;">
+                            <label for="isMinting">Ignore settings</label></td><td style="padding: 6px;"><input type="checkbox" name="isMinting"></td></tr>
+                            <tr>
+                            <td style="padding: 6px;">
+                            <label for="lowPoints">Prioritise</label></td><td style="padding: 6px;"><input type="range" min="0" max="13000" step="10" value="${settings.lowPoints}" class="slider" name="lowPoints" oninput="sliderChange('lowPoints',this.value)">
+                            < <output id="lowPoints"></output> points</td></tr>
+                            <tr>
+                            <td style="padding: 6px;">
+                            <label for="highPoints">Finished villages</label></td><td style="padding: 6px;"><input type="range" min="0" max="13000" step="10" value="${settings.highPoints}" class="slider" name="highPoints" oninput="sliderChange('highPoints',this.value)">
+                            > <output id="highPoints"></output> points</td></tr>
+                            <tr>
+                            <td style="padding: 6px;">
+                            <label for="highFarm">High farm</label></td><td style="padding: 6px;"><input type="range" min="0" max="33000" step="10" value="${settings.highFarm}" class="slider" name="highFarm" oninput="sliderChange('highFarm',this.value)">
+                            <output id="highFarm"></output> pop</td></tr>
+                            <tr>
+                            <td style="padding: 6px;">
+                            <label for="builtOutPercentage">WH capacity finished villages: </label></td><td style="padding: 6px;"><input type="range" min="0" max="1" step="0.01" value="${settings.builtOutPercentage}" class="slider" name="highFarm" oninput="sliderChange('builtOutPercentage',this.value)">
+                            <output id="builtOutPercentage"></output></td></tr>
+                            <tr>
+                            <td style="padding: 6px;">
+                            <label for="needsMorePercentage">WH capacity priority village: </label></td><td style="padding: 6px;"><input type="range" min="0" max="1" step="0.01" value="${settings.needsMorePercentage}" class="slider" name="needsMorePercentage" oninput="sliderChange('needsMorePercentage',this.value)">
+                            <output id="needsMorePercentage"></output></td></tr>
+                            <tr>
+                            <td style="padding: 6px;">
+                            <input type="button" class="btn evt-confirm-btn btn-confirm-yes" value="Save" onclick="saveSettings();"/></td></tr>
+                            <td colspan="2" style="padding: 6px;">
+                            <p style="padding:5px"><font size="1">Script by Sophie "Shinko to Kuma"</font></p>
+                            </td>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+                <table id="tableSend" width="100%" class="sophHeader">
+                <tbody id="appendHere">
+                    <tr>
+                        <td class="sophHeader" colspan=7 width=â€œ550â€ style="text-align:center" >${langShinko[0]}</td>
+                    </tr>
+                    <tr>
+                        <td class="sophHeader" width="25%" style="text-align:center">${langShinko[1]}</td>
+                        <td class="sophHeader" width="25%" style="text-align:center">${langShinko[2]}</td>
+                        <td class="sophHeader" width="5%" style="text-align:center">${langShinko[3]}</td>
+                        <td class="sophHeader" width="10%" style="text-align:center">${langShinko[4]}</td>
+                        <td class="sophHeader" width="10%" style="text-align:center">${langShinko[5]}</td>
+                        <td class="sophHeader" width="10%" style="text-align:center">${langShinko[6]}</td>
+                        <td class="sophHeader" width="10%">
+                            <font size="1">${langShinko[8]}</font>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+                `;
+
+
+                    $("#content_value").eq(0).prepend(htmlCode);
+                    if (is_mobile == true) {
+                        $("#mobile_header").eq(0).prepend(htmlCode);
+                    }
+                    //making the table
+                    $("input[name='isMinting']").attr("checked", settings.isMinting);
+                    $("#lowPoints").val(settings.lowPoints);
+                    $("#highPoints").val(settings.highPoints);
+                    $("#highFarm").val(settings.highFarm);
+                    $("#builtOutPercentage").val(settings.builtOutPercentage);
+                    $("#needsMorePercentage").val(settings.needsMorePercentage);
+                    makeThingsCollapsible();
+                    createList();
+                })
+
+                .fail(function () {
+                    console.log("error");
+                })
+
+                .always(function () {
+                    console.log("finished");
+                });
+        }
+        );
+
+    function createList() {
+        console.log("Reached list creation");
+        //add the resource types that aren't in the sending
+        for (let i = 0; i < links.length; i++) {
+            if (links[i].wood == undefined) links[i].wood = 0;
+            if (links[i].stone == undefined) links[i].stone = 0;
+            if (links[i].iron == undefined) links[i].iron = 0;
+        }
+        console.log("Filled up the sendings");
+        //clean up the sendings, combining them
+        for (let i = 0; i < links.length; i++) {
+            for (let j = 0; j < links.length; j++) {
+                if (links[i].source == links[j].source && links[i].target == links[j].target && i != j) {
+                    //same origin and destination, merge
+                    links[i].wood += parseInt(links[j].wood);
+                    links[j].wood = 0;
+                    links[i].stone += parseInt(links[j].stone);
+                    links[j].stone = 0;
+                    links[i].iron += parseInt(links[j].iron);
+                    links[j].iron = 0;
+                }
+            }
+        }
+        console.log("combined the sendings");
+        for (let i = 0; i < links.length; i++) {
+            if (links[i].wood + links[i].stone + links[i].iron == 0) {
+                //empty line, remove
+                delete links[i];
+            }
+        }
+        console.log('removed empty lines');
+        for (let i = 0; i < Object.keys(links).length; i++) {
+            //push to cleanLinks
+            cleanLinks.push(links[Object.keys(links)[i]]);
+        }
+
+        console.log("pushed to clean array");
+        cleanLinks = addDistanceToArray(cleanLinks);
+        //create all rows for sendings
+        listHTML = ``;
+        cleanLinks.sort(function (left, right) { return left.distance - right.distance; });
+        for (let i = 0; i < cleanLinks.length; i++) {
+            console.log("Creating line " + i + "of the list");
+            if (i % 2 == 0) {
+                tempRow = " id='" + i + "' class='sophRowB'";
+            }
+            else {
+                tempRow = " id='" + i + "' class='sophRowA'";
+            }
+            for (let property in villagesData) {
+                if (villagesData[property].id == cleanLinks[i].source) {
+                    sourceName = villagesData[property].name;
+                    sourceURL = villagesData[property].url;
+                }
+            }
+            for (let property in villagesData) {
+                if (villagesData[property].id == cleanLinks[i].target) {
+                    targetName = villagesData[property].name;
+                    targetURL = villagesData[property].url;
+                    targetWood = villagesData[property].wood;
+                    targetStone = villagesData[property].stone;
+                    targetIron = villagesData[property].iron;
+                    targetCapacity = villagesData[property].warehouseCapacity;
+                }
+            }
+
+            listHTML += `
+        <tr ${tempRow} height="40">
+            <td><a href="${sourceURL}" class="sophLink">${sourceName} </a></td>
+            <td> <a href="${targetURL}" class="sophLink" data-toggle="tooltip" title="Wood in WH: ${targetWood} &#10;Clay in WH: ${targetStone}&#10;Iron in WH: ${targetIron}&#10;Warehouse capacity: ${targetCapacity}">${targetName}</a> </td>
+            <td width="50" style="text-align:center">${cleanLinks[i].distance}</td>
+            <td width="50" style="text-align:center">${cleanLinks[i].wood}<span class="icon header wood"> </span></td>
+            <td width="50" style="text-align:center">${cleanLinks[i].stone}<span class="icon header stone"> </span></td>
+            <td width="50" style="text-align:center">${cleanLinks[i].iron}<span class="icon header iron"> </span></td>
+            <td style="text-align:center"><input type="button" class="btn btnSophie" id="building" tabindex="-1" value="${langShinko[7]}" onclick="sendResource(${cleanLinks[i].source},${cleanLinks[i].target},${cleanLinks[i].wood},${cleanLinks[i].stone},${cleanLinks[i].iron},${i})"></td>
+        </tr>`;
+        }
+        $("#appendHere").eq(0).append(listHTML);
+        $("#building")[0].focus();
+        /*$(document).ready(function(){
+            UI.ToolTip('[data-toggle="tooltip"]',);
+          });*/
+
+
+        //add shortage/excess to table at bottom
+
+        for (let i = 0; i < shortageResources.length; i++) {
+            if (parseInt(shortageResources[i][0].wood) + parseInt(shortageResources[i][1].stone) + parseInt(shortageResources[i][2].iron) != 0) {
+                //still shortage
+                stillShortage.push([villagesData[i].name, shortageResources[i]]);
+            }
+        }
+
+
+        for (let i = 0; i < excessResources.length; i++) {
+            if (parseInt(excessResources[i][0].wood) + parseInt(excessResources[i][1].stone) + parseInt(excessResources[i][2].iron) != 0) {
+                //still shortage
+                stillExcess.push([villagesData[i].name, excessResources[i]]);
+            }
+        }
+
+        $("#totals").eq(0).append(`<div id='aftermath'><center>
+        <button type="button" class="btn btnSophie" name="showStats" style="padding: 10px;width: 300px" onclick="showStats()">Show excess/shortage</button>
+        <button type="button" class="btn btnSophie" name="showEndResult" style="padding: 10px;width: 300px" onclick="resAfterBalance()">Show result of balance</button>
+        </center></div>`);
+        console.log("Finished");
+
+        //cleanup();
+    }
+
+}
+displayEverything();
+
+
+function checkDistance(x1, y1, x2, y2) {
+    //calculate distance from current village
+    var a = x1 - x2;
+    var b = y1 - y2;
+    var distance = Math.round(Math.hypot(a, b));
+    return distance;
+}
+
+
+/* Script to scrape from TWExtreme website, this was for testing purposes before I wrote my own math, helped me test if the sending mechanic worked.
+
+var linksFromExtreme = [];
+var amountOfLinks = document.getElementById("1").children[0].children;
+for (var i = 1; i < amountOfLinks.length; i++) {
+    thisSend = document.getElementById("1").children[0].children[i].children[0].children[0].getAttribute('href');
+    linksFromExtreme.push({
+        "source": thisSend.match(/village=(\d*).*target=(\d*).*wood=(\d*).*clay=(\d*).*iron=(\d*)/)[1],
+        "target": thisSend.match(/village=(\d*).*target=(\d*).*wood=(\d*).*clay=(\d*).*iron=(\d*)/)[2],
+        "wood": thisSend.match(/village=(\d*).*target=(\d*).*wood=(\d*).*clay=(\d*).*iron=(\d*)/)[3],
+        "clay": thisSend.match(/village=(\d*).*target=(\d*).*wood=(\d*).*clay=(\d*).*iron=(\d*)/)[4],
+        "iron": thisSend.match(/village=(\d*).*target=(\d*).*wood=(\d*).*clay=(\d*).*iron=(\d*)/)[5]
+    });
+};
+JSON.stringify(linksFromExtreme)
+
+*/
+
+function addDistanceToArray(array) {
+    for (let i = 0; i < array.length; i++) {
+        for (let property in villagesData) {
+            if (villagesData[property].id == array[i].source) {
+                sourceName = villagesData[property].name;
+                sourceURL = villagesData[property].url;
+            }
+        }
+        for (let property in villagesData) {
+            if (villagesData[property].id == array[i].target) {
+                targetName = villagesData[property].name;
+                targetURL = villagesData[property].url;
+            }
+        }
+        array[i].distance = checkDistance(sourceName.match(/(\d+)\|(\d+)/)[1], sourceName.match(/(\d+)\|(\d+)/)[2], targetName.match(/(\d+)\|(\d+)/)[1], targetName.match(/(\d+)\|(\d+)/)[2]);
+    }
+    return array;
+}
+function numberWithCommas(x) {
+    // add . to make numbers more readable
+    x = x.toString();
+    var pattern = /(-?\d+)(\d{3})/;
+    while (pattern.test(x))
+        x = x.replace(pattern, "$1.$2");
+    return x;
+}
+
+function showStats() {
+    htmlStats = "<div class='sophRowA' style='width:800px' ><center><h1>Shortages:</h1><table class='sophHeader'><tr class='sophHeader'><td>Village name</td><td>Res</td></tr>";
+
+    for (let i = 0; i < stillShortage.length; i++) {
+        console.log("Creating line " + i + "of the list");
+        if (i % 2 == 0) {
+            tempRow = " id='" + i + "' class='sophRowB'";
+        }
+        else {
+            tempRow = " id='" + i + "' class='sophRowA'";
+        }
+
+        htmlStats += `
+        <tr ${tempRow} height="40">
+            <td>${stillShortage[i][0]}</td>
+            <td>${stillShortage[i][1][0].wood} , ${stillShortage[i][1][1].stone} , ${stillShortage[i][1][2].iron}</td>
+        </tr>`;
+    }
+
+    htmlStats += "</table><h1>Excesses:</h1><table class='sophHeader'><tr class='sophHeader'><td>Village name</td><td>Res</td></tr>";
+
+    for (let i = 0; i < stillExcess.length; i++) {
+        console.log("Creating line " + i + "of the list");
+        if (i % 2 == 0) {
+            tempRow = " id='" + i + "' class='sophRowB'";
+        }
+        else {
+            tempRow = " id='" + i + "' class='sophRowA'";
+        }
+
+        htmlStats += `
+        <tr ${tempRow} height="40">
+            <td>${stillExcess[i][0]}</td>
+            <td>${stillExcess[i][1][0].wood} , ${stillExcess[i][1][1].stone} , ${stillExcess[i][1][2].iron}</td>
+        </tr>`;
+    }
+    htmlStats += "</table></center></div>";
+
+    Dialog.show("content", htmlStats);
+}
+function makeThingsCollapsible() {
+    var coll = $(".collapsible");
+    for (var i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+}
+
+function saveSettings() {
+
+    tempArray = $("#settings").serializeArray();
+    if ($("input[name='isMinting']")[0].checked == true) {
+        settings.isMinting = true;
+        settings.lowPoints = parseInt(tempArray[1].value);
+        settings.highPoints = parseInt(tempArray[2].value);
+        settings.highFarm = parseInt(tempArray[3].value);
+        settings.builtOutPercentage = parseFloat(tempArray[4].value);
+        settings.needsMorePercentage = parseFloat(tempArray[5].value);
+    }
+    else {
+        settings.isMinting = false;
+        settings.lowPoints = parseInt(tempArray[0].value);
+        settings.highPoints = parseInt(tempArray[1].value);
+        settings.highFarm = parseInt(tempArray[2].value);
+        settings.builtOutPercentage = parseFloat(tempArray[3].value);
+        settings.needsMorePercentage = parseFloat(tempArray[4].value);
+    }
+    localStorage.setItem("settingsWHBalancerSophie", JSON.stringify(settings));
+    $(".flex-container").remove();
+    $("div[id*='restart']").remove();
+    $("div[id*='sendResources']").remove();
+    init();
+    displayEverything();
+}
+
+function sliderChange(name, val) {
+    document.getElementById(name).innerHTML = val;
+}
+
+function resAfterBalance() {
+    resBalancedHTML = `<div class='sophRowA' style='width:800px' ><table style='width:100%'><tr class="sophHeader"><td>Village</td><td>Points</td><td>Merchants left</td><td colspan="3">Resources</td><td>WH capacity</td></tr>`;
+    for (var i = 0; i < villagesData.length; i++) {
+        thisMerchantLeft = villagesData[i].availableMerchants;
+        if (incomingRes[villagesData[i].id] != undefined) {
+            console.log("adding res underway to target");
+            thisVillageTotalWood = incomingRes[villagesData[i].id].wood + parseInt(villagesData[i].wood);
+            thisVillageTotalStone = incomingRes[villagesData[i].id].stone + parseInt(villagesData[i].stone);
+            thisVillageTotalIron = incomingRes[villagesData[i].id].iron + parseInt(villagesData[i].iron);
+        }
+        else {
+            thisVillageTotalWood = parseInt(villagesData[i].wood);
+            thisVillageTotalStone = parseInt(villagesData[i].stone);
+            thisVillageTotalIron = parseInt(villagesData[i].iron);
+        }
+        for (var j = 0; j < cleanLinks.length; j++) {
+            if (cleanLinks[j].target == villagesData[i].id) {
+                console.log('adding rows to be received to the res at the target');
+                thisVillageTotalWood += cleanLinks[j].wood;
+                thisVillageTotalStone += cleanLinks[j].stone;
+                thisVillageTotalIron += cleanLinks[j].iron;
+            }
+            if (cleanLinks[j].source == villagesData[i].id) {
+                console.log('addings rows to be sent to the res at the target');
+                thisVillageTotalWood -= cleanLinks[j].wood;
+                thisVillageTotalStone -= cleanLinks[j].stone;
+                thisVillageTotalIron -= cleanLinks[j].iron;
+                thisMerchantLeft -= (cleanLinks[j].wood + cleanLinks[j].stone + cleanLinks[j].iron) / 1000;
+            }
+        }
+
+        if (i % 2 == 0) {
+            tempRow = "class='sophRowB'";
+        }
+        else {
+            tempRow = "class='sophRowA'";
+        }
+
+        resBalancedHTML += `
+        <tr ${tempRow}>
+            <td>${villagesData[i].name}</td>
+            <td>${villagesData[i].points}</td>
+            <td style="text-align:right;padding-right:2em">
+                ${thisMerchantLeft + "/" + villagesData[i].totalMerchants}
+            </td>
+            <td>
+                <span class="res wood" style="padding-left:1em">&nbsp;</span>${thisVillageTotalWood}
+            </td>
+            <td>
+                <span class="res stone" style="padding-left:1em">&nbsp;</span>${thisVillageTotalStone}
+            </td>
+            <td>
+                <span class="res iron" style="padding-left:1em">&nbsp;</span>${thisVillageTotalIron}
+            </td>
+            <td style="text-align:right">${villagesData[i].warehouseCapacity}</td>
+        </tr>`;
+    }
+    resBalancedHTML += `</table></div>`;
+    Dialog.show('content', resBalancedHTML);
+}

@@ -147,12 +147,12 @@ if (game_data.locale == "pt_BR") {
         "Aldeia",
         "Pontos",
         "Enviar para",
-        "Manter % no armazÃ©m",
+        "Manter % no armazém",
         "Recalcular transporte",
         "Enviar recursos",
         "Origem",
         "Destino",
-        "DistÃ¢ncia",
+        "Distância",
         "Madeira",
         "Argila",
         "Ferro",
@@ -332,6 +332,25 @@ $.get(URLReq, function () {
 //ask user what coordinate they want to send resources to
 askCoordinate();
 
+function sendResourcesTotal(){
+    // seleciona todos os inputs e filtra os que têm a classe exatamente igual
+    const inputs = Array.from(document.querySelectorAll('input')).filter(input => 
+        input.className === 'btn evt-confirm-btn btn-confirm-yes'
+    );
+
+    let index = 0;
+    alert(inputs.length);
+    /*const intervalo = setInterval(() => {
+        if (index >= inputs.length) {
+            clearInterval(intervalo); // para o loop quando acabar
+            return;
+        }
+        inputs[index].click(); // dispara o onclick do input
+        index++;
+    }, 500); // 500ms = 0,5 segundo*/
+    
+}
+
 function createList() {
     //if list is already made, delete both the older(possibly out of date list), with new one and readd the target and WH limit 
     if ($("#sendResources")[0]) {
@@ -391,6 +410,11 @@ function createList() {
                             <td class="sophHeader" width="10%" style="text-align:center">${langShinko[16]}</td>
                             <td class="sophHeader" width="15%">
                                 <font size="1">${langShinko[18]}</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left;">
+                                <input type="button" class="btn evt-confirm-btn btn-confirm-yes" id="sendResourcesTotal" value="Enviar tudo" onclick="sendResourcesTotal()">
                             </td>
                         </tr>
                     </tbody>

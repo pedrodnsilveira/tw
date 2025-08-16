@@ -1,5 +1,6 @@
 /*TRATAMENTOS DE ERRO DE EXECUÇÃO*/
-if (!window.location.href.includes("screen=overview_villages&mode=prod")) {
+//if (!window.location.href.includes("screen=overview_villages&mode=prod")) {
+if (!(window.location.href.includes("screen=overview_villages") && window.location.href.includes("mode=prod"))) {
     alert("O script precisa ser executado na página Visualizações -> Produção");
     throw new Error("Script interrompido. Página incorreta.");
 }

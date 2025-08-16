@@ -1,1 +1,1442 @@
-var _0x5274=['</table></div>','catapult',';\x20padding:5px;\x22><input\x20type=\x22radio\x22\x20ID=\x22settingPriorityBalanced\x22\x20name=\x22prio\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:50%;\x20background-color:','\x0a<style>\x0a.sophRowA\x20{\x0abackground-color:\x20#32353b;\x0acolor:\x20white;\x0a}\x0a.sophRowB\x20{\x0abackground-color:\x20#36393f;\x0acolor:\x20white;\x0a}\x0a.sophHeader\x20{\x0abackground-color:\x20#202225;\x0afont-weight:\x20bold;\x0acolor:\x20white;\x0a}\x0a.btnSophie\x0a{\x0a\x20\x20\x20\x20background-image:\x20linear-gradient(#6e7178\x200%,\x20#36393f\x2030%,\x20#202225\x2080%,\x20black\x20100%);\x0a}\x0a.btnSophie:hover\x0a{\x20\x0a\x20\x20\x20\x20background-image:\x20linear-gradient(#7b7e85\x200%,\x20#40444a\x2030%,\x20#393c40\x2080%,\x20#171717\x20100%);\x0a}\x0a#x\x20{\x0a\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20background:\x20red;\x0a\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20right:\x200px;\x0a\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20height:\x2030px;\x0a}\x0a#cog\x20{\x0a\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20background:\x20#32353b;\x0a\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20right:\x2030px;\x0a\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20height:\x2030px;\x0a}\x0a</style>','Inserisci\x20qui\x20il\x20tempo','#category3','Bereken\x20rooftochten\x20voor\x20iedere\x20pagina',':checked',';\x20padding:5px;\x22><input\x20type=\x22date\x22\x20id=\x22defDay\x22\x20name=\x22defDay\x22\x20value=\x22','marcher','Î¥Ï€Î¿Î»ÏŒÎ³Î¹ÏƒÎµ\x20Ï‡ÏÏŒÎ½Î¿Ï…Ï‚\x20ÏƒÎ¬ÏÏ‰ÏƒÎ·Ï‚\x20Î³Î¹Î±\x20ÎºÎ¬Î¸Îµ\x20ÏƒÎµÎ»Î¯Î´Î±.','Scripter:\x20','input','runTimes','Textbox\x20','Î§ÏÏŒÎ½Î¿Ï‚\x20Î£Î¬ÏÏ‰ÏƒÎ·Ï‚\x20(ÎÏÎµÏ‚.Î›ÎµÏ€Ï„Î¬)','&screen=place&mode=scavenge_mass','getItem','#383834','\x20ØªØ´ØºÙŠÙ„\x20Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©\x20','has_rally_point','focus','#803000','now','138443HDKBvn','No\x20category\x20enabled\x20setting\x20found,\x20making\x20new\x20one','Loot\x20possible\x20from\x20this\x20village:\x20','Cueatare\x20in\x20masa:\x20trimite\x20pe\x2050\x20de\x20sate',',1px\x201px\x200\x20','Which\x20setting?','didn\x27t\x20choose\x20type','Time\x20is\x20in\x20the\x20past!','\x20WITH\x20PREMIUM\x22\x20style=\x22display:none\x22></center></td></tr>','#F699CD','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;background-color:','No\x20priority/balance\x20setting\x20found,\x20making\x20new\x20one','heavy','ar_AE','#serverDate','timeElement',';\x20padding:5px;\x22><input\x20type=\x22radio\x22\x20ID=\x22timeSelectorDate\x22\x20name=\x22timeSelector\x22\x20></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','html','setItem','checked','Î§ÏÏŒÎ½Î¿Ï‚','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tbody>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20style=\x22background-color:','#03456b','getMonth','table','Getting\x20','Runtimes:\x20Off:\x20','#category4','el_GR','village_id','Lanseaza\x20grup\x20','#offTime','\x22\x20onclick=\x22this.select();\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22width:22px;background-color:','\x22\x20name=\x22','#777777','clicked','\x22><input\x20type=\x22time\x22\x20id=\x22offTime\x22\x20name=\x22offTime\x22\x20value=\x22','scavenging_squad','ram','Inserisci\x20la\x20durata\x20voluta\x20dei\x20rovistamenti\x20in\x20ORE','old','attr','innerText','.runTime_off',':button[id^=\x22sendMass\x22]','<tr\x20id=\x22sendRow','Select\x20unit\x20types/ORDER\x20to\x20scavenge\x20with\x20(drag\x20units\x20to\x20order)','#c6a768','Creating\x20launch\x20options','\x22><center><input\x20type=\x22button\x22\x20\x20class=\x22btn\x20btnSophie\x22\x20id=\x22sendMass\x22\x20onclick=\x22sendGroup(','disabled','\x22><input\x20type=\x22time\x22\x20id=\x22defTime\x22\x20name=\x22defTime\x22\x20value=\x22','Lancia\x20gruppo','removeItem','&page=','\x22\x20colspan=\x224\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<center\x20style=\x22margin:10px\x22><u>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20color=\x22','keys',';\x20padding:5px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20color=\x22','#timeSelectorDate','Wanneer\x20wil\x20je\x20dat\x20je\x20rooftochten\x20terug\x20zijn?','Massa\x20rooftochten',';\x20padding:5px;\x22><font\x20color=\x22','#ded9d9','get','Ø§Ù„Ø§ØºØ§Ø±Ø§Øª\x20:\x20ØªØ±Ø³Ù„\x20Ù„ÙƒÙ„\x2050\x20Ù‚Ø±ÙŠÙ‡\x20Ø¹Ù„Ù‰\x20Ø­Ø¯Ù‰\x20','#massScavengeSophie','#sophieImg',',true)\x22\x20value=\x22','titleColor','Verstuur\x20groep\x20','#category2','Creating\x20launch\x20UI','sendOrder','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<center\x20style=\x22margin:10px\x22><u>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20color=\x22','game.php?&screen=place&mode=scavenge_mass','done','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:50%;\x20background-color:','prop','</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</u>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20style=\x22background-color:','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophRowA\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#32353b;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophRowB\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#36393f;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophHeader\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#202225;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#6e7178\x200%,\x20#36393f\x2030%,\x20#202225\x2080%,\x20black\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie:hover\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#7b7e85\x200%,\x20#40444a\x2030%,\x20#393c40\x2080%,\x20#171717\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#x\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20red;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20#cog\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#32353b;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</style>','snob','prepend','1438313VXaamt','undefined','<div\x20id=\x22massScavengeFinal\x22\x20class=\x22ui-widget-content\x22\x20style=\x22position:fixed;background-color:','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20colspan=\x223\x22\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','addEventListener','didn\x27t\x20choose\x20category','no\x20rally\x20point','is_locked','userAgent','</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','Î•Ï€Î¹Î»Î­Î¾Ï„Îµ\x20ÎµÏ€Î¯Ï€ÎµÎ´Î±\x20ÏƒÎ¬ÏÏ‰ÏƒÎ·Ï‚\x20Ï€Î¿Ï…\x20Î¸Î±\x20Ï‡ÏÎ·ÏƒÎ¹Î¼Î¿Ï€Î¿Î¹Î·Î¸Î¿ÏÎ½','#category1','Creatore:\x20','#36393f','categoryEnabled','game.php?t=','knight','.png\x22\x20title=\x22','Seleziona\x20i\x20tipi\x20da\x20unitÃ \x20con\x20cui\x20rovistare','ÎœÎ±Î¶Î¹ÎºÎ®\x20ÏƒÎ¬ÏÏ‰ÏƒÎ·','show','error','#imgRow\x20:checkbox','sword','getFullYear','place&mode=scavenge_mass',':checkbox#','militia','can\x20scavenge','sitter','5pCfMaa','Massa\x20rooftochten:\x20verstuur\x20per\x2050\x20dorpen','Ø¶Ø¹\x20Ø§Ø§Ù„Ù…Ø¯Ù‡\x20Ù‡Ù†Ø§','locale',';\x20padding:5px;\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','#f1f1f1','Group\x20sent\x20successfully','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#00a1fe\x200%,\x20#5d9afd\x2030%,\x20#1626ff\x2080%,\x20#1f15e1\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie:hover\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#b8bcf2\x200%,\x20#babbfc\x2030%,\x20#8c86fa\x2080%,\x20#969fff\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#x\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20red;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#cog\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#fecd00;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20</style>','Calculate\x20runtimes\x20for\x20each\x20page','length','</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','axe','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#00a1fe\x200%,\x20#5d9afd\x2030%,\x20#1626ff\x2080%,\x20#1f15e1\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:white\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie:hover\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#b8bcf2\x200%,\x20#babbfc\x2030%,\x20#8c86fa\x2080%,\x20#969fff\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#x\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20red;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#cog\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#f1f1f1;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20</style>','#settingPriorityPriority','#offDay','Creator:\x20','stringify',';\x22\x20title=\x22Sophie\x20profile\x22\x20target=\x22_blank\x22>Sophie\x20\x22Shinko\x20to\x20Kuma\x22</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</p>\x0a\x20\x20\x20\x20</center>\x0a</div>\x0a','https://v.tylercamp.me/hc/massScavengeSophie','#202225','Date','parent','Select\x20categories\x20to\x20use','Cand\x20vrei\x20sa\x20se\x20intoarca\x20trupele\x20de\x20la\x20curatare\x20(aproximativ)','1621237dKgJet','removeAttr','Durata\x20aici','log','#defDisplay','coming\x20soon!','pink','Launch\x20group\x20','screen=place&mode=scavenge_mass',';\x20padding:5px;\x22><input\x20type=\x22text\x22\x20class=\x22runTime_off\x22\x20style=\x22background-color:','9sIqOdu','too\x20many\x20units','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<center><input\x20type=\x22checkbox\x22\x20ID=\x22category4\x22\x20name=\x22cat4\x22></center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tbody>\x0a\x20\x20\x20\x20</table>\x0a\x20\x20\x20\x20<hr>\x0a\x20\x20\x20\x20<table\x20class=\x22vis\x22\x20border=\x221\x22\x20style=\x22width:\x20100%;background-color:','https://media2.giphy.com/media/qYr8p3Dzbet5S/giphy.gif','Getting\x20sendorder\x20from\x20storage','.maincell','unit_carry_factor','#settingPriorityBalanced','width','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20colspan=\x2210\x22\x20id=\x22massScavengeSophieTitle\x22\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','\x22>Off\x20villages</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','name','location','#imgRow','datebox','innerHTML','Ø§Ù„Ø§ØºØ§Ø±Ø§Øª','Î”Î·Î¼Î¹Î¿Ï…ÏÎ³ÏŒÏ‚:\x20','426459RaRmkU','Time\x20def:\x20','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22background-color:','Grabbing\x20which\x20units\x20to\x20keep\x20home','#serverTime','#offDisplay','player',';\x20padding:5px;\x22><input\x20type=\x22date\x22\x20id=\x22offDay\x22\x20name=\x22offDay\x22\x20value=\x22',';color:','Getting\x20which\x20category\x20types\x20are\x20enabled\x20from\x20storage','When\x20do\x20you\x20want\x20your\x20scav\x20runs\x20to\x20return\x20(approximately)?',';border-color:','\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22width:22px;background-color:','units','#sendMassPremium','</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</u></center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20id=\x22imgRow\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20</table>\x0a\x20\x20\x20\x20<hr>\x0a\x20\x20\x20\x20<table\x20class=\x22vis\x22\x20border=\x221\x22\x20style=\x22width:\x20100%;background-color:','No\x20troopTypeEnabled\x20found,\x20making\x20new\x20one','#progress','indexOf','Done','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20id=\x22runtimesTitle\x22\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','spy','send_squads',';\x20padding:5px;\x22><center><input\x20type=\x22button\x22\x20class=\x22btn\x20btnSophie\x22\x20id=\x22reset\x22\x20onclick=\x22resetSettings()\x22\x20value=\x22Reset\x20settings\x22></center></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20</table>\x0a\x20\x20\x20\x20<hr>\x0a\x20\x20\x20\x20<center><input\x20type=\x22button\x22\x20class=\x22btn\x20btnSophie\x22\x20id=\x22sendMass\x22\x20onclick=\x22readyToSend()\x22\x20value=\x22','match','append','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20colspan=\x222\x22\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','No\x20units\x20set\x20to\x20keep\x20home,\x20creating','setting\x20balanced',':button[id^=\x22sendMassPremium\x22]','getHours','Saved\x20priority:\x20','\x22>Settings\x20bugged?</font></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:50%;\x20background-color:','keepHome','reload','archer','not\x20enough\x20units,\x20but\x20even\x20balance','Hours','</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</u></center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20id=\x22categories\x22\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','Calculeaza\x20durata\x20pentru\x20fiecare\x20pagina','nl_NL','headerColor','\x22>\x0a\x20\x20\x20\x20<table\x20class=\x22vis\x22\x20border=\x221\x22\x20style=\x22width:\x20100%\x22>\x0a\x20\x20\x20\x20<thead>\x0a\x20\x20\x20\x20</thead>\x0a\x20\x20\x20\x20<tbody>\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22\x20text-align:center;background-color:','#ecd7ac','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','Looptijd\x20hier\x20invullen','hasOwnProperty','\x22>Priority\x20on\x20filling\x20higher\x20categories</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20id=\x22settingPriority\x22\x20style=\x22text-align:center;\x20width:auto;\x20background-color:',';cursor:move;z-index:50;\x22>\x0a<button\x20class=\x22btn\x22\x20id\x20=\x22cog\x22\x20onclick=\x22settings()\x22>âš™ï¸</button>\x0a<button\x20class=\x22btn\x22\x20id\x20=\x20\x22x\x22\x20onclick=\x22closeWindow(\x27massScavengeSophie\x27)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20X\x0a\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20<table\x20id=\x22massScavengeSophieTable\x22\x20class=\x22vis\x22\x20border=\x221\x22\x20style=\x22width:\x20100%;background-color:','#sendRow','Backup\x22\x20name=\x22',';padding:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20color=\x22','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<center\x20style=\x22margin:10px\x22><u>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20color=\x22',';padding:\x205px;\x22><input\x20type=\x22checkbox\x22\x20ID=\x22','1342737kzMlcG','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20id=\x22settingPriorityTitle\x22\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','\x0a<div\x20id=\x22massScavengeSophie\x22\x20class=\x22ui-widget-content\x22\x20style=\x22width:600px;background-color:','ro_RO','troopTypeEnabled','options','Ø§Ø®ØªØ§Ø±\x20Ø§Ù†ÙˆØ§Ø¹\x20\x20\x20Ø§Ù„Ø§ØºØ§Ø±Ø§Øª\x20Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…Ø©\x20','script:contains(\x22ScavengeMassScreen\x22)','duration_exponent','You\x20have\x20not\x20chosen\x20which\x20categories\x20you\x20want\x20to\x20use!','\x20Ù…Ø§\x20Ø§Ù„Ù…Ø¯Ù‡\x20Ø§Ù„Ù…Ø¯Ù‡\x20Ø§Ù„Ø²Ù…Ù†ÙŠÙ‡\x20Ø§Ù„Ù…Ø±Ø§Ø¯\x20Ø§Ø±Ø³Ø§Ù„\x20Ø§Ù„Ø§ØºØ§Ø±Ø§Øª\x20Ø¨Ù‡Ø§','def','Rovistamento\x20di\x20massa','floor','\x22><td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','getDate','val','unit_counts_home','position','post','.paged-nav-item','Ø§Ø®ØªØ§Ø±\x20Ø§Ù„ÙˆØ­Ø¯Ø§Øª\x20Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…Ø©\x20ÙÙ‰\x20Ø§Ù„Ø§ØºØ§Ø±Ø§Øª','borderColor','#mobileContent','#category','remove','off','getMinutes','find',',1px\x20-1px\x200\x20','prioritiseHighCat','\x22>Balanced\x20over\x20all\x20categories</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:50%;\x20background-color:','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<center><input\x20type=\x22checkbox\x22\x20ID=\x22category3\x22\x20name=\x22cat3\x22></center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','push','parse',';padding:\x205px;\x22><input\x20type=\x22text\x22\x20ID=\x22','Ø­Ø³Ø§Ø¨\x20Ø§Ù„Ù…Ø¯Ù‡\x20Ù„ÙƒÙ„\x20ØµÙØ­Ù‡\x20','Runtime\x20here','it_IT','assign','replace','getAll','</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20id=\x22settingPriorityHeader\x22\x20style=\x22text-align:center;\x20width:auto;\x20background-color:',';\x20padding:5px;\x22><input\x20type=\x22radio\x22\x20ID=\x22settingPriorityPriority\x22\x20name=\x22prio\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:#202225;padding:\x205px;\x22><font\x20color=\x22#ffffdf\x22>Backup</font></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20align=\x22center\x22\x20style=\x22background-color:','Rovistamento\x20di\x20massa:\x20manda\x20su\x2050\x20villaggi',';padding:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20color=\x22','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#FEC5E5\x200%,\x20#FD5DA8\x2030%,\x20#FF1694\x2080%,\x20#E11584\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie:hover\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(#F2B8C6\x200%,\x20#FCBACB\x2030%,\x20#FA86C4\x2080%,\x20#FE7F9C\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#x\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20red;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#cog\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#FEC5E5;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20</style>','Mass\x20scavenging','#ffffdf',';\x20padding:5px;\x22>\x20<font\x20color=\x22','forEach','#defTime','css','1680210bciwPS','1720449OASQcg','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<center\x20style=\x22margin:10px\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20color=\x22','ÎœÎ±Î¶Î¹ÎºÎ®\x20ÏƒÎ¬ÏÏ‰ÏƒÎ·:\x20Î‘Ï€Î¿ÏƒÏ„Î¿Î»Î®\x20Î±Î½Î±\x2050\x20Ï‡Ï‰ÏÎ¹Î¬','</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr\x20id=\x22runtimes\x22\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','setting\x20high\x20priority\x20cat','sortable','.runTime_def','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<center><input\x20type=\x22checkbox\x22\x20ID=\x22category1\x22\x20name=\x22cat1\x22></center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','#timeSelectorHours',';\x20padding:5px;\x22><input\x20type=\x22text\x22\x20class=\x22runTime_def\x22\x20style=\x22background-color:','draggable','\x22\x20colspan=\x2215\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<center\x20style=\x22margin:10px\x22><u>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20color=\x22','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<center><input\x20type=\x22checkbox\x22\x20ID=\x22category2\x22\x20name=\x22cat2\x22></center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','Settings\x20reset',';\x22\x20value=\x22','minimalistGray','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20colspan=\x2210\x22\x20id=\x22massScavengeSophieTitle\x22\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','#defDay','scavenge_api','disableSelection','\x22></center></td><td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','Kies\x20welke\x20troeptypes\x20je\x20wil\x20mee\x20roven,\x20sleep\x20om\x20prioriteit\x20te\x20ordenen','href','#fecd00','\x22\x20size=\x225\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tbody>\x20\x20\x0a\x20\x20\x20\x20</table>\x0a</td>',';\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:','SuccessMessage','#sendMass',';padding:\x205px;\x22><img\x20src=\x22https://dsen.innogamescdn.com/asset/cf2959e7/graphic/unit/unit_','</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</u>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>','backgroundColor','#3e4147'];var _0x473b=function(_0x3735ab,_0x58ab31){_0x3735ab=_0x3735ab-0x16a;var _0x527433=_0x5274[_0x3735ab];return _0x527433;};var _0x338173=_0x473b;(function(_0x6eb990,_0x5ea291){var _0x19a3d4=_0x473b;while(!![]){try{var _0x55c14c=parseInt(_0x19a3d4(0x199))+-parseInt(_0x19a3d4(0x19a))+parseInt(_0x19a3d4(0x224))+-parseInt(_0x19a3d4(0x264))*parseInt(_0x19a3d4(0x1d2))+parseInt(_0x19a3d4(0x2ac))+parseInt(_0x19a3d4(0x25a))+-parseInt(_0x19a3d4(0x276))*parseInt(_0x19a3d4(0x242));if(_0x55c14c===_0x5ea291)break;else _0x6eb990['push'](_0x6eb990['shift']());}catch(_0x39fec9){_0x6eb990['push'](_0x6eb990['shift']());}}}(_0x5274,0xf02d6));_0x8a99ac:serverTimeTemp=$(_0x338173(0x1e0))[0x0][_0x338173(0x1fc)]+'\x20'+$(_0x338173(0x27a))[0x0][_0x338173(0x1fc)];serverTime=serverTimeTemp[_0x338173(0x28e)](/^([0][1-9]|[12][0-9]|3[01])[\/\-]([0][1-9]|1[012])[\/\-](\d{4})( (0?[0-9]|[1][0-9]|[2][0-3])[:]([0-5][0-9])([:]([0-5][0-9]))?)?$/),serverDate=Date[_0x338173(0x185)](serverTime[0x3]+'/'+serverTime[0x2]+'/'+serverTime[0x1]+serverTime[0x4]);var is_mobile=!!navigator[_0x338173(0x22c)][_0x338173(0x28e)](/iphone|android|blackberry/ig)||![],scavengeInfo,tempElementSelection='';window[_0x338173(0x270)][_0x338173(0x1b0)][_0x338173(0x288)](_0x338173(0x262))<0x0&&window[_0x338173(0x270)][_0x338173(0x18a)](game_data['link_base_pure']+_0x338173(0x23d));$['post'](_0x338173(0x254)),$(_0x338173(0x213))[_0x338173(0x17c)]();typeof version==_0x338173(0x225)&&(version='new');var langShinko=[_0x338173(0x193),_0x338173(0x200),_0x338173(0x258),_0x338173(0x280),_0x338173(0x188),_0x338173(0x24a),_0x338173(0x251),'Mass\x20scavenging:\x20send\x20per\x2050\x20villages',_0x338173(0x261)];game_data[_0x338173(0x245)]==_0x338173(0x2af)&&(langShinko=['Curatare\x20in\x20masa','Selecteaza\x20tipul\x20unitatii/ORDONEAZA\x20sa\x20curete\x20cu\x20(trage\x20unitatea\x20pentru\x20a\x20ordona)','Selecteaza\x20categoria',_0x338173(0x259),_0x338173(0x25c),_0x338173(0x29d),'Creator:\x20',_0x338173(0x1d5),_0x338173(0x1f0)]);game_data[_0x338173(0x245)]==_0x338173(0x1df)&&(langShinko=[_0x338173(0x274),_0x338173(0x178),_0x338173(0x2b2),_0x338173(0x16d),_0x338173(0x244),_0x338173(0x187),'Creator:\x20',_0x338173(0x212),_0x338173(0x1cd)]);game_data['locale']==_0x338173(0x1ee)&&(langShinko=[_0x338173(0x237),'Î•Ï€Î¹Î»Î­Î¾Ï„Îµ\x20Ï„Î¹Ï‚\x20Î¼Î¿Î½Î¬Î´ÎµÏ‚\x20Î¼Îµ\x20Ï„Î¹Ï‚\x20Î¿Ï€Î¿Î¯ÎµÏ‚\x20Î¸Î±\x20ÎºÎ¬Î½ÎµÏ„Îµ\x20ÏƒÎ¬ÏÏ‰ÏƒÎ·',_0x338173(0x22e),_0x338173(0x1c9),_0x338173(0x1e6),_0x338173(0x1c4),_0x338173(0x275),_0x338173(0x19c),'Î‘Ï€Î¿ÏƒÏ„Î¿Î»Î®\x20Î¿Î¼Î¬Î´Î±Ï‚\x20']);game_data['locale']==_0x338173(0x29e)&&(langShinko=[_0x338173(0x20e),_0x338173(0x1af),'Kies\x20categorieÃ«n\x20die\x20je\x20wil\x20gebruiken',_0x338173(0x20d),_0x338173(0x2a3),_0x338173(0x1c0),_0x338173(0x1c5),_0x338173(0x243),_0x338173(0x217)]);game_data[_0x338173(0x245)]==_0x338173(0x189)&&(langShinko=[_0x338173(0x16f),_0x338173(0x236),'Seleziona\x20quali\x20categorie\x20utilizzare',_0x338173(0x1f9),_0x338173(0x1be),'Calcola\x20tempi\x20per\x20tutte\x20le\x20pagine',_0x338173(0x230),_0x338173(0x190),_0x338173(0x206)]);if(localStorage[_0x338173(0x1cb)](_0x338173(0x2b0))==null){console['log'](_0x338173(0x286)),worldUnits=game_data[_0x338173(0x283)];var troopTypeEnabled={};for(var i=0x0;i<worldUnits['length'];i++){worldUnits[i]!=_0x338173(0x23f)&&worldUnits[i]!=_0x338173(0x222)&&worldUnits[i]!=_0x338173(0x1f8)&&worldUnits[i]!=_0x338173(0x1bb)&&worldUnits[i]!=_0x338173(0x28b)&&worldUnits[i]!=_0x338173(0x234)&&(troopTypeEnabled[worldUnits[i]]=![]);};localStorage[_0x338173(0x1e4)](_0x338173(0x2b0),JSON[_0x338173(0x252)](troopTypeEnabled));}else{console[_0x338173(0x25d)]('Getting\x20which\x20troop\x20types\x20are\x20enabled\x20from\x20storage');var troopTypeEnabled=JSON[_0x338173(0x185)](localStorage['getItem'](_0x338173(0x2b0)));}if(localStorage[_0x338173(0x1cb)]('keepHome')==null){console['log'](_0x338173(0x291));var keepHome={'spear':0x0,'sword':0x0,'axe':0x0,'archer':0x0,'light':0x0,'marcher':0x0,'heavy':0x0};localStorage[_0x338173(0x1e4)](_0x338173(0x297),JSON[_0x338173(0x252)](keepHome));}else{console[_0x338173(0x25d)](_0x338173(0x279));var keepHome=JSON[_0x338173(0x185)](localStorage[_0x338173(0x1cb)](_0x338173(0x297)));}if(localStorage[_0x338173(0x1cb)]('categoryEnabled')==null){console[_0x338173(0x25d)](_0x338173(0x1d3));var categoryEnabled=[!![],!![],!![],!![]];localStorage['setItem']('categoryEnabled',JSON[_0x338173(0x252)](categoryEnabled));}else{console[_0x338173(0x25d)](_0x338173(0x27f));var categoryEnabled=JSON[_0x338173(0x185)](localStorage[_0x338173(0x1cb)](_0x338173(0x232)));}if(localStorage[_0x338173(0x1cb)]('prioritiseHighCat')==null){console[_0x338173(0x25d)](_0x338173(0x1dd));var prioritiseHighCat=![];localStorage[_0x338173(0x1e4)](_0x338173(0x181),JSON[_0x338173(0x252)](prioritiseHighCat));}else{console[_0x338173(0x25d)]('Getting\x20prioritiseHighCat\x20from\x20storage');var prioritiseHighCat=JSON[_0x338173(0x185)](localStorage[_0x338173(0x1cb)]('prioritiseHighCat'));}localStorage[_0x338173(0x1cb)](_0x338173(0x1e1))==null?(console[_0x338173(0x25d)]('No\x20timeElement\x20selected,\x20use\x20Date'),localStorage[_0x338173(0x1e4)](_0x338173(0x1e1),'Date'),tempElementSelection=_0x338173(0x256)):(console['log']('Getting\x20which\x20element\x20from\x20localstorage'),tempElementSelection=localStorage[_0x338173(0x1cb)](_0x338173(0x1e1)));if(localStorage[_0x338173(0x1cb)](_0x338173(0x21a))==null){console[_0x338173(0x25d)]('No\x20sendorder\x20found,\x20making\x20new\x20one'),worldUnits=game_data['units'];var sendOrder=[];for(var i=0x0;i<worldUnits[_0x338173(0x24b)];i++){worldUnits[i]!=_0x338173(0x23f)&&worldUnits[i]!='snob'&&worldUnits[i]!=_0x338173(0x1f8)&&worldUnits[i]!=_0x338173(0x1bb)&&worldUnits[i]!=_0x338173(0x28b)&&worldUnits[i]!=_0x338173(0x234)&&sendOrder['push'](worldUnits[i]);};console['log'](sendOrder),localStorage[_0x338173(0x1e4)]('sendOrder',JSON[_0x338173(0x252)](sendOrder));}else{console[_0x338173(0x25d)](_0x338173(0x268));var sendOrder=JSON['parse'](localStorage[_0x338173(0x1cb)](_0x338173(0x21a)));}if(localStorage['getItem']('runTimes')==null){console['log']('No\x20runTimes\x20found,\x20making\x20new\x20one');var runTimes={'off':0x4,'def':0x3};localStorage[_0x338173(0x1e4)](_0x338173(0x1c7),JSON[_0x338173(0x252)](runTimes));}else{console[_0x338173(0x25d)]('Getting\x20runTimes\x20from\x20storage');var runTimes=JSON[_0x338173(0x185)](localStorage[_0x338173(0x1cb)](_0x338173(0x1c7)));}if(typeof premiumBtnEnabled==_0x338173(0x225))var premiumBtnEnabled=![];game_data[_0x338173(0x27c)][_0x338173(0x241)]>0x0?URLReq=_0x338173(0x233)+game_data[_0x338173(0x27c)]['id']+_0x338173(0x1ca):URLReq=_0x338173(0x21c);var arrayWithData,enabledCategories=[],availableUnits=[],squad_requests=[],squad_requests_premium=[],scavengeInfo,duration_factor=0x0,duration_exponent=0x0,duration_initial_seconds=0x0,categoryNames=JSON[_0x338173(0x185)]('['+$['find'](_0x338173(0x16a))[0x0][_0x338173(0x273)][_0x338173(0x28e)](/\{.*\:\{.*\:.*\}\}/g)+']')[0x0],time={'off':0x0,'def':0x0};if(typeof colors==_0x338173(0x225)){var backgroundColor=_0x338173(0x231),borderColor=_0x338173(0x1b9),headerColor=_0x338173(0x255),titleColor=_0x338173(0x194);cssClassesSophie=_0x338173(0x1bd);}else{if(colors==_0x338173(0x260)){var colors={'backgroundColor':'#FEC5E5','borderColor':'#FF1694','headerColor':_0x338173(0x1db),'titleColor':'#E11584'},backgroundColor=colors[_0x338173(0x1b8)],borderColor=colors[_0x338173(0x179)],headerColor=colors['headerColor'],titleColor=colors[_0x338173(0x216)];cssClassesSophie=_0x338173(0x192);}else{if(colors=='swedish'){var colors={'backgroundColor':_0x338173(0x1b1),'borderColor':_0x338173(0x1e8),'headerColor':'#006aa8','titleColor':_0x338173(0x194)},backgroundColor=colors[_0x338173(0x1b8)],borderColor=colors['borderColor'],headerColor=colors['headerColor'],titleColor=colors['titleColor'];cssClassesSophie=_0x338173(0x249);}else{if(colors==_0x338173(0x1a9)){var colors={'backgroundColor':_0x338173(0x247),'borderColor':_0x338173(0x1f4),'headerColor':_0x338173(0x210),'titleColor':_0x338173(0x1cc)},backgroundColor=colors[_0x338173(0x1b8)],borderColor=colors[_0x338173(0x179)],headerColor=colors[_0x338173(0x29f)],titleColor=colors[_0x338173(0x216)];cssClassesSophie=_0x338173(0x24e);}else{if(colors=='TW'){console[_0x338173(0x25d)]('Changing\x20to\x20TW\x20theme');var backgroundColor='#F4E4BC',borderColor=_0x338173(0x2a1),headerColor=_0x338173(0x201),titleColor=_0x338173(0x1d0);cssClassesSophie='\x0a\x20\x20\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20.sophRowA\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#f4e4bc;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophRowB\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#fff5da;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophHeader\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-color:\x20#c6a768;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20bold;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#803000;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20.sophLink\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:#803000;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20linear-gradient(to\x20bottom,\x20#947a62\x200%,#7b5c3d\x2022%,#6c4824\x2030%,#6c4824\x20100%)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:white\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btnSophie:hover\x0a\x20\x20\x20\x20\x20\x20\x20\x20{\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20linear-gradient(to\x20bottom,\x20#b69471\x200%,#9f764d\x2022%,#8f6133\x2030%,#6c4d2d\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#x\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20red;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20#cog\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#f4e4bc;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x200px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20</style>';}else{var backgroundColor=_0x338173(0x231),borderColor=_0x338173(0x1b9),headerColor='#202225',titleColor='#ffffdf';cssClassesSophie=_0x338173(0x221);}}}}}$('#contentContainer')['eq'](0x0)[_0x338173(0x223)](cssClassesSophie),$('#mobileHeader')['eq'](0x0)[_0x338173(0x223)](cssClassesSophie),$[_0x338173(0x18c)]=function(_0x26ebe3,_0x43a0b6,_0x21aa98,_0x1d9166){var _0x584b90=0x0,_0x205e5d=0x0,_0x4947c9=0xc8;_0x5447b9();function _0x5447b9(){var _0x117f58=_0x473b;if(_0x584b90==_0x26ebe3[_0x117f58(0x24b)]){_0x21aa98();return;}let _0x598b8a=Date[_0x117f58(0x1d1)](),_0x34dd6d=_0x598b8a-_0x205e5d;if(_0x34dd6d<_0x4947c9){let _0x537f28=_0x4947c9-_0x34dd6d;setTimeout(_0x5447b9,_0x537f28);return;}console[_0x117f58(0x25d)](_0x117f58(0x1eb),_0x26ebe3[_0x584b90]),$(_0x117f58(0x287))[_0x117f58(0x198)](_0x117f58(0x26c),(_0x584b90+0x1)/_0x26ebe3['length']*0x64+'%'),_0x205e5d=_0x598b8a,$['get'](_0x26ebe3[_0x584b90])[_0x117f58(0x21d)](_0x66c832=>{try{_0x43a0b6(_0x584b90,_0x66c832),++_0x584b90,_0x5447b9();}catch(_0x421161){_0x1d9166(_0x421161);}})['fail'](_0x4c9469=>{_0x1d9166(_0x4c9469);});}};function getData(){var _0x1738b4=_0x338173;$('#massScavengeSophie')[_0x1738b4(0x17c)](),URLs=[],$[_0x1738b4(0x211)](URLReq,function(_0x237285){var _0x303b5a=_0x1738b4;$('.paged-nav-item')[_0x303b5a(0x24b)]>0x0?amountOfPages=parseInt($(_0x303b5a(0x177))[$(_0x303b5a(0x177))[_0x303b5a(0x24b)]-0x1]['href'][_0x303b5a(0x28e)](/page=(\d+)/)[0x1]):amountOfPages=0x0;for(var _0x428747=0x0;_0x428747<=amountOfPages;_0x428747++){URLs[_0x303b5a(0x184)](URLReq+_0x303b5a(0x208)+_0x428747),tempData=JSON[_0x303b5a(0x185)]($(_0x237285)[_0x303b5a(0x17f)](_0x303b5a(0x16a))[_0x303b5a(0x1e3)]()[_0x303b5a(0x28e)](/\{.*\:\{.*\:.*\}\}/g)[0x0]),duration_exponent=tempData[0x1][_0x303b5a(0x16b)],duration_factor=tempData[0x1]['duration_factor'],duration_initial_seconds=tempData[0x1]['duration_initial_seconds'];}console[_0x303b5a(0x25d)](URLs);})[_0x1738b4(0x21d)](function(){var _0x1d1a63=_0x1738b4;arrayWithData='[',$[_0x1d1a63(0x18c)](URLs,(_0x5a2d4c,_0x1f944a)=>{var _0x372bad=_0x1d1a63;thisPageData=$(_0x1f944a)['find'](_0x372bad(0x16a))[_0x372bad(0x1e3)]()[_0x372bad(0x28e)](/\{.*\:\{.*\:.*\}\}/g)[0x2],arrayWithData+=thisPageData+',';},()=>{var _0x2581fc=_0x1d1a63;arrayWithData=arrayWithData['substring'](0x0,arrayWithData[_0x2581fc(0x24b)]-0x1),arrayWithData+=']',scavengeInfo=JSON[_0x2581fc(0x185)](arrayWithData),count=0x0;for(var _0x3ee3ed=0x0;_0x3ee3ed<scavengeInfo[_0x2581fc(0x24b)];_0x3ee3ed++){calculateHaulCategories(scavengeInfo[_0x3ee3ed]),count++;}if(count==scavengeInfo[_0x2581fc(0x24b)]){console[_0x2581fc(0x25d)](_0x2581fc(0x289)),squads={},squads_premium={},per200=0x0,groupNumber=0x0,squads[groupNumber]=[],squads_premium[groupNumber]=[];for(var _0x45aecd=0x0;_0x45aecd<squad_requests[_0x2581fc(0x24b)];_0x45aecd++){per200==0xc8&&(groupNumber++,squads[groupNumber]=[],squads_premium[groupNumber]=[],per200=0x0),per200++,squads[groupNumber][_0x2581fc(0x184)](squad_requests[_0x45aecd]),squads_premium[groupNumber][_0x2581fc(0x184)](squad_requests_premium[_0x45aecd]);}console[_0x2581fc(0x25d)](_0x2581fc(0x202)),htmlWithLaunchButtons=_0x2581fc(0x226)+backgroundColor+';cursor:move;z-index:50;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x22\x20id\x20=\x20\x22x\x22\x20onclick=\x22closeWindow(\x27massScavengeFinal\x27)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20X\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<table\x20id=\x22massScavengeSophieFinalTable\x22\x20class=\x22vis\x22\x20border=\x221\x22\x20style=\x22width:\x20100%;background-color:'+backgroundColor+_0x2581fc(0x281)+borderColor+_0x2581fc(0x26d)+headerColor+_0x2581fc(0x21b)+titleColor+'\x22>'+langShinko[0x7]+_0x2581fc(0x1b7);for(var _0x295d07=0x0;_0x295d07<Object[_0x2581fc(0x20a)](squads)[_0x2581fc(0x24b)];_0x295d07++){htmlWithLaunchButtons+=_0x2581fc(0x1ff)+_0x295d07+'\x22\x20style=\x22text-align:center;\x20width:auto;\x20background-color:'+backgroundColor+_0x2581fc(0x171)+backgroundColor+_0x2581fc(0x203)+_0x295d07+',false)\x22\x20value=\x22'+langShinko[0x8]+(_0x295d07+0x1)+_0x2581fc(0x1ae)+backgroundColor+'\x22><center><input\x20type=\x22button\x22\x20\x20class=\x22btn\x20btn-pp\x20btn-send-premium\x22\x20id=\x22sendMassPremium\x22\x20onclick=\x22sendGroup('+_0x295d07+_0x2581fc(0x215)+langShinko[0x8]+(_0x295d07+0x1)+_0x2581fc(0x1da);}htmlWithLaunchButtons+=_0x2581fc(0x1ba),console[_0x2581fc(0x25d)](_0x2581fc(0x219)),$(_0x2581fc(0x269))['eq'](0x0)[_0x2581fc(0x223)](htmlWithLaunchButtons),$(_0x2581fc(0x17a))['eq'](0x0)[_0x2581fc(0x223)](htmlWithLaunchButtons);is_mobile==![]&&$('#massScavengeFinal')['draggable']();for(var _0x71e560=0x0;_0x71e560<$(_0x2581fc(0x284))[_0x2581fc(0x24b)];_0x71e560++){premiumBtnEnabled==!![]&&$($(_0x2581fc(0x284))[_0x71e560])[_0x2581fc(0x238)]();}$(_0x2581fc(0x1b5))[0x0][_0x2581fc(0x1cf)]();}},_0x5ed8d6=>{var _0xa7cd00=_0x1d1a63;console[_0xa7cd00(0x239)](_0x5ed8d6);});});}html=_0x338173(0x2ae)+backgroundColor+_0x338173(0x2a6)+backgroundColor+_0x338173(0x281)+borderColor+_0x338173(0x1aa)+headerColor+_0x338173(0x2aa)+titleColor+'\x22>'+langShinko[0x0]+_0x338173(0x220)+backgroundColor+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;background-color:'+headerColor+_0x338173(0x1a5)+titleColor+'\x22>'+langShinko[0x1]+_0x338173(0x285)+backgroundColor+_0x338173(0x281)+borderColor+_0x338173(0x1e7)+backgroundColor+_0x338173(0x1dc)+headerColor+_0x338173(0x209)+titleColor+'\x22>'+langShinko[0x2]+_0x338173(0x29c)+headerColor+_0x338173(0x2a2)+headerColor+_0x338173(0x191)+titleColor+'\x22>'+categoryNames[0x1][_0x338173(0x26f)]+_0x338173(0x24c)+headerColor+';padding:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20color=\x22'+titleColor+'\x22>'+categoryNames[0x2]['name']+_0x338173(0x24c)+headerColor+_0x338173(0x191)+titleColor+'\x22>'+categoryNames[0x3][_0x338173(0x26f)]+_0x338173(0x24c)+headerColor+_0x338173(0x191)+titleColor+'\x22>'+categoryNames[0x4][_0x338173(0x26f)]+_0x338173(0x22d)+backgroundColor+_0x338173(0x1a1)+backgroundColor+_0x338173(0x1a6)+backgroundColor+_0x338173(0x183)+backgroundColor+_0x338173(0x266)+backgroundColor+_0x338173(0x281)+borderColor+_0x338173(0x28a)+headerColor+_0x338173(0x227)+headerColor+_0x338173(0x19b)+titleColor+'\x22>'+langShinko[0x3]+_0x338173(0x19d)+headerColor+_0x338173(0x278)+headerColor+_0x338173(0x1b3)+headerColor+';padding:\x2010px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20color=\x22'+titleColor+_0x338173(0x26e)+headerColor+_0x338173(0x2a9)+titleColor+'\x22>Def\x20villages</font>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22width:22px;background-color:'+backgroundColor+_0x338173(0x1e2)+backgroundColor+_0x338173(0x27d)+setDayToField(runTimes[_0x338173(0x17d)])+_0x338173(0x1f6)+setTimeToField(runTimes[_0x338173(0x17d)])+'\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:'+backgroundColor+_0x338173(0x1c2)+setDayToField(runTimes[_0x338173(0x16e)])+_0x338173(0x205)+setTimeToField(runTimes['def'])+_0x338173(0x282)+backgroundColor+';\x20padding:5px;\x22><input\x20type=\x22radio\x22\x20ID=\x22timeSelectorHours\x22\x20name=\x22timeSelector\x22\x20></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:'+backgroundColor+_0x338173(0x263)+backgroundColor+_0x338173(0x27e)+titleColor+_0x338173(0x1a8)+runTimes[_0x338173(0x17d)]+'\x22\x20onclick=\x22this.select();\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:'+backgroundColor+_0x338173(0x1a3)+backgroundColor+_0x338173(0x27e)+titleColor+_0x338173(0x1a8)+runTimes[_0x338173(0x16e)]+_0x338173(0x1f2)+backgroundColor+_0x338173(0x246)+backgroundColor+_0x338173(0x20f)+titleColor+'\x22><span\x20id=\x22offDisplay\x22></span></font></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:auto;\x20background-color:'+backgroundColor+_0x338173(0x20f)+titleColor+'\x22><span\x20id=\x22defDisplay\x22></span></font></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20</table>\x0a\x20\x20\x20\x20<hr>\x0a\x20\x20\x20\x20<table\x20class=\x22vis\x22\x20border=\x221\x22\x20style=\x22width:\x20100%;background-color:'+backgroundColor+';border-color:'+borderColor+_0x338173(0x2ad)+headerColor+_0x338173(0x290)+headerColor+_0x338173(0x19b)+titleColor+'\x22>'+_0x338173(0x1d7)+_0x338173(0x18d)+headerColor+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:50%;\x20background-color:'+headerColor+_0x338173(0x20b)+titleColor+_0x338173(0x182)+headerColor+_0x338173(0x20b)+titleColor+_0x338173(0x2a5)+headerColor+'\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20style=\x22text-align:center;\x20width:50%;\x20background-color:'+backgroundColor+_0x338173(0x1bc)+backgroundColor+_0x338173(0x18e)+headerColor+_0x338173(0x21e)+backgroundColor+_0x338173(0x195)+titleColor+_0x338173(0x296)+backgroundColor+_0x338173(0x28d)+langShinko[0x5]+'\x22></center>\x0a\x20\x20\x20\x20<hr>\x0a\x20\x20\x20\x20<center><img\x20id=\x22sophieImg\x22\x20class=\x22\x20tooltip-delayed\x22\x20title=\x22Sophie\x20-Shinko\x20to\x20Kuma-\x22\x20src=\x22https://dl.dropboxusercontent.com/s/bxoyga8wa6yuuz4/sophie2.gif\x22\x20style=\x22cursor:help;\x20position:\x20relative\x22></center>\x0a\x20\x20\x20\x20<br>\x0a\x20\x20\x20\x20<center>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<font\x20color=\x22'+titleColor+'\x22>'+langShinko[0x6]+'\x20</font><a\x20href=\x22https://shinko-to-kuma.my-free.website/\x22\x20style=\x22text-shadow:-1px\x20-1px\x200\x20'+titleColor+_0x338173(0x180)+titleColor+',-1px\x201px\x200\x20'+titleColor+_0x338173(0x1d6)+titleColor+_0x338173(0x253),$('.maincell')['eq'](0x0)[_0x338173(0x223)](html),$(_0x338173(0x17a))['eq'](0x0)[_0x338173(0x223)](html);game_data[_0x338173(0x245)]==_0x338173(0x1df)&&$(_0x338173(0x214))[_0x338173(0x1fb)]('src',_0x338173(0x267));is_mobile==![]&&($(_0x338173(0x213))['css'](_0x338173(0x175),'fixed'),$(_0x338173(0x213))[_0x338173(0x1a4)]());$(_0x338173(0x27b))[0x0]['innerText']=fancyTimeFormat(runTimes[_0x338173(0x17d)]*0xe10),$('#defDisplay')[0x0][_0x338173(0x1fc)]=fancyTimeFormat(runTimes['def']*0xe10);tempElementSelection==_0x338173(0x256)?($(_0x338173(0x20c))[_0x338173(0x21f)](_0x338173(0x1e5),!![]),selectType('Date'),updateTimers()):($('#timeSelectorHours')[_0x338173(0x21f)](_0x338173(0x1e5),!![]),selectType(_0x338173(0x29b)),updateTimers());$(_0x338173(0x250))[0x0][_0x338173(0x228)](_0x338173(0x1c6),function(){updateTimers();},![]),$(_0x338173(0x1ab))[0x0][_0x338173(0x228)](_0x338173(0x1c6),function(){updateTimers();},![]),$('#offTime')[0x0][_0x338173(0x228)]('input',function(){updateTimers();},![]),$(_0x338173(0x197))[0x0]['addEventListener'](_0x338173(0x1c6),function(){updateTimers();},![]),$('.runTime_off')[0x0]['addEventListener'](_0x338173(0x1c6),function(){updateTimers();},![]),$('.runTime_def')[0x0][_0x338173(0x228)]('input',function(){updateTimers();},![]),$(_0x338173(0x20c))[0x0][_0x338173(0x228)](_0x338173(0x1c6),function(){var _0x5d0ec1=_0x338173;selectType(_0x5d0ec1(0x256)),updateTimers();},![]),$(_0x338173(0x1a2))[0x0]['addEventListener'](_0x338173(0x1c6),function(){var _0x3c3ce8=_0x338173;selectType(_0x3c3ce8(0x29b)),updateTimers();},![]);for(var i=0x0;i<sendOrder[_0x338173(0x24b)];i++){$(_0x338173(0x271))['eq'](0x0)[_0x338173(0x28f)]('<td\x20align=\x22center\x22\x20style=\x22background-color:'+backgroundColor+_0x338173(0x2a0)+headerColor+_0x338173(0x1b6)+sendOrder[i]+_0x338173(0x235)+sendOrder[i]+'\x22\x20alt=\x22\x22\x20class=\x22\x22></td>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<td\x20align=\x22center\x22\x20style=\x22background-color:'+backgroundColor+_0x338173(0x2ab)+sendOrder[i]+_0x338173(0x1f3)+sendOrder[i]+_0x338173(0x18f)+backgroundColor+_0x338173(0x186)+sendOrder[i]+_0x338173(0x2a8)+sendOrder[i]+'\x22\x20value=\x22'+keepHome[sendOrder[i]]+_0x338173(0x1b2)),$(_0x338173(0x271))[_0x338173(0x19f)]({'axis':'x','revert':0x64,'containment':_0x338173(0x257),'forceHelperSize':!![],'delay':0x64,'scroll':![]})[_0x338173(0x1ad)](),prioritiseHighCat==!![]?(console[_0x338173(0x25d)](_0x338173(0x19e)),$(_0x338173(0x24f))['prop']('checked',!![])):(console[_0x338173(0x25d)](_0x338173(0x292)),$(_0x338173(0x26b))[_0x338173(0x21f)](_0x338173(0x1e5),!![])),enableCorrectTroopTypes();}$(_0x338173(0x1b5))[_0x338173(0x1cf)]();function readyToSend(){var _0x472591=_0x338173;if($(_0x472591(0x24f))[0x0][_0x472591(0x1e5)]==![]&&$('#settingPriorityBalanced')[0x0][_0x472591(0x1e5)]==![]){alert('You\x20have\x20not\x20chosen\x20how\x20you\x20want\x20to\x20split\x20your\x20troops!\x20Choose\x20either\x20prioritising\x20higher\x20categories\x20till\x20chosen\x20runtime,\x20or\x20balanced\x20spread\x20over\x20all\x20categories!');throw Error(_0x472591(0x1d8));}if($(_0x472591(0x22f))['is'](':checked')==![]&&$(_0x472591(0x218))['is'](_0x472591(0x1c1))==![]&&$(_0x472591(0x1bf))['is'](_0x472591(0x1c1))==![]&&$(_0x472591(0x1ed))['is'](_0x472591(0x1c1))==![]){alert(_0x472591(0x16c));throw Error(_0x472591(0x229));}console[_0x472591(0x25d)](sendOrder);for(var _0x368db3=0x0;_0x368db3<sendOrder[_0x472591(0x24b)];_0x368db3++){troopTypeEnabled[sendOrder[_0x368db3]]=$(_0x472591(0x23e)+sendOrder[_0x368db3])['is'](_0x472591(0x1c1));}for(var _0x368db3=0x0;_0x368db3<sendOrder['length'];_0x368db3++){keepHome[sendOrder[_0x368db3]]=$('#'+sendOrder[_0x368db3]+'Backup')[_0x472591(0x173)]();}console[_0x472591(0x25d)](troopTypeEnabled),enabledCategories[_0x472591(0x184)]($(_0x472591(0x22f))['is'](_0x472591(0x1c1))),enabledCategories[_0x472591(0x184)]($(_0x472591(0x218))['is'](_0x472591(0x1c1))),enabledCategories[_0x472591(0x184)]($(_0x472591(0x1bf))['is'](':checked')),enabledCategories[_0x472591(0x184)]($(_0x472591(0x1ed))['is'](_0x472591(0x1c1)));$(_0x472591(0x20c))[0x0][_0x472591(0x1e5)]==!![]?(localStorage['setItem']('timeElement','Date'),time[_0x472591(0x17d)]=Date[_0x472591(0x185)]($(_0x472591(0x250))[_0x472591(0x173)]()[_0x472591(0x18b)](/-/g,'/')+'\x20'+$(_0x472591(0x1f1))[_0x472591(0x173)]()),time[_0x472591(0x16e)]=Date[_0x472591(0x185)]($(_0x472591(0x1ab))['val']()[_0x472591(0x18b)](/-/g,'/')+'\x20'+$(_0x472591(0x197))['val']()),time[_0x472591(0x17d)]=(time[_0x472591(0x17d)]-serverDate)/0x3e8/0xe10,time[_0x472591(0x16e)]=(time['def']-serverDate)/0x3e8/0xe10):(localStorage['setItem'](_0x472591(0x1e1),_0x472591(0x29b)),time[_0x472591(0x17d)]=$('.runTime_off')[_0x472591(0x173)](),time[_0x472591(0x16e)]=$('.runTime_def')[_0x472591(0x173)]());console[_0x472591(0x25d)]('Time\x20off:\x20'+time[_0x472591(0x17d)]),console['log'](_0x472591(0x277)+time[_0x472591(0x16e)]);(time[_0x472591(0x17d)]>0x18||time[_0x472591(0x16e)]>0x18)&&alert('Your\x20runtime\x20is\x20higher\x20than\x2024h!');console[_0x472591(0x25d)](sendOrder);$(_0x472591(0x24f))[0x0][_0x472591(0x1e5)]==!![]?prioritiseHighCat=!![]:prioritiseHighCat=![];sendOrder=[];for(var _0x9918ad=0x0;_0x9918ad<$(_0x472591(0x23a))[_0x472591(0x24b)];_0x9918ad++){sendOrder['push']($(_0x472591(0x23a))[_0x9918ad][_0x472591(0x26f)]);}console[_0x472591(0x25d)](_0x472591(0x1ec)+time[_0x472591(0x17d)]+'\x20Def:\x20'+time[_0x472591(0x16e)]),localStorage['setItem'](_0x472591(0x2b0),JSON[_0x472591(0x252)](troopTypeEnabled)),localStorage[_0x472591(0x1e4)]('keepHome',JSON['stringify'](keepHome)),localStorage[_0x472591(0x1e4)](_0x472591(0x232),JSON[_0x472591(0x252)](enabledCategories)),localStorage[_0x472591(0x1e4)](_0x472591(0x181),JSON['stringify'](prioritiseHighCat)),localStorage[_0x472591(0x1e4)]('sendOrder',JSON[_0x472591(0x252)](sendOrder)),localStorage['setItem']('runTimes',JSON[_0x472591(0x252)](time)),console['log'](_0x472591(0x295)+prioritiseHighCat),console[_0x472591(0x1ea)](troopTypeEnabled),console[_0x472591(0x1ea)](time),console[_0x472591(0x1ea)](sendOrder),console[_0x472591(0x1ea)](enabledCategories),categoryEnabled=enabledCategories,getData();}function sendGroup(_0x5c8cf4,_0x501b22){var _0x4526b4=_0x338173;_0x501b22==!![]?(actuallyEnabled=![],actuallyEnabled=confirm('Are\x20you\x20sure\x20you\x20want\x20to\x20send\x20the\x20scavenge\x20runs\x20using\x20premium?\x20Cancelling\x20will\x20send\x20the\x20scav\x20run\x20without\x20premium.\x20\x20\x20*********\x20DEPENDING\x20ON\x20HOW\x20MANY\x20UNITS/VILLAGES\x20YOU\x20SEND\x20WITH,\x20THIS\x20CAN\x20RESULT\x20IN\x20VERY\x20HIGH\x20AMOUNTS\x20OF\x20PP\x20BEING\x20USED!\x20ONLY\x20USE\x20THIS\x20IF\x20YOU\x20CAN\x20AFFORD\x20IT/KNOW\x20HOW\x20MUCH\x20THE\x20INDIVIDUAL\x20PP\x20RUNS\x20WOULD\x20COST\x20YOU!\x20*********')):actuallyEnabled=![],actuallyEnabled==!![]?tempSquads=squads_premium[_0x5c8cf4]:tempSquads=squads[_0x5c8cf4],$(_0x4526b4(0x1fe))[_0x4526b4(0x21f)](_0x4526b4(0x204),!![]),$(_0x4526b4(0x293))[_0x4526b4(0x21f)]('disabled',!![]),TribalWars[_0x4526b4(0x176)](_0x4526b4(0x1ac),{'ajaxaction':_0x4526b4(0x28c)},{'squad_requests':tempSquads},function(){var _0x5b6e41=_0x4526b4;UI[_0x5b6e41(0x1b4)](_0x5b6e41(0x248));},!0x1),setTimeout(function(){var _0x54d0ac=_0x4526b4;$(_0x54d0ac(0x2a7)+_0x5c8cf4)[_0x54d0ac(0x17c)](),$(_0x54d0ac(0x1fe))[_0x54d0ac(0x21f)](_0x54d0ac(0x204),![]),$(_0x54d0ac(0x293))[_0x54d0ac(0x21f)](_0x54d0ac(0x204),![]),$('#sendMass')[0x0][_0x54d0ac(0x1cf)]();},0xc8);}function calculateHaulCategories(_0x4e80fb){var _0xebb61c=_0x338173;if(_0x4e80fb[_0xebb61c(0x1ce)]==!![]){console[_0xebb61c(0x25d)](_0xebb61c(0x240));var _0x150e48={};for(key in troopTypeEnabled){troopTypeEnabled[key]==!![]&&(_0x4e80fb['unit_counts_home'][key]-keepHome[key]>0x0?_0x150e48[key]=_0x4e80fb[_0xebb61c(0x174)][key]-keepHome[key]:_0x150e48[key]=0x0);}var _0x40629c={'spear':_0xebb61c(0x16e),'sword':_0xebb61c(0x16e),'axe':_0xebb61c(0x17d),'archer':_0xebb61c(0x16e),'light':_0xebb61c(0x17d),'marcher':_0xebb61c(0x17d),'heavy':'def'},_0x244a37={'off':0x0,'def':0x0};for(var _0x17c928 in _0x150e48){_0x244a37[_0x40629c[_0x17c928]]=_0x244a37[_0x40629c[_0x17c928]]+_0x150e48[_0x17c928];}totalLoot=0x0;for(key in _0x150e48){if(key=='spear')totalLoot+=_0x150e48[key]*(_0x4e80fb[_0xebb61c(0x26a)]*0x19);if(key==_0xebb61c(0x23b))totalLoot+=_0x150e48[key]*(_0x4e80fb[_0xebb61c(0x26a)]*0xf);if(key==_0xebb61c(0x24d))totalLoot+=_0x150e48[key]*(_0x4e80fb[_0xebb61c(0x26a)]*0xa);if(key==_0xebb61c(0x299))totalLoot+=_0x150e48[key]*(_0x4e80fb[_0xebb61c(0x26a)]*0xa);if(key=='light')totalLoot+=_0x150e48[key]*(_0x4e80fb[_0xebb61c(0x26a)]*0x50);if(key==_0xebb61c(0x1c3))totalLoot+=_0x150e48[key]*(_0x4e80fb[_0xebb61c(0x26a)]*0x32);if(key==_0xebb61c(0x1de))totalLoot+=_0x150e48[key]*(_0x4e80fb[_0xebb61c(0x26a)]*0x32);if(key==_0xebb61c(0x234))totalLoot+=_0x150e48[key]*(_0x4e80fb[_0xebb61c(0x26a)]*0x64);}console[_0xebb61c(0x25d)](_0xebb61c(0x1d4)+totalLoot);if(totalLoot==0x0)return;_0x244a37[_0xebb61c(0x17d)]>_0x244a37[_0xebb61c(0x16e)]?haul=parseInt((time[_0xebb61c(0x17d)]*0xe10/duration_factor-duration_initial_seconds)**(0x1/duration_exponent)/0x64)**(0x1/0x2):haul=parseInt((time[_0xebb61c(0x16e)]*0xe10/duration_factor-duration_initial_seconds)**(0x1/duration_exponent)/0x64)**(0x1/0x2);haulCategoryRate={};_0x4e80fb['options'][0x1][_0xebb61c(0x22b)]==!![]||_0x4e80fb[_0xebb61c(0x2b1)][0x1][_0xebb61c(0x1f7)]!=null?haulCategoryRate[0x1]=0x0:haulCategoryRate[0x1]=haul/0.1;_0x4e80fb[_0xebb61c(0x2b1)][0x2][_0xebb61c(0x22b)]==!![]||_0x4e80fb['options'][0x2]['scavenging_squad']!=null?haulCategoryRate[0x2]=0x0:haulCategoryRate[0x2]=haul/0.25;_0x4e80fb['options'][0x3][_0xebb61c(0x22b)]==!![]||_0x4e80fb['options'][0x3]['scavenging_squad']!=null?haulCategoryRate[0x3]=0x0:haulCategoryRate[0x3]=haul/0.5;_0x4e80fb[_0xebb61c(0x2b1)][0x4]['is_locked']==!![]||_0x4e80fb[_0xebb61c(0x2b1)][0x4][_0xebb61c(0x1f7)]!=null?haulCategoryRate[0x4]=0x0:haulCategoryRate[0x4]=haul/0.75;console['log'](haulCategoryRate);for(var _0x5aecb9=0x0;_0x5aecb9<enabledCategories[_0xebb61c(0x24b)];_0x5aecb9++){if(enabledCategories[_0x5aecb9]==![])haulCategoryRate[_0x5aecb9+0x1]=0x0;}totalHaul=haulCategoryRate[0x1]+haulCategoryRate[0x2]+haulCategoryRate[0x3]+haulCategoryRate[0x4],unitsReadyForSend=calculateUnitsPerVillage(_0x150e48);for(var _0x9cd21=0x0;_0x9cd21<Object['keys'](unitsReadyForSend)[_0xebb61c(0x24b)];_0x9cd21++){candidate_squad={'unit_counts':unitsReadyForSend[_0x9cd21],'carry_max':0x2540be3ff},_0x4e80fb[_0xebb61c(0x2b1)][_0x9cd21+0x1][_0xebb61c(0x22b)]==![]&&(squad_requests[_0xebb61c(0x184)]({'village_id':_0x4e80fb[_0xebb61c(0x1ef)],'candidate_squad':candidate_squad,'option_id':_0x9cd21+0x1,'use_premium':![]}),squad_requests_premium[_0xebb61c(0x184)]({'village_id':_0x4e80fb['village_id'],'candidate_squad':candidate_squad,'option_id':_0x9cd21+0x1,'use_premium':!![]}));}}else console[_0xebb61c(0x25d)](_0xebb61c(0x22a));}function enableCorrectTroopTypes(){var _0x19bcf3=_0x338173;worldUnits=game_data['units'];for(var _0x3c59d1=0x0;_0x3c59d1<worldUnits[_0x19bcf3(0x24b)];_0x3c59d1++){if(worldUnits[_0x3c59d1]!='militia'&&worldUnits[_0x3c59d1]!='snob'&&worldUnits[_0x3c59d1]!=_0x19bcf3(0x1f8)&&worldUnits[_0x3c59d1]!=_0x19bcf3(0x1bb)&&worldUnits[_0x3c59d1]!=_0x19bcf3(0x28b)){if(troopTypeEnabled[worldUnits[_0x3c59d1]]==!![])$('#'+worldUnits[_0x3c59d1])['prop'](_0x19bcf3(0x1e5),!![]);}}for(var _0x3c59d1=0x0;_0x3c59d1<categoryEnabled['length']+0x1;_0x3c59d1++){categoryEnabled[_0x3c59d1]==!![]&&$(_0x19bcf3(0x17b)+(_0x3c59d1+0x1))['prop'](_0x19bcf3(0x1e5),!![]);}}function calculateUnitsPerVillage(_0x129f48){var _0xb56d20=_0x338173,_0x47c0cf={'spear':0x19,'sword':0xf,'axe':0xa,'archer':0xa,'light':0x50,'marcher':0x32,'heavy':0x32,'knight':0x64};console[_0xb56d20(0x25d)](_0x129f48),unitsReadyForSend={},unitsReadyForSend[0x0]={},unitsReadyForSend[0x1]={},unitsReadyForSend[0x2]={},unitsReadyForSend[0x3]={};if(totalLoot>totalHaul){console['log'](_0xb56d20(0x265));if(version!=_0xb56d20(0x1fa))for(var _0x5cf1ad=0x3;_0x5cf1ad>=0x0;_0x5cf1ad--){var _0x1a66c5=haulCategoryRate[_0x5cf1ad+0x1];sendOrder[_0xb56d20(0x196)](_0x520385=>{var _0x23c752=_0xb56d20;if(_0x129f48['hasOwnProperty'](_0x520385)&&_0x1a66c5>0x0){var _0x194fdf=Math[_0x23c752(0x170)](_0x1a66c5/_0x47c0cf[_0x520385]);_0x194fdf>_0x129f48[_0x520385]?(unitsReadyForSend[_0x5cf1ad][_0x520385]=_0x129f48[_0x520385],_0x1a66c5=_0x1a66c5-_0x129f48[_0x520385]*_0x47c0cf[_0x520385],_0x129f48[_0x520385]=0x0):(unitsReadyForSend[_0x5cf1ad][_0x520385]=_0x194fdf,_0x1a66c5=0x0,_0x129f48[_0x520385]=_0x129f48[_0x520385]-_0x194fdf);}});}else for(var _0x5cf1ad=0x0;_0x5cf1ad<0x4;_0x5cf1ad++){for(key in _0x129f48){unitsReadyForSend[_0x5cf1ad][key]=Math[_0xb56d20(0x170)](haulCategoryRate[_0x5cf1ad+0x1]*(_0x129f48[key]/totalLoot));}}}else{troopNumber=0x0;for(key in _0x129f48){troopNumber+=_0x129f48[key];}console[_0xb56d20(0x25d)](troopNumber);if(prioritiseHighCat!=!![]&&troopNumber>0x82)for(var _0x5cf1ad=0x0;_0x5cf1ad<0x4;_0x5cf1ad++){console[_0xb56d20(0x25d)](_0xb56d20(0x29a));for(key in _0x129f48){unitsReadyForSend[_0x5cf1ad][key]=Math['floor'](totalLoot/totalHaul*haulCategoryRate[_0x5cf1ad+0x1]*(_0x129f48[key]/totalLoot));}}else for(var _0x5cf1ad=0x3;_0x5cf1ad>=0x0;_0x5cf1ad--){var _0x1a66c5=haulCategoryRate[_0x5cf1ad+0x1];sendOrder['forEach'](_0x22842b=>{var _0x567bc7=_0xb56d20;if(_0x129f48[_0x567bc7(0x2a4)](_0x22842b)&&_0x1a66c5>0x0){var _0x27ae54=Math[_0x567bc7(0x170)](_0x1a66c5/_0x47c0cf[_0x22842b]);_0x27ae54>_0x129f48[_0x22842b]?(unitsReadyForSend[_0x5cf1ad][_0x22842b]=_0x129f48[_0x22842b],_0x1a66c5=_0x1a66c5-_0x129f48[_0x22842b]*_0x47c0cf[_0x22842b],_0x129f48[_0x22842b]=0x0):(unitsReadyForSend[_0x5cf1ad][_0x22842b]=_0x27ae54,_0x1a66c5=0x0,_0x129f48[_0x22842b]=_0x129f48[_0x22842b]-_0x27ae54);}});}}return unitsReadyForSend;}function resetSettings(){var _0x4cfaeb=_0x338173;localStorage[_0x4cfaeb(0x207)](_0x4cfaeb(0x2b0)),localStorage[_0x4cfaeb(0x207)](_0x4cfaeb(0x232)),localStorage[_0x4cfaeb(0x207)](_0x4cfaeb(0x181)),localStorage[_0x4cfaeb(0x207)](_0x4cfaeb(0x21a)),localStorage['removeItem'](_0x4cfaeb(0x1c7)),localStorage[_0x4cfaeb(0x207)](_0x4cfaeb(0x297)),UI['BanneredRewardMessage'](_0x4cfaeb(0x1a7)),window[_0x4cfaeb(0x270)][_0x4cfaeb(0x298)]();}function closeWindow(_0x6f5f8e){var _0x5ab350=_0x338173;$('#'+_0x6f5f8e)[_0x5ab350(0x17c)]();}function settings(){var _0x541875=_0x338173;alert(_0x541875(0x25f));}function zeroPadded(_0x20352d){if(_0x20352d>=0xa)return _0x20352d;else return'0'+_0x20352d;}function setTimeToField(_0x58abcd){var _0x1f3656=_0x338173;return d=Date[_0x1f3656(0x185)](new Date(serverDate))+_0x58abcd*0x3e8*0xe10,d=new Date(d),d=zeroPadded(d[_0x1f3656(0x294)]())+':'+zeroPadded(d[_0x1f3656(0x17e)]()),d;}function setDayToField(_0x57fc08){var _0x2b7760=_0x338173;return d=Date[_0x2b7760(0x185)](new Date(serverDate))+_0x57fc08*0x3e8*0xe10,d=new Date(d),d=d[_0x2b7760(0x23c)]()+'-'+zeroPadded(d[_0x2b7760(0x1e9)]()+0x1)+'-'+zeroPadded(d[_0x2b7760(0x172)]()),d;}function fancyTimeFormat(_0x5d3337){var _0x5d5b07=_0x338173;if(_0x5d3337<0x0)return _0x5d5b07(0x1d9);else{var _0x1dfd37=~~(_0x5d3337/0xe10),_0x41690b=~~(_0x5d3337%0xe10/0x3c),_0x437a96=~~_0x5d3337%0x3c,_0xd64564='Max\x20duration:\x20';return _0x1dfd37>0x0?_0xd64564+=''+_0x1dfd37+':'+(_0x41690b<0xa?'0':''):_0xd64564+='0:'+(_0x41690b<0xa?'0':''),_0xd64564+=''+_0x41690b+':'+(_0x437a96<0xa?'0':''),_0xd64564+=''+_0x437a96,_0xd64564;}}function updateTimers(){var _0x46985f=_0x338173;$(_0x46985f(0x20c))[0x0]['checked']==!![]?(console['log'](_0x46985f(0x272)),$(_0x46985f(0x27b))[0x0][_0x46985f(0x1fc)]=fancyTimeFormat((Date[_0x46985f(0x185)]($(_0x46985f(0x250))[_0x46985f(0x173)]()[_0x46985f(0x18b)](/-/g,'/')+'\x20'+$('#offTime')[_0x46985f(0x173)]())-serverDate)/0x3e8),$(_0x46985f(0x25e))[0x0][_0x46985f(0x1fc)]=fancyTimeFormat((Date[_0x46985f(0x185)]($(_0x46985f(0x1ab))[_0x46985f(0x173)]()[_0x46985f(0x18b)](/-/g,'/')+'\x20'+$(_0x46985f(0x197))['val']())-serverDate)/0x3e8)):(console['log'](_0x46985f(0x1c8)),$(_0x46985f(0x27b))[0x0][_0x46985f(0x1fc)]=fancyTimeFormat($(_0x46985f(0x1fd))[_0x46985f(0x173)]()*0xe10),$(_0x46985f(0x25e))[0x0][_0x46985f(0x1fc)]=fancyTimeFormat($('.runTime_def')[_0x46985f(0x173)]()*0xe10));}function selectType(_0x2cb0b2){var _0x5d1969=_0x338173;console[_0x5d1969(0x25d)](_0x5d1969(0x1f5)+_0x2cb0b2);switch(_0x2cb0b2){case _0x5d1969(0x29b):if($(_0x5d1969(0x20c))[0x0]['checked']==!![]){$(_0x5d1969(0x250))['eq'](0x0)[_0x5d1969(0x25b)](_0x5d1969(0x204)),$(_0x5d1969(0x1ab))['eq'](0x0)[_0x5d1969(0x25b)](_0x5d1969(0x204)),$(_0x5d1969(0x1f1))['eq'](0x0)['removeAttr'](_0x5d1969(0x204));;$(_0x5d1969(0x197))['eq'](0x0)[_0x5d1969(0x25b)](_0x5d1969(0x204)),$(_0x5d1969(0x1fd))['prop'](_0x5d1969(0x204),!![]),$('.runTime_def')[_0x5d1969(0x21f)](_0x5d1969(0x204),!![]);}else $(_0x5d1969(0x250))[_0x5d1969(0x21f)](_0x5d1969(0x204),!![]),$(_0x5d1969(0x1ab))[_0x5d1969(0x21f)](_0x5d1969(0x204),!![]),$('#offTime')['prop'](_0x5d1969(0x204),!![]),$(_0x5d1969(0x197))['prop'](_0x5d1969(0x204),!![]),$(_0x5d1969(0x1fd))['eq'](0x0)[_0x5d1969(0x25b)](_0x5d1969(0x204)),$(_0x5d1969(0x1a0))['eq'](0x0)['removeAttr'](_0x5d1969(0x204));break;case _0x5d1969(0x256):if($(_0x5d1969(0x1a2))[0x0][_0x5d1969(0x1e5)]==!![])$(_0x5d1969(0x250))[_0x5d1969(0x21f)](_0x5d1969(0x204),!![]),$(_0x5d1969(0x1ab))[_0x5d1969(0x21f)](_0x5d1969(0x204),!![]),$(_0x5d1969(0x1f1))['prop'](_0x5d1969(0x204),!![]),$('#defTime')[_0x5d1969(0x21f)]('disabled',!![]),$('.runTime_off')['eq'](0x0)['removeAttr'](_0x5d1969(0x204)),$(_0x5d1969(0x1a0))['eq'](0x0)[_0x5d1969(0x25b)](_0x5d1969(0x204));else{$('#offDay')['eq'](0x0)[_0x5d1969(0x25b)](_0x5d1969(0x204)),$(_0x5d1969(0x1ab))['eq'](0x0)[_0x5d1969(0x25b)]('disabled'),$('#offTime')['eq'](0x0)['removeAttr'](_0x5d1969(0x204));;$(_0x5d1969(0x197))['eq'](0x0)[_0x5d1969(0x25b)](_0x5d1969(0x204)),$('.runTime_off')['prop'](_0x5d1969(0x204),!![]),$(_0x5d1969(0x1a0))['prop'](_0x5d1969(0x204),!![]);}break;default:break;}}
+javascript:
+//mass scavenging by Sophie "Shinko to Kuma"
+serverTimeTemp = $("#serverDate")[0].innerText + " " + $("#serverTime")[0].innerText;
+serverTime = serverTimeTemp.match(/^([0][1-9]|[12][0-9]|3[01])[\/\-]([0][1-9]|1[012])[\/\-](\d{4})( (0?[0-9]|[1][0-9]|[2][0-3])[:]([0-5][0-9])([:]([0-5][0-9]))?)?$/);
+serverDate = Date.parse(serverTime[3] + "/" + serverTime[2] + "/" + serverTime[1] + serverTime[4]);
+var is_mobile = !!navigator.userAgent.match(/iphone|android|blackberry/ig) || false;
+var scavengeInfo;
+var tempElementSelection="";
+
+//relocate to mass scavenging page
+if (window.location.href.indexOf('screen=place&mode=scavenge_mass') < 0) {
+    //relocate
+    window.location.assign(game_data.link_base_pure + "place&mode=scavenge_mass");
+}
+
+$("#massScavengeSophie").remove();
+//set global variables
+
+if (typeof version == 'undefined') {
+    version = "new";
+}
+
+
+//set translations
+var langShinko = [
+    "Mass scavenging",
+    "Select unit types/ORDER to scavenge with (drag units to order)",
+    "Select categories to use",
+    "When do you want your scav runs to return (approximately)?",
+    "Runtime here",
+    "Calculate runtimes for each page",
+    "Creator: ",
+    "Mass scavenging: send per 50 villages",
+    "Launch group "
+]
+
+if (game_data.locale == "ro_RO") {
+    //romanian server
+    langShinko = [
+        "Curatare in masa",
+        "Selecteaza tipul unitatii/ORDONEAZA sa curete cu (trage unitatea pentru a ordona)",
+        "Selecteaza categoria",
+        "Cand vrei sa se intoarca trupele de la curatare (aproximativ)",
+        "Durata aici",
+        "Calculeaza durata pentru fiecare pagina",
+        "Creator: ",
+        "Cueatare in masa: trimite pe 50 de sate",
+        "Lanseaza grup "
+    ]
+}
+if (game_data.locale == "ar_AE") {
+    //arabic server
+    langShinko = [
+        "Ø§Ù„Ø§ØºØ§Ø±Ø§Øª",
+        "Ø§Ø®ØªØ§Ø± Ø§Ù„ÙˆØ­Ø¯Ø§Øª Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…Ø© ÙÙ‰ Ø§Ù„Ø§ØºØ§Ø±Ø§Øª",
+        "Ø§Ø®ØªØ§Ø± Ø§Ù†ÙˆØ§Ø¹   Ø§Ù„Ø§ØºØ§Ø±Ø§Øª Ø§Ù„Ù…Ø³ØªØ®Ø¯Ù…Ø© ",
+        " Ù…Ø§ Ø§Ù„Ù…Ø¯Ù‡ Ø§Ù„Ù…Ø¯Ù‡ Ø§Ù„Ø²Ù…Ù†ÙŠÙ‡ Ø§Ù„Ù…Ø±Ø§Ø¯ Ø§Ø±Ø³Ø§Ù„ Ø§Ù„Ø§ØºØ§Ø±Ø§Øª Ø¨Ù‡Ø§",
+        "Ø¶Ø¹ Ø§Ø§Ù„Ù…Ø¯Ù‡ Ù‡Ù†Ø§",
+        "Ø­Ø³Ø§Ø¨ Ø§Ù„Ù…Ø¯Ù‡ Ù„ÙƒÙ„ ØµÙØ­Ù‡ ",
+        "Creator: ",
+        "Ø§Ù„Ø§ØºØ§Ø±Ø§Øª : ØªØ±Ø³Ù„ Ù„ÙƒÙ„ 50 Ù‚Ø±ÙŠÙ‡ Ø¹Ù„Ù‰ Ø­Ø¯Ù‰ ",
+        " ØªØ´ØºÙŠÙ„ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø© "
+    ]
+}
+if (game_data.locale == "el_GR") {
+    //greek server
+    langShinko = [
+        "ÎœÎ±Î¶Î¹ÎºÎ® ÏƒÎ¬ÏÏ‰ÏƒÎ·",
+        "Î•Ï€Î¹Î»Î­Î¾Ï„Îµ Ï„Î¹Ï‚ Î¼Î¿Î½Î¬Î´ÎµÏ‚ Î¼Îµ Ï„Î¹Ï‚ Î¿Ï€Î¿Î¯ÎµÏ‚ Î¸Î± ÎºÎ¬Î½ÎµÏ„Îµ ÏƒÎ¬ÏÏ‰ÏƒÎ·",
+        "Î•Ï€Î¹Î»Î­Î¾Ï„Îµ ÎµÏ€Î¯Ï€ÎµÎ´Î± ÏƒÎ¬ÏÏ‰ÏƒÎ·Ï‚ Ï€Î¿Ï… Î¸Î± Ï‡ÏÎ·ÏƒÎ¹Î¼Î¿Ï€Î¿Î¹Î·Î¸Î¿ÏÎ½",
+        "Î§ÏÏŒÎ½Î¿Ï‚ Î£Î¬ÏÏ‰ÏƒÎ·Ï‚ (ÎÏÎµÏ‚.Î›ÎµÏ€Ï„Î¬)",
+        "Î§ÏÏŒÎ½Î¿Ï‚",
+        "Î¥Ï€Î¿Î»ÏŒÎ³Î¹ÏƒÎµ Ï‡ÏÏŒÎ½Î¿Ï…Ï‚ ÏƒÎ¬ÏÏ‰ÏƒÎ·Ï‚ Î³Î¹Î± ÎºÎ¬Î¸Îµ ÏƒÎµÎ»Î¯Î´Î±.",
+        "Î”Î·Î¼Î¹Î¿Ï…ÏÎ³ÏŒÏ‚: ",
+        "ÎœÎ±Î¶Î¹ÎºÎ® ÏƒÎ¬ÏÏ‰ÏƒÎ·: Î‘Ï€Î¿ÏƒÏ„Î¿Î»Î® Î±Î½Î± 50 Ï‡Ï‰ÏÎ¹Î¬",
+        "Î‘Ï€Î¿ÏƒÏ„Î¿Î»Î® Î¿Î¼Î¬Î´Î±Ï‚ "
+    ]
+}
+if (game_data.locale == "nl_NL") {
+    //dutch server
+    langShinko = [
+        "Massa rooftochten",
+        "Kies welke troeptypes je wil mee roven, sleep om prioriteit te ordenen",
+        "Kies categorieÃ«n die je wil gebruiken",
+        "Wanneer wil je dat je rooftochten terug zijn?",
+        "Looptijd hier invullen",
+        "Bereken rooftochten voor iedere pagina",
+        "Scripter: ",
+        "Massa rooftochten: verstuur per 50 dorpen",
+        "Verstuur groep "
+    ]
+}
+if (game_data.locale == "it_IT") {
+    //Italian server
+    langShinko = [
+        "Rovistamento di massa",
+        "Seleziona i tipi da unitÃ  con cui rovistare",
+        "Seleziona quali categorie utilizzare",
+        "Inserisci la durata voluta dei rovistamenti in ORE",
+        "Inserisci qui il tempo",
+        "Calcola tempi per tutte le pagine",
+        "Creatore: ",
+        "Rovistamento di massa: manda su 50 villaggi",
+        "Lancia gruppo"
+    ]
+}
+
+//loading settings
+
+// troop types
+
+if (localStorage.getItem("troopTypeEnabled") == null) {
+    console.log("No troopTypeEnabled found, making new one")
+    worldUnits = game_data.units;
+    var troopTypeEnabled = {}
+    for (var i = 0; i < worldUnits.length; i++) {
+        if (worldUnits[i] != "militia" && worldUnits[i] != "snob" && worldUnits[i] != "ram" && worldUnits[i] != "catapult" && worldUnits[i] != "spy" && worldUnits[i] != "knight") {
+            troopTypeEnabled[worldUnits[i]] = false
+        }
+    };
+    localStorage.setItem("troopTypeEnabled", JSON.stringify(troopTypeEnabled));
+}
+else {
+    console.log("Getting which troop types are enabled from storage");
+    var troopTypeEnabled = JSON.parse(localStorage.getItem("troopTypeEnabled"));
+}
+
+// keepHome
+
+if (localStorage.getItem("keepHome") == null) {
+    console.log("No units set to keep home, creating")
+    var keepHome = {
+        "spear": 0,
+        "sword": 0,
+        "axe": 0,
+        "archer": 0,
+        "light": 0,
+        "marcher": 0,
+        "heavy": 0
+    }
+    localStorage.setItem("keepHome", JSON.stringify(keepHome));
+}
+else {
+    console.log("Grabbing which units to keep home");
+    var keepHome = JSON.parse(localStorage.getItem("keepHome"));
+}
+
+// categories enabled
+
+if (localStorage.getItem("categoryEnabled") == null) {
+    console.log("No category enabled setting found, making new one")
+    var categoryEnabled = [true, true, true, true];
+    localStorage.setItem("categoryEnabled", JSON.stringify(categoryEnabled));
+}
+else {
+    console.log("Getting which category types are enabled from storage");
+    var categoryEnabled = JSON.parse(localStorage.getItem("categoryEnabled"));
+}
+
+//priority
+
+if (localStorage.getItem("prioritiseHighCat") == null) {
+    console.log("No priority/balance setting found, making new one")
+    var prioritiseHighCat = false;
+    localStorage.setItem("prioritiseHighCat", JSON.stringify(prioritiseHighCat));
+}
+else {
+    console.log("Getting prioritiseHighCat from storage");
+    var prioritiseHighCat = JSON.parse(localStorage.getItem("prioritiseHighCat"));
+}
+
+//Time element
+
+if (localStorage.getItem("timeElement") == null) {
+    console.log("No timeElement selected, use Date");
+    localStorage.setItem("timeElement", "Date");
+    tempElementSelection = "Date";
+}
+else {
+    console.log("Getting which element from localstorage");
+    tempElementSelection = localStorage.getItem("timeElement");
+
+}
+
+// sendorder
+
+if (localStorage.getItem("sendOrder") == null) {
+    console.log("No sendorder found, making new one")
+    worldUnits = game_data.units;
+    var sendOrder = [];
+    for (var i = 0; i < worldUnits.length; i++) {
+        if (worldUnits[i] != "militia" && worldUnits[i] != "snob" && worldUnits[i] != "ram" && worldUnits[i] != "catapult" && worldUnits[i] != "spy" && worldUnits[i] != "knight") {
+            sendOrder.push(worldUnits[i])
+        }
+    };
+    console.log(sendOrder);
+    localStorage.setItem("sendOrder", JSON.stringify(sendOrder));
+}
+else {
+    console.log("Getting sendorder from storage");
+    var sendOrder = JSON.parse(localStorage.getItem("sendOrder"));
+}
+
+// runtimes
+
+if (localStorage.getItem("runTimes") == null) {
+    console.log("No runTimes found, making new one")
+    var runTimes = {
+        "off": 4,
+        "def": 3
+    }
+    localStorage.setItem("runTimes", JSON.stringify(runTimes));
+}
+else {
+    console.log("Getting runTimes from storage");
+    var runTimes = JSON.parse(localStorage.getItem("runTimes"));
+}
+
+if (typeof premiumBtnEnabled == 'undefined') {
+    var premiumBtnEnabled = false;
+}
+
+/*if (game_data.units.indexOf("archer") == -1) {
+    sendOrder.splice(sendOrder.indexOf('archer'), 1);
+    delete troopTypeEnabled["archer"];
+}
+if (game_data.units.indexOf("marcher") == -1) {
+    sendOrder.splice(sendOrder.indexOf('marcher'), 1);
+    delete troopTypeEnabled["marcher"];
+}*/
+
+if (game_data.player.sitter > 0) {
+    URLReq = `game.php?t=${game_data.player.id}&screen=place&mode=scavenge_mass`;
+}
+else {
+    URLReq = "game.php?&screen=place&mode=scavenge_mass";
+}
+var arrayWithData;
+var enabledCategories = [];
+var availableUnits = [];
+var squad_requests = [];
+var squad_requests_premium = [];
+var scavengeInfo;
+var duration_factor = 0;
+var duration_exponent = 0;
+var duration_initial_seconds = 0;
+var categoryNames = JSON.parse("[" + $.find('script:contains("ScavengeMassScreen")')[0].innerHTML.match(/\{.*\:\{.*\:.*\}\}/g) + "]")[0];
+//basic setting, to be safe
+var time = {
+    'off': 0,
+    'def': 0
+};
+
+
+
+//colors for UI
+if (typeof colors == 'undefined') {
+    var backgroundColor = "#36393f";
+    var borderColor = "#3e4147";
+    var headerColor = "#202225";
+    var titleColor = "#ffffdf";
+    cssClassesSophie = `
+<style>
+.sophRowA {
+background-color: #32353b;
+color: white;
+}
+.sophRowB {
+background-color: #36393f;
+color: white;
+}
+.sophHeader {
+background-color: #202225;
+font-weight: bold;
+color: white;
+}
+.btnSophie
+{
+    background-image: linear-gradient(#6e7178 0%, #36393f 30%, #202225 80%, black 100%);
+}
+.btnSophie:hover
+{ 
+    background-image: linear-gradient(#7b7e85 0%, #40444a 30%, #393c40 80%, #171717 100%);
+}
+#x {
+    position: absolute;
+    background: red;
+    color: white;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+}
+#cog {
+    position: absolute;
+    background: #32353b;
+    color: white;
+    top: 0px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+}
+</style>`
+}
+else {
+    if (colors == 'pink') {
+        //pink theme
+        var colors = {
+            "backgroundColor": "#FEC5E5",
+            "borderColor": "#FF1694",
+            "headerColor": "#F699CD",
+            "titleColor": "#E11584"
+        };
+        var backgroundColor = colors.backgroundColor;
+        var borderColor = colors.borderColor;
+        var headerColor = colors.headerColor;
+        var titleColor = colors.titleColor;
+        cssClassesSophie = `
+        <style>
+        .btnSophie
+        {
+            background-image: linear-gradient(#FEC5E5 0%, #FD5DA8 30%, #FF1694 80%, #E11584 100%);
+        }
+        .btnSophie:hover
+        { 
+            background-image: linear-gradient(#F2B8C6 0%, #FCBACB 30%, #FA86C4 80%, #FE7F9C 100%);
+        }
+        #x {
+            position: absolute;
+            background: red;
+            color: white;
+            top: 0px;
+            right: 0px;
+            width: 30px;
+            height: 30px;
+        }
+        #cog {
+            position: absolute;
+            background: #FEC5E5;
+            color: white;
+            top: 0px;
+            right: 30px;
+            width: 30px;
+            height: 30px;
+        }
+        </style>`
+    }
+    else if (colors == "swedish") {
+        //yellow/blue
+
+        var colors = {
+            "backgroundColor": "#fecd00",
+            "borderColor": "#03456b",
+            "headerColor": "#006aa8",
+            "titleColor": "#ffffdf"
+        };
+        var backgroundColor = colors.backgroundColor;
+        var borderColor = colors.borderColor;
+        var headerColor = colors.headerColor;
+        var titleColor = colors.titleColor;
+        cssClassesSophie = `
+        <style>
+        .btnSophie
+        {
+            background-image: linear-gradient(#00a1fe 0%, #5d9afd 30%, #1626ff 80%, #1f15e1 100%);
+        }
+        .btnSophie:hover
+        { 
+            background-image: linear-gradient(#b8bcf2 0%, #babbfc 30%, #8c86fa 80%, #969fff 100%);
+        }
+        #x {
+            position: absolute;
+            background: red;
+            color: white;
+            top: 0px;
+            right: 0px;
+            width: 30px;
+            height: 30px;
+        }
+        #cog {
+            position: absolute;
+            background: #fecd00;
+            color: white;
+            top: 0px;
+            right: 30px;
+            width: 30px;
+            height: 30px;
+        }
+        </style>`
+
+
+    }
+    else if (colors == "minimalistGray") {
+        //gray
+
+        var colors = {
+            "backgroundColor": "#f1f1f1",
+            "borderColor": "#777777",
+            "headerColor": "#ded9d9",
+            "titleColor": "#383834"
+        };
+        var backgroundColor = colors.backgroundColor;
+        var borderColor = colors.borderColor;
+        var headerColor = colors.headerColor;
+        var titleColor = colors.titleColor;
+        cssClassesSophie = `
+        <style>
+        .btnSophie
+        {
+            background-image: linear-gradient(#00a1fe 0%, #5d9afd 30%, #1626ff 80%, #1f15e1 100%);
+            color:white
+        }
+        .btnSophie:hover
+        { 
+            background-image: linear-gradient(#b8bcf2 0%, #babbfc 30%, #8c86fa 80%, #969fff 100%);
+            color: white
+        }
+        #x {
+            position: absolute;
+            background: red;
+            color: white;
+            top: 0px;
+            right: 0px;
+            width: 30px;
+            height: 30px;
+        }
+        #cog {
+            position: absolute;
+            background: #f1f1f1;
+            color: white;
+            top: 0px;
+            right: 30px;
+            width: 30px;
+            height: 30px;
+        }
+        </style>`
+
+
+    }
+    else if (colors == "TW") {
+        //TW
+        console.log("Changing to TW theme");
+        var backgroundColor = "#F4E4BC";
+        var borderColor = "#ecd7ac";
+        var headerColor = "#c6a768";
+        var titleColor = "#803000";
+        cssClassesSophie = `
+        <style>
+        .sophRowA {
+            background-color: #f4e4bc;
+            color: black;
+            }
+            .sophRowB {
+            background-color: #fff5da;
+            color: black;
+            }
+            .sophHeader {
+            background-color: #c6a768;
+            font-weight: bold;
+            color: #803000;
+            }
+            .sophLink
+            {
+                color:#803000;
+            }
+        .btnSophie
+        {
+            linear-gradient(to bottom, #947a62 0%,#7b5c3d 22%,#6c4824 30%,#6c4824 100%)
+            color:white
+        }
+        .btnSophie:hover
+        { 
+            linear-gradient(to bottom, #b69471 0%,#9f764d 22%,#8f6133 30%,#6c4d2d 100%);
+            color: white
+        }
+        #x {
+            position: absolute;
+            background: red;
+            color: white;
+            top: 0px;
+            right: 0px;
+            width: 30px;
+            height: 30px;
+        }
+        #cog {
+            position: absolute;
+            background: #f4e4bc;
+            color: white;
+            top: 0px;
+            right: 30px;
+            width: 30px;
+            height: 30px;
+        }
+        </style>`
+    }
+    else {
+        //standard
+        var backgroundColor = "#36393f";
+        var borderColor = "#3e4147";
+        var headerColor = "#202225";
+        var titleColor = "#ffffdf";
+        cssClassesSophie = `
+            <style>
+            .sophRowA {
+            background-color: #32353b;
+            color: white;
+            }
+            .sophRowB {
+            background-color: #36393f;
+            color: white;
+            }
+            .sophHeader {
+            background-color: #202225;
+            font-weight: bold;
+            color: white;
+            }
+            .btnSophie
+            {
+                background-image: linear-gradient(#6e7178 0%, #36393f 30%, #202225 80%, black 100%);
+            }
+            .btnSophie:hover
+            { 
+                background-image: linear-gradient(#7b7e85 0%, #40444a 30%, #393c40 80%, #171717 100%);
+            }
+            #x {
+                position: absolute;
+                background: red;
+                color: white;
+                top: 0px;
+                right: 0px;
+                width: 30px;
+                height: 30px;
+            }
+            #cog {
+                position: absolute;
+                background: #32353b;
+                color: white;
+                top: 0px;
+                right: 30px;
+                width: 30px;
+                height: 30px;
+            }
+            </style>`
+    }
+}
+
+
+
+
+//adding UI classes to page
+$("#contentContainer").eq(0).prepend(cssClassesSophie);
+$("#mobileHeader").eq(0).prepend(cssClassesSophie);
+
+
+
+$.getAll = function (
+    urls, // array of URLs
+    onLoad, // called when any URL is loaded, params (index, data)
+    onDone, // called when all URLs successfully loaded, no params
+    onError // called when a URL load fails or if onLoad throws an exception, params (error)
+) {
+    var numDone = 0;
+    var lastRequestTime = 0;
+    var minWaitTime = 200; // ms between requests
+    loadNext();
+    function loadNext() {
+        if (numDone == urls.length) {
+            onDone();
+            return;
+        }
+
+        let now = Date.now();
+        let timeElapsed = now - lastRequestTime;
+        if (timeElapsed < minWaitTime) {
+            let timeRemaining = minWaitTime - timeElapsed;
+            setTimeout(loadNext, timeRemaining);
+            return;
+        }
+        console.log('Getting ', urls[numDone]);
+        $("#progress").css("width", `${(numDone + 1) / urls.length * 100}%`);
+        lastRequestTime = now;
+        $.get(urls[numDone])
+            .done((data) => {
+                try {
+                    onLoad(numDone, data);
+                    ++numDone;
+                    loadNext();
+                } catch (e) {
+                    onError(e);
+                }
+            })
+            .fail((xhr) => {
+                onError(xhr);
+            })
+    }
+};
+
+//get scavenging data that is in play for this world, every world has different exponent, factor, and initial seconds. Also getting the URLS of each mass scavenging page
+//we can limit the amount of pages we need to call this way, since the mass scavenging pages have all the data that is necessary: troopcounts, which categories per village are unlocked, and if rally point exists.
+function getData() {
+    $("#massScavengeSophie").remove();
+    URLs = [];
+    $.get(URLReq, function (data) {
+        if ($(".paged-nav-item").length > 0) {
+            amountOfPages = parseInt($(".paged-nav-item")[$(".paged-nav-item").length - 1].href.match(/page=(\d+)/)[1]);
+        }
+        else {
+            amountOfPages = 0;
+        }
+        for (var i = 0; i <= amountOfPages; i++) {
+            //push url that belongs to scavenging page i
+            URLs.push(URLReq + "&page=" + i);
+            //get world data
+            tempData = JSON.parse($(data).find('script:contains("ScavengeMassScreen")').html().match(/\{.*\:\{.*\:.*\}\}/g)[0]);
+            duration_exponent = tempData[1].duration_exponent;
+            duration_factor = tempData[1].duration_factor;
+            duration_initial_seconds = tempData[1].duration_initial_seconds;
+        }
+        console.log(URLs);
+
+    })
+        .done(function () {
+            //here we get all the village data and make an array with it, we won't be able to parse unless we add brackets before and after the string
+            arrayWithData = "[";
+            $.getAll(URLs,
+                (i, data) => {
+                    thisPageData = $(data).find('script:contains("ScavengeMassScreen")').html().match(/\{.*\:\{.*\:.*\}\}/g)[2];
+                    arrayWithData += thisPageData + ",";
+                },
+                () => {
+                    //on done
+                    arrayWithData = arrayWithData.substring(0, arrayWithData.length - 1);
+                    //closing bracket so we can parse the data into a useable array
+                    arrayWithData += "]";
+                    scavengeInfo = JSON.parse(arrayWithData);
+                    // count and calculate per village how many troops per category need to be sent. 
+                    // Once count is finished, make a new UI element, and group all the results per 200.
+                    // According to morthy, that is the limit at which the server will accept squad pushes.
+                    count = 0;
+                    for (var i = 0; i < scavengeInfo.length; i++) {
+                        calculateHaulCategories(scavengeInfo[i]);
+                        count++;
+                    }
+                    if (count == scavengeInfo.length) {
+                        //Post here
+                        console.log("Done");
+                        //need to split all the scavenging runs per 200, server limit according to morty
+                        squads = {};
+                        squads_premium = {};
+                        per200 = 0;
+                        groupNumber = 0;
+                        squads[groupNumber] = [];
+                        squads_premium[groupNumber] = [];
+                        for (var k = 0; k < squad_requests.length; k++) {
+                            if (per200 == 200) {
+                                groupNumber++;
+                                squads[groupNumber] = [];
+                                squads_premium[groupNumber] = [];
+                                per200 = 0;
+                            }
+                            per200++;
+                            squads[groupNumber].push(squad_requests[k]);
+                            squads_premium[groupNumber].push(squad_requests_premium[k]);
+                        }
+
+                        //create html send screen with button per launch
+                        console.log("Creating launch options");
+                        htmlWithLaunchButtons = `<div id="massScavengeFinal" class="ui-widget-content" style="position:fixed;background-color:${backgroundColor};cursor:move;z-index:50;">
+                        <button class="btn" id = "x" onclick="closeWindow('massScavengeFinal')">
+                            X
+                        </button>
+                        <table id="massScavengeSophieFinalTable" class="vis" border="1" style="width: 100%;background-color:${backgroundColor};border-color:${borderColor}">
+                        <tr>
+                            <td colspan="10" id="massScavengeSophieTitle" style="text-align:center; width:auto; background-color:${headerColor}">
+                                <h3>
+                                    <center style="margin:10px"><u>
+                                            <font color="${titleColor}">${langShinko[7]}</font>
+                                        </u>
+                                    </center>
+                                </h3>
+                            </td>
+                        </tr>`;
+                        for (var s = 0; s < Object.keys(squads).length; s++) {
+                            //add row with new button
+                            htmlWithLaunchButtons += `<tr id="sendRow${s}" style="text-align:center; width:auto; background-color:${backgroundColor}"><td style="text-align:center; width:auto; background-color:${backgroundColor}"><center><input type="button"  class="btn btnSophie" id="sendMass" onclick="sendGroup(${s},false)" value="${langShinko[8]}${s + 1}"></center></td><td style="text-align:center; width:auto; background-color:${backgroundColor}"><center><input type="button"  class="btn btn-pp btn-send-premium" id="sendMassPremium" onclick="sendGroup(${s},true)" value="${langShinko[8]}${s + 1} WITH PREMIUM" style="display:none"></center></td></tr>`
+                        }
+                        htmlWithLaunchButtons += "</table></div>"
+                        //appending to page
+                        console.log("Creating launch UI");
+                        $(".maincell").eq(0).prepend(htmlWithLaunchButtons);
+                        $("#mobileContent").eq(0).prepend(htmlWithLaunchButtons);
+
+                        if (is_mobile == false) {
+                            $("#massScavengeFinal").draggable();
+                        }
+                        for (var prem = 0; prem < $("#sendMassPremium").length; prem++) {
+                            if (premiumBtnEnabled == true) {
+                                $($("#sendMassPremium")[prem]).show();
+                            }
+                        }
+                        $("#sendMass")[0].focus()
+                    }
+                },
+                (error) => {
+                    console.error(error);
+                });
+        }
+        )
+}
+
+//first UI, will always open as soon as you run the script.
+html = `
+<div id="massScavengeSophie" class="ui-widget-content" style="width:600px;background-color:${backgroundColor};cursor:move;z-index:50;">
+<button class="btn" id ="cog" onclick="settings()">âš™ï¸</button>
+<button class="btn" id = "x" onclick="closeWindow('massScavengeSophie')">
+            X
+        </button>
+    <table id="massScavengeSophieTable" class="vis" border="1" style="width: 100%;background-color:${backgroundColor};border-color:${borderColor}">
+        <tr>
+            <td colspan="10" id="massScavengeSophieTitle" style="text-align:center; width:auto; background-color:${headerColor}">
+                <h3>
+                    <center style="margin:10px"><u>
+                            <font color="${titleColor}">${langShinko[0]}</font>
+                        </u>
+                    </center>
+                </h3>
+            </td>
+        </tr>
+        <tr style="background-color:${backgroundColor}">
+            <td style="text-align:center;background-color:${headerColor}" colspan="15">
+                <h3>
+                    <center style="margin:10px"><u>
+                            <font color="${titleColor}">${langShinko[1]}</font>
+                        </u></center>
+                </h3>
+            </td>
+        </tr>
+        <tr id="imgRow">
+        </tr>
+    </table>
+    <hr>
+    <table class="vis" border="1" style="width: 100%;background-color:${backgroundColor};border-color:${borderColor}">
+        <tbody>
+            <tr style="background-color:${backgroundColor}">
+                <td style="text-align:center;background-color:${headerColor}" colspan="4">
+                    <h3>
+                        <center style="margin:10px"><u>
+                                <font color="${titleColor}">${langShinko[2]}</font>
+                            </u></center>
+                    </h3>
+                </td>
+            </tr>
+            <tr id="categories" style="text-align:center; width:auto; background-color:${headerColor}">
+                <td style="text-align:center; width:auto; background-color:${headerColor};padding: 10px;">
+                    <font color="${titleColor}">${categoryNames[1].name}</font>
+                </td>
+                <td style="text-align:center; width:auto; background-color:${headerColor};padding: 10px;">
+                    <font color="${titleColor}">${categoryNames[2].name}</font>
+                </td>
+                <td style="text-align:center; width:auto; background-color:${headerColor};padding: 10px;">
+                    <font color="${titleColor}">${categoryNames[3].name}</font>
+                </td>
+                <td style="text-align:center; width:auto; background-color:${headerColor};padding: 10px;">
+                    <font color="${titleColor}">${categoryNames[4].name}</font>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center; width:auto; background-color:${backgroundColor}">
+                    <center><input type="checkbox" ID="category1" name="cat1"></center>
+                </td>
+                <td style="text-align:center; width:auto; background-color:${backgroundColor}">
+                    <center><input type="checkbox" ID="category2" name="cat2"></center>
+                </td>
+                <td style="text-align:center; width:auto; background-color:${backgroundColor}">
+                    <center><input type="checkbox" ID="category3" name="cat3"></center>
+                </td>
+                <td style="text-align:center; width:auto; background-color:${backgroundColor}">
+                    <center><input type="checkbox" ID="category4" name="cat4"></center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table class="vis" border="1" style="width: 100%;background-color:${backgroundColor};border-color:${borderColor}">
+        <tr id="runtimesTitle" style="text-align:center; width:auto; background-color:${headerColor}">
+            <td colspan="3" style="text-align:center; width:auto; background-color:${headerColor}">
+                <center style="margin:10px">
+                    <font color="${titleColor}">${langShinko[3]}</font>
+                </center>
+            </td>
+        </tr>
+        <tr id="runtimes" style="text-align:center; width:auto; background-color:${headerColor}">
+            <td style="background-color:${headerColor};"></td>
+            <td style="text-align:center; width:auto; background-color:${headerColor};padding: 10px;">
+                <font color="${titleColor}">Off villages</font>
+            </td>
+            <td style="text-align:center; width:auto; background-color:${headerColor};padding: 10px;">
+                <font color="${titleColor}">Def villages</font>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:22px;background-color:${backgroundColor}; padding:5px;"><input type="radio" ID="timeSelectorDate" name="timeSelector" ></td>
+            <td style="text-align:center; width:auto; background-color:${backgroundColor}; padding:5px;"><input type="date" id="offDay" name="offDay" value="${setDayToField(runTimes.off)}"><input type="time" id="offTime" name="offTime" value="${setTimeToField(runTimes.off)}"></td>
+            <td style="text-align:center; width:auto; background-color:${backgroundColor}; padding:5px;"><input type="date" id="defDay" name="defDay" value="${setDayToField(runTimes.def)}"><input type="time" id="defTime" name="defTime" value="${setTimeToField(runTimes.def)}"></td>
+        </tr>
+        <tr>
+            <td style="width:22px;background-color:${backgroundColor}; padding:5px;"><input type="radio" ID="timeSelectorHours" name="timeSelector" ></td>
+            <td style="text-align:center; width:auto; background-color:${backgroundColor}; padding:5px;"><input type="text" class="runTime_off" style="background-color:${backgroundColor};color:${titleColor};" value="${runTimes['off']}" onclick="this.select();"></td>
+            <td style="text-align:center; width:auto; background-color:${backgroundColor}; padding:5px;"><input type="text" class="runTime_def" style="background-color:${backgroundColor};color:${titleColor};" value="${runTimes['def']}" onclick="this.select();"></td>
+        </tr>
+        <tr>
+            <td style="width:22px;background-color:${backgroundColor}; padding:5px;"></td>
+            <td style="text-align:center; width:auto; background-color:${backgroundColor}; padding:5px;"><font color="${titleColor}"><span id="offDisplay"></span></font></td>
+            <td style="text-align:center; width:auto; background-color:${backgroundColor}; padding:5px;"><font color="${titleColor}"><span id="defDisplay"></span></font></td>
+        </tr>
+        </tr>
+    </table>
+    <hr>
+    <table class="vis" border="1" style="width: 100%;background-color:${backgroundColor};border-color:${borderColor}">
+        <tr id="settingPriorityTitle" style="text-align:center; width:auto; background-color:${headerColor}">
+            <td colspan="2" style="text-align:center; width:auto; background-color:${headerColor}">
+                <center style="margin:10px">
+                    <font color="${titleColor}">${"Which setting?"}</font>
+                </center>
+            </td>
+        </tr>
+        <tr id="settingPriorityHeader" style="text-align:center; width:auto; background-color:${headerColor}">
+            <td style="text-align:center; width:50%; background-color:${headerColor}; padding:5px;">
+                <font color="${titleColor}">Balanced over all categories</font>
+            </td>
+            <td style="text-align:center; width:50%; background-color:${headerColor}; padding:5px;">
+                <font color="${titleColor}">Priority on filling higher categories</font>
+            </td>
+        </tr>
+        <tr id="settingPriority" style="text-align:center; width:auto; background-color:${headerColor}">
+            <td style="text-align:center; width:50%; background-color:${backgroundColor}; padding:5px;"><input type="radio" ID="settingPriorityBalanced" name="prio"></td>
+            <td style="text-align:center; width:50%; background-color:${backgroundColor}; padding:5px;"><input type="radio" ID="settingPriorityPriority" name="prio"></td>
+        </tr>
+        <tr style="text-align:center; width:auto; background-color:${headerColor}">
+            <td style="text-align:center; width:50%; background-color:${backgroundColor}; padding:5px;"> <font color="${titleColor}">Settings bugged?</font></td>
+            <td style="text-align:center; width:50%; background-color:${backgroundColor}; padding:5px;"><center><input type="button" class="btn btnSophie" id="reset" onclick="resetSettings()" value="Reset settings"></center></td>
+        </tr>
+    </table>
+    <hr>
+    <center><input type="button" class="btn btnSophie" id="sendMass" onclick="readyToSend()" value="${langShinko[5]}"></center>
+    <hr>
+    <center><img id="sophieImg" class=" tooltip-delayed" title="Sophie -Shinko to Kuma-" src="https://dl.dropboxusercontent.com/s/bxoyga8wa6yuuz4/sophie2.gif" style="cursor:help; position: relative"></center>
+    <br>
+    <center>
+        <p>
+            <font color="${titleColor}">${langShinko[6]} </font><a href="https://shinko-to-kuma.my-free.website/" style="text-shadow:-1px -1px 0 ${titleColor},1px -1px 0 ${titleColor},-1px 1px 0 ${titleColor},1px 1px 0 ${titleColor};" title="Sophie profile" target="_blank">Sophie "Shinko to Kuma"</a>
+        </p>
+    </center>
+</div>
+`;
+$(".maincell").eq(0).prepend(html);
+$("#mobileContent").eq(0).prepend(html);
+if (game_data.locale == "ar_AE") {
+    $("#sophieImg").attr("src", "https://media2.giphy.com/media/qYr8p3Dzbet5S/giphy.gif");
+}
+if (is_mobile == false) {
+    $("#massScavengeSophie").css("position", "fixed");
+    $("#massScavengeSophie").draggable();
+
+}
+
+$("#offDisplay")[0].innerText = fancyTimeFormat(runTimes.off * 3600);
+$("#defDisplay")[0].innerText = fancyTimeFormat(runTimes.def * 3600);
+if (tempElementSelection == "Date") {
+    $(`#timeSelectorDate`).prop("checked", true);
+    selectType("Date");
+    updateTimers();
+}
+else {
+    $(`#timeSelectorHours`).prop("checked", true);
+    selectType("Hours");
+    updateTimers();
+}
+$("#offDay")[0].addEventListener("input", function () {
+    updateTimers();
+}, false)
+
+
+
+$("#defDay")[0].addEventListener("input", function () {
+    updateTimers();
+}, false)
+
+$("#offTime")[0].addEventListener("input", function () {
+    updateTimers();
+}, false)
+
+$("#defTime")[0].addEventListener("input", function () {
+    updateTimers();
+}, false)
+
+
+$(".runTime_off")[0].addEventListener("input", function () {
+    updateTimers();
+}, false)
+
+$(".runTime_def")[0].addEventListener("input", function () {
+    updateTimers();
+}, false)
+
+$("#timeSelectorDate")[0].addEventListener("input", function () {
+    selectType('Date');
+    updateTimers();
+}, false)
+
+$("#timeSelectorHours")[0].addEventListener("input", function () {
+    selectType('Hours');
+    updateTimers();
+}, false)
+
+//create checkboxes and add them to the UI
+
+
+for (var i = 0; i < sendOrder.length; i++) {
+
+    $("#imgRow").eq(0).append(`<td align="center" style="background-color:${backgroundColor}">
+    <table class="vis" border="1" style="width: 100%">
+    <thead>
+    </thead>
+    <tbody>    
+        <tr>
+            <td style=" text-align:center;background-color:${headerColor};padding: 5px;"><img src="https://dsen.innogamescdn.com/asset/cf2959e7/graphic/unit/unit_${sendOrder[i]}.png" title="${sendOrder[i]}" alt="" class=""></td>
+        </tr>
+        <tr>
+            <td align="center" style="background-color:${backgroundColor};padding: 5px;"><input type="checkbox" ID="${sendOrder[i]}" name="${sendOrder[i]}"></td>
+        </tr>
+        <tr>
+            <td style="text-align:center; width:auto; background-color:#202225;padding: 5px;"><font color="#ffffdf">Backup</font></td>
+        </tr>
+        <tr>
+            <td align="center" style="background-color:${backgroundColor};padding: 5px;"><input type="text" ID="${sendOrder[i]}Backup" name="${sendOrder[i]}" value="${keepHome[sendOrder[i]]}" size="5"></td>
+        </tr>
+        </tbody>  
+    </table>
+</td>`);
+    $("#imgRow").sortable({
+        axis: "x",
+        revert: 100,
+        containment: "parent",
+        forceHelperSize: true,
+        delay: 100,
+        scroll: false
+    }).disableSelection();
+
+    if (prioritiseHighCat == true) {
+        console.log('setting high priority cat')
+        $(`#settingPriorityPriority`).prop("checked", true);
+    }
+    else {
+        console.log('setting balanced')
+        $(`#settingPriorityBalanced`).prop("checked", true);
+    }
+
+    enableCorrectTroopTypes();
+}
+
+
+
+//focus calculate button!
+$("#sendMass").focus();
+
+function readyToSend() {
+
+    //check if every setting is chosen, otherwise alert and abort
+
+    if ($("#settingPriorityPriority")[0].checked == false && $("#settingPriorityBalanced")[0].checked == false) {
+        // no setting chosen
+        alert("You have not chosen how you want to split your troops! Choose either prioritising higher categories till chosen runtime, or balanced spread over all categories!");
+        throw Error("didn't choose type");
+    }
+
+    if ($("#category1").is(":checked") == false && $("#category2").is(":checked") == false && $("#category3").is(":checked") == false && $("#category4").is(":checked") == false) {
+        // no category chosen
+        alert("You have not chosen which categories you want to use!");
+        throw Error("didn't choose category");
+    }
+
+
+    //get trooptypes we wanna use, and runtime
+    console.log(sendOrder);
+    for (var i = 0; i < sendOrder.length; i++) {
+        troopTypeEnabled[sendOrder[i]] = $(`:checkbox#${sendOrder[i]}`).is(":checked");
+    }
+    for (var i = 0; i < sendOrder.length; i++) {
+        keepHome[sendOrder[i]] = $(`#${sendOrder[i]}Backup`).val();
+    }
+    console.log(troopTypeEnabled);
+    enabledCategories.push($("#category1").is(":checked"));
+    enabledCategories.push($("#category2").is(":checked"));
+    enabledCategories.push($("#category3").is(":checked"));
+    enabledCategories.push($("#category4").is(":checked"));
+
+    if ($("#timeSelectorDate")[0].checked == true) {
+        localStorage.setItem("timeElement", "Date");
+        time.off = Date.parse($("#offDay").val().replace(/-/g, "/") + " " + $("#offTime").val());
+        time.def = Date.parse($("#defDay").val().replace(/-/g, "/") + " " + $("#defTime").val());
+        time.off = (time.off - serverDate) / 1000 / 3600;
+        time.def = (time.def - serverDate) / 1000 / 3600;
+    }
+    else {
+        localStorage.setItem("timeElement", "Hours");
+        time.off = $('.runTime_off').val();
+        time.def = $('.runTime_def').val();
+    }
+
+    console.log("Time off: " + time.off);
+    console.log("Time def: " + time.def);
+    if (time.off > 24 || time.def > 24) {
+        alert("Your runtime is higher than 24h!");
+    }
+
+
+    //Dialog.show("content", time.off + " " + time.def);
+
+
+    console.log(sendOrder);
+    if ($("#settingPriorityPriority")[0].checked == true) {
+        prioritiseHighCat = true;
+    }
+    else {
+        prioritiseHighCat = false;
+    }
+
+    sendOrder = [];
+    for (var k = 0; k < $("#imgRow :checkbox").length; k++) {
+        sendOrder.push($("#imgRow :checkbox")[k].name)
+    }
+
+    console.log("Runtimes: Off: " + time.off + " Def: " + time.def);
+    localStorage.setItem("troopTypeEnabled", JSON.stringify(troopTypeEnabled));
+    localStorage.setItem("keepHome", JSON.stringify(keepHome));
+    localStorage.setItem("categoryEnabled", JSON.stringify(enabledCategories));
+    localStorage.setItem("prioritiseHighCat", JSON.stringify(prioritiseHighCat));
+    localStorage.setItem("sendOrder", JSON.stringify(sendOrder));
+    localStorage.setItem("runTimes", JSON.stringify(time));
+
+    console.log("Saved priority: " + prioritiseHighCat);
+    console.table(troopTypeEnabled);
+    console.table(time);
+    console.table(sendOrder);
+    console.table(enabledCategories);
+    categoryEnabled = enabledCategories;
+
+    getData();
+}
+
+function sendGroup(groupNr, premiumEnabled) {
+    if (premiumEnabled == true) {
+        actuallyEnabled = false;
+        actuallyEnabled = confirm("Are you sure you want to send the scavenge runs using premium? Cancelling will send the scav run without premium.   ********* DEPENDING ON HOW MANY UNITS/VILLAGES YOU SEND WITH, THIS CAN RESULT IN VERY HIGH AMOUNTS OF PP BEING USED! ONLY USE THIS IF YOU CAN AFFORD IT/KNOW HOW MUCH THE INDIVIDUAL PP RUNS WOULD COST YOU! *********");
+    }
+    else {
+        actuallyEnabled = false;
+    }
+    if (actuallyEnabled == true) {
+        tempSquads = squads_premium[groupNr];
+    }
+    else {
+        tempSquads = squads[groupNr];
+    }
+    //Send one group(one page worth of scavenging)
+    $(':button[id^="sendMass"]').prop('disabled', true)
+    $(':button[id^="sendMassPremium"]').prop('disabled', true)
+    TribalWars.post('scavenge_api', 
+    { ajaxaction: 'send_squads' }, 
+    { "squad_requests": tempSquads }, function () {
+        UI.SuccessMessage("Group sent successfully");
+    },
+        !1
+    );
+
+    //once group is sent, remove the row from the table
+    setTimeout(function () { 
+        $(`#sendRow${groupNr}`).remove(); 
+        $(':button[id^="sendMass"]').prop('disabled', false); 
+        $(':button[id^="sendMassPremium"]').prop('disabled', false); 
+        $("#sendMass")[0].focus(); 
+    }, 200);
+}
+
+
+
+function calculateHaulCategories(data) {
+    //check if village has rally point
+    if (data.has_rally_point == true) {
+        console.log("can scavenge");
+        var troopsAllowed = {};
+        for (key in troopTypeEnabled) {
+            if (troopTypeEnabled[key] == true) {
+                if (data.unit_counts_home[key] - keepHome[key] > 0) {
+                    troopsAllowed[key] = data.unit_counts_home[key] - keepHome[key];
+                }
+                else {
+                    troopsAllowed[key] = 0;
+                }
+            }
+        }
+        var unitType = {
+            "spear": 'def',
+            "sword": 'def',
+            "axe": 'off',
+            "archer": 'def',
+            "light": 'off',
+            "marcher": 'off',
+            "heavy": 'def',
+        }
+
+        var typeCount = { 'off': 0, 'def': 0 };
+
+        for (var prop in troopsAllowed) {
+            typeCount[unitType[prop]] = typeCount[unitType[prop]] + troopsAllowed[prop];
+        }
+
+        totalLoot = 0;
+
+        //check what the max possible loot is
+        for (key in troopsAllowed) {
+            if (key == "spear") totalLoot += troopsAllowed[key] * (data.unit_carry_factor * 25);
+            if (key == "sword") totalLoot += troopsAllowed[key] * (data.unit_carry_factor * 15);
+            if (key == "axe") totalLoot += troopsAllowed[key] * (data.unit_carry_factor * 10);
+            if (key == "archer") totalLoot += troopsAllowed[key] * (data.unit_carry_factor * 10);
+            if (key == "light") totalLoot += troopsAllowed[key] * (data.unit_carry_factor * 80);
+            if (key == "marcher") totalLoot += troopsAllowed[key] * (data.unit_carry_factor * 50);
+            if (key == "heavy") totalLoot += troopsAllowed[key] * (data.unit_carry_factor * 50);
+            if (key == "knight") totalLoot += troopsAllowed[key] * (data.unit_carry_factor * 100);
+        }
+        console.log("Loot possible from this village: " + totalLoot);
+        if (totalLoot == 0) {
+            //can't loot from here, end
+            return;
+        }
+        if (typeCount.off > typeCount.def) {
+            haul = parseInt(((time.off * 3600) / duration_factor - duration_initial_seconds) ** (1 / (duration_exponent)) / 100) ** (1 / 2);
+        } else {
+            haul = parseInt(((time.def * 3600) / duration_factor - duration_initial_seconds) ** (1 / (duration_exponent)) / 100) ** (1 / 2);
+        }
+
+        haulCategoryRate = {};
+        //check which categories are enabled
+
+
+        if (data.options[1].is_locked == true || data.options[1].scavenging_squad != null) {
+            haulCategoryRate[1] = 0;
+        } else {
+            haulCategoryRate[1] = haul / 0.1;
+        }
+        if (data.options[2].is_locked == true || data.options[2].scavenging_squad != null) {
+            haulCategoryRate[2] = 0;
+        } else {
+            haulCategoryRate[2] = haul / 0.25;
+        }
+        if (data.options[3].is_locked == true || data.options[3].scavenging_squad != null) {
+            haulCategoryRate[3] = 0;
+        } else {
+            haulCategoryRate[3] = haul / 0.50;
+        }
+        if (data.options[4].is_locked == true || data.options[4].scavenging_squad != null) {
+            haulCategoryRate[4] = 0;
+        } else {
+            haulCategoryRate[4] = haul / 0.75;
+        }
+        console.log(haulCategoryRate);
+
+        for (var i = 0; i < enabledCategories.length; i++) {
+            if (enabledCategories[i] == false) haulCategoryRate[i + 1] = 0;
+        }
+
+
+        totalHaul = haulCategoryRate[1] + haulCategoryRate[2] + haulCategoryRate[3] + haulCategoryRate[4];
+
+        unitsReadyForSend = calculateUnitsPerVillage(troopsAllowed);
+
+        for (var k = 0; k < Object.keys(unitsReadyForSend).length; k++) {
+            candidate_squad = { "unit_counts": unitsReadyForSend[k], "carry_max": 9999999999 };
+            if (data.options[k + 1].is_locked == false) {
+                squad_requests.push({ "village_id": data.village_id, "candidate_squad": candidate_squad, "option_id": k + 1, "use_premium": false })
+                squad_requests_premium.push({ "village_id": data.village_id, "candidate_squad": candidate_squad, "option_id": k + 1, "use_premium": true })
+
+            }
+        }
+    }
+    else {
+        console.log("no rally point");
+    }
+}
+
+function enableCorrectTroopTypes() {
+    worldUnits = game_data.units;
+    for (var i = 0; i < worldUnits.length; i++) {
+        if (worldUnits[i] != "militia" && worldUnits[i] != "snob" && worldUnits[i] != "ram" && worldUnits[i] != "catapult" && worldUnits[i] != "spy") {
+            if (troopTypeEnabled[worldUnits[i]] == true) $(`#${worldUnits[i]}`).prop("checked", true);
+        }
+    }
+    for (var i = 0; i < categoryEnabled.length + 1; i++) {
+        if (categoryEnabled[i] == true) {
+            $(`#category${i + 1}`).prop("checked", true);
+        }
+    }
+}
+
+function calculateUnitsPerVillage(troopsAllowed) {
+    var unitHaul = {
+        "spear": 25,
+        "sword": 15,
+        "axe": 10,
+        "archer": 10,
+        "light": 80,
+        "marcher": 50,
+        "heavy": 50,
+        "knight": 100
+    };
+    //calculate HERE :D
+    console.log(troopsAllowed)
+    unitsReadyForSend = {};
+    unitsReadyForSend[0] = {};
+    unitsReadyForSend[1] = {};
+    unitsReadyForSend[2] = {};
+    unitsReadyForSend[3] = {};
+    if (totalLoot > totalHaul) {
+        //too many units
+        console.log("too many units")
+        //prioritise higher category first
+        if (version != "old") {
+            for (var j = 3; j >= 0; j--) {
+                var reach = haulCategoryRate[j + 1];
+                sendOrder.forEach((unit) => {
+                    if (troopsAllowed.hasOwnProperty(unit) && reach > 0) {
+                        var amountNeeded = Math.floor(reach / unitHaul[unit]);
+
+                        if (amountNeeded > troopsAllowed[unit]) {
+                            unitsReadyForSend[j][unit] = troopsAllowed[unit];
+                            reach = reach - (troopsAllowed[unit] * unitHaul[unit]);
+                            troopsAllowed[unit] = 0;
+                        } else {
+                            unitsReadyForSend[j][unit] = amountNeeded;
+                            reach = 0;
+                            troopsAllowed[unit] = troopsAllowed[unit] - amountNeeded;
+                        }
+                    }
+                });
+            }
+        }
+        else {
+            for (var j = 0; j < 4; j++) {
+                for (key in troopsAllowed) {
+                    unitsReadyForSend[j][key] = Math.floor((haulCategoryRate[j + 1] * (troopsAllowed[key] / totalLoot)));
+                }
+            }
+
+        }
+    }
+    else {
+        //not enough units, spread evenly
+        troopNumber = 0;
+        for (key in troopsAllowed) {
+            troopNumber += troopsAllowed[key];
+        }
+        console.log(troopNumber);
+        if (prioritiseHighCat != true && troopNumber > 130) {
+            for (var j = 0; j < 4; j++) {
+                console.log("not enough units, but even balance")
+                for (key in troopsAllowed) {
+                    unitsReadyForSend[j][key] = Math.floor((totalLoot / totalHaul * haulCategoryRate[j + 1]) * (troopsAllowed[key] / totalLoot));
+                }
+            }
+        }
+        else {
+            //prioritise higher category first
+            for (var j = 3; j >= 0; j--) {
+                var reach = haulCategoryRate[j + 1];
+                sendOrder.forEach((unit) => {
+                    if (troopsAllowed.hasOwnProperty(unit) && reach > 0) {
+                        var amountNeeded = Math.floor(reach / unitHaul[unit]);
+
+                        if (amountNeeded > troopsAllowed[unit]) {
+                            unitsReadyForSend[j][unit] = troopsAllowed[unit];
+                            reach = reach - (troopsAllowed[unit] * unitHaul[unit]);
+                            troopsAllowed[unit] = 0;
+                        } else {
+                            unitsReadyForSend[j][unit] = amountNeeded;
+                            reach = 0;
+                            troopsAllowed[unit] = troopsAllowed[unit] - amountNeeded;
+                        }
+                    }
+                });
+            }
+        }
+    }
+    return unitsReadyForSend;
+}
+
+function resetSettings() {
+    localStorage.removeItem("troopTypeEnabled");
+    localStorage.removeItem("categoryEnabled");
+    localStorage.removeItem("prioritiseHighCat");
+    localStorage.removeItem("sendOrder");
+    localStorage.removeItem("runTimes");
+    localStorage.removeItem("keepHome");
+    UI.BanneredRewardMessage("Settings reset");
+    window.location.reload();
+}
+
+function closeWindow(title) {
+    $("#" + title).remove();
+}
+
+function settings() {
+    alert("coming soon!");
+}
+
+function zeroPadded(val) {
+    if (val >= 10)
+        return val;
+    else
+        return '0' + val;
+}
+
+function setTimeToField(runtimeType) {
+
+    d = Date.parse(new Date(serverDate)) + runtimeType * 1000 * 3600;
+    d = new Date(d);
+    d = zeroPadded(d.getHours()) + ":" + zeroPadded(d.getMinutes());
+    return d;
+}
+function setDayToField(runtimeType) {
+
+    d = Date.parse(new Date(serverDate)) + runtimeType * 1000 * 3600;
+    d = new Date(d);
+    d = d.getFullYear() + "-" + zeroPadded(d.getMonth() + 1) + "-" + zeroPadded(d.getDate());
+    return d;
+}
+
+function fancyTimeFormat(time) {
+    if (time < 0) {
+        return "Time is in the past!"
+    }
+    else {
+        // Hours, minutes and seconds
+        var hrs = ~~(time / 3600);
+        var mins = ~~((time % 3600) / 60);
+        var secs = ~~time % 60;
+
+        // Output like "1:01" or "4:03:59" or "123:03:59"
+        var ret = "Max duration: ";
+
+        if (hrs > 0) {
+            ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+        }
+        else {
+            ret += "0:" + (mins < 10 ? "0" : "");
+        }
+
+        ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+        ret += "" + secs;
+        return ret;
+    }
+}
+
+function updateTimers() {
+    if ($("#timeSelectorDate")[0].checked == true) {
+        console.log("datebox")
+        $("#offDisplay")[0].innerText = fancyTimeFormat((Date.parse($("#offDay").val().replace(/-/g, "/") + " " + $("#offTime").val()) - serverDate) / 1000)
+        $("#defDisplay")[0].innerText = fancyTimeFormat((Date.parse($("#defDay").val().replace(/-/g, "/") + " " + $("#defTime").val()) - serverDate) / 1000)
+    }
+    else {
+        console.log("Textbox ")
+        $("#offDisplay")[0].innerText = fancyTimeFormat($(".runTime_off").val() * 3600)
+        $("#defDisplay")[0].innerText = fancyTimeFormat($(".runTime_def").val() * 3600)
+    }
+}
+
+function selectType(type) {
+    console.log("clicked" + type);
+    switch (type) {
+        case 'Hours':
+            if ($("#timeSelectorDate")[0].checked == true) {
+                $("#offDay").eq(0).removeAttr('disabled');
+                $("#defDay").eq(0).removeAttr('disabled');
+                $("#offTime").eq(0).removeAttr('disabled');;
+                $("#defTime").eq(0).removeAttr('disabled');
+                $(".runTime_off").prop("disabled", true);
+                $(".runTime_def").prop("disabled", true);
+            }
+            else {
+                $("#offDay").prop("disabled", true);
+                $("#defDay").prop("disabled", true);
+                $("#offTime").prop("disabled", true);
+                $("#defTime").prop("disabled", true);
+                $(".runTime_off").eq(0).removeAttr('disabled');
+                $(".runTime_def").eq(0).removeAttr('disabled');
+            }
+            break;
+        case 'Date':
+            if ($("#timeSelectorHours")[0].checked == true) {
+                $("#offDay").prop("disabled", true);
+                $("#defDay").prop("disabled", true);
+                $("#offTime").prop("disabled", true);
+                $("#defTime").prop("disabled", true);
+                $(".runTime_off").eq(0).removeAttr('disabled');
+                $(".runTime_def").eq(0).removeAttr('disabled');
+            }
+            else {
+                $("#offDay").eq(0).removeAttr('disabled');
+                $("#defDay").eq(0).removeAttr('disabled');
+                $("#offTime").eq(0).removeAttr('disabled');;
+                $("#defTime").eq(0).removeAttr('disabled');
+                $(".runTime_off").prop("disabled", true);
+                $(".runTime_def").prop("disabled", true);
+            }
+            break;
+        default:
+            break;
+
+    }
+}
+/* This is some notes just for me so I know what I'm working with data wise
+
+Structure of the array:
+scavengInfo[i].
+
+village_id
+player_id
+village_name
+res :{wood,stone,iron}
+res_rate:{wood,stone,iron}
+storage_max
+unit_counts_home:{spear,sword, etc}
+unit_carry_factor
+has_rally_point (true or false)
+
+options[1]
+base_id: 1
+village_id
+is_locked: (true or false)
+unlock_time: null
+scavenging_squad: null
+*/
