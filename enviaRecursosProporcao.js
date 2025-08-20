@@ -347,7 +347,7 @@ function sendResourcesTotal(){
         }
         inputs[index].click(); // dispara o onclick do input
         index++;
-    }, 200); // 500ms = 0,5 segundo
+    }, 500); // 500ms = 0,5 segundo
     
 }
 
